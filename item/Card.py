@@ -18,15 +18,18 @@ class Card(object):
         other_position = card.get_position()
         min_x = max(current_position[0], other_position[0])
         min_y = max(current_position[1], other_position[1])
-        max_x = min(current_position[2], other_position[3])
+        max_x = min(current_position[2], other_position[2])
         max_y = min(current_position[3], other_position[3])
         overlap_area = max(0, max_x - min_x) * max(0, max_y - min_y)
         current_area = self.clac_area()
-        other_area = other_position.clac_area()
+        other_area = card.clac_area()
         return overlap_area / (current_area + other_area - overlap_area)
 
     def has_parent(self):
         return len(self._parent_note) > 0
+
+    def get_children_set(self):
+        return self._children_node
 
     def add_parent(self, card_index):
         self._parent_note.add(card_index)
