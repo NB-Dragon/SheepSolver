@@ -32,4 +32,4 @@ let answer = [29, 37, 56, ......];
 ```
 
 # 许可证
-GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
+GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007
