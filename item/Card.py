@@ -4,6 +4,9 @@ class Card(object):
         self._parent_note = set()
         self._children_node = set()
 
+    def get_type(self):
+        return self._origin_data["type"]
+
     def clac_area(self):
         width = self._origin_data["max_x"] - self._origin_data["min_x"]
         height = self._origin_data["max_y"] - self._origin_data["min_y"]
