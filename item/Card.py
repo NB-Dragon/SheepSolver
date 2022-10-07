@@ -25,6 +25,9 @@ class Card(object):
         other_area = other_position.clac_area()
         return overlap_area / (current_area + other_area - overlap_area)
 
+    def has_parent(self):
+        return len(self._parent_note) > 0
+
     def add_parent(self, card_index):
         self._parent_note.add(card_index)
 
