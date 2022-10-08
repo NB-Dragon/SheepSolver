@@ -10,7 +10,13 @@
 - 下载并部署该[开源项目](https://github.com/BugMaker888/sheep)
 
 ## 修改本地文件
-- 修改sheep.py文件中第13行代码，将路径修改为本项目的绝对路径
+- 修改`web/sheep.py`文件中第13行代码，将路径修改为本项目的绝对路径，如下面所示
+```text
+# 替换前
+self.solve_origin_path = "path/to/your/SheepSolver/online_data.json"
+# 替换后
+self.solve_origin_path = "/home/root/SheepSolver/online_data.json"
+```
 
 ## 替换第三方项目
 - 把`web/html`目录下的内容，替换到已成功部署的第三方项目的路径`three.js/examples`
@@ -25,8 +31,8 @@
 - 打开终端并进入到本项目的根路径
 - 执行命令`python main.py`
 - 等到结果成功打印出来后，把倒数第二行的数据复制出来
-- 把结果粘贴到已成功部署的第三方项目文件`three.js/examples/sheep.html`的第50行代码中
-- 如下面所示
+- 把结果粘贴到已成功部署的第三方项目文件`three.js/examples/sheep.html`的第50行代码，如下面所示
+
 ```text
 # 替换前
 let answer = ["把答案粘贴到这里"];
