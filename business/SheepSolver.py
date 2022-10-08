@@ -24,6 +24,7 @@ class SheepSolver(object):
             self._card_count += len(level_data)
             card_list = [Card(item) for item in level_data]
             self._card_position.append_level_card(card_list)
+        self._card_position.generate_head_data()
 
     def solve(self):
         print("当前进度为: {}/{}".format(len(self._pick_list), self._card_count))

@@ -14,6 +14,11 @@ class CardPosition(object):
         new_card_data = {key: self._origin_data[key] for key in range(start_index, end_index)}
         self._handle_overlap_data(new_card_data)
 
+    def generate_head_data(self):
+        for key_old, card_old in self._origin_data.items():
+            if not card_old.has_parent():
+                self._head_data[key_old] = card_old
+
     def get_head_description(self):
         return "-".join([str(item) for item in sorted(self._head_data.keys())])
 
@@ -51,12 +56,9 @@ class CardPosition(object):
             self._origin_data[self._card_count] = card_item
 
     def _handle_overlap_data(self, card_dict):
-        overlap_key_set = set()
+        old_card_dict = {key: self._origin_data[key] for key in self._origin_data.keys() if key not in card_dict}
         for key_new, card_new in card_dict.items():
-            for key_old, card_old in self._head_data.items():
+            for key_old, card_old in old_card_dict.items():
                 if card_new.clac_iou(card_old) > 0:
                     card_new.add_children(key_old)
                     card_old.add_parent(key_new)
-                    overlap_key_set.add(key_old)
-        [self._head_data.pop(key) for key in overlap_key_set]
-        self._head_data.update(card_dict)
