@@ -8,6 +8,10 @@
 # 使用教程
 ## 部署第三方项目
 - 下载并部署该[开源项目](https://github.com/BugMaker888/sheep)
+```shell
+git clone https://github.com/BugMaker888/sheep
+cd sheep && git checkout 67e0c4c5b035fee354c08915e9d8579df97549e5
+```
 
 ## 修改本地文件
 - 修改`web/sheep.py`文件中第13行代码，将路径修改为本项目的绝对路径，如下面所示
