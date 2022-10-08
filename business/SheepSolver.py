@@ -66,9 +66,3 @@ class SheepSolver(object):
             print(json.dumps(self._pick_list))
         else:
             print("牌面无解")
-
-    def test(self):
-        key_list = self._card_position.get_head_key_list()
-        print(key_list)
-        self._card_position.pick_card(key_list[1])
-        print(self._card_position.get_head_key_list())
