@@ -36,6 +36,7 @@ class SheepSolver(object):
                 self._operation_recover_card(head_item)
                 continue
             else:
+                self._situation_history.add(head_fingerprint)
                 if self._residual_pool.is_pool_full():
                     self._operation_recover_card(head_item)
                     continue
