@@ -121,5 +121,8 @@ class Sheep():
 
         print("==========================================")
 
+        self.write_outside_solve_data(map_data)
+        print("==========================================")
+
 
 addons = [Sheep()]
