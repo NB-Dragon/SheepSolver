@@ -6,14 +6,17 @@ class Card(object):
 
     @staticmethod
     def generate_format_data_item(origin_data):
-        level = int(origin_data["id"].split("-")[0])
+        card_id = origin_data["id"]
         card_type = origin_data["type"]
         min_x, max_x = origin_data["rolNum"], origin_data["rolNum"] + 8
         min_y, max_y = origin_data["rowNum"], origin_data["rowNum"] + 8
-        return {"level": level, "type": card_type, "min_x": min_x, "max_x": max_x, "min_y": min_y, "max_y": max_y}
+        return {"id": card_id, "type": card_type, "min_x": min_x, "max_x": max_x, "min_y": min_y, "max_y": max_y}
+
+    def get_card_id(self):
+        return self._origin_data["id"]
 
     def get_card_level(self):
-        return self._origin_data["level"]
+        return int(self._origin_data["id"].split("-")[0])
 
     def get_card_type(self):
         return self._origin_data["type"]
