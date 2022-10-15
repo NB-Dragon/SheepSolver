@@ -2,7 +2,7 @@ import time
 from business.SheepSolver import SheepSolver
 
 if __name__ == '__main__':
-    sheep_solver = SheepSolver(0.8)
+    sheep_solver = SheepSolver(0.8, "normal")
     sheep_solver.init_card_data()
     start_time = time.time()
     sheep_solver.solve()

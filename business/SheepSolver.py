@@ -8,12 +8,12 @@ from item.ResidualPool import ResidualPool
 
 
 class SheepSolver(object):
-    def __init__(self, percentage):
+    def __init__(self, percentage, sort_mode):
         self._code_entrance_path = os.path.split(os.path.abspath(sys.argv[0]))[0]
         self._origin_data_file = os.path.join(self._code_entrance_path, "online_data.json")
         self._origin_data = FileHelper().read_json_data(self._origin_data_file)
         self._card_count = 0
-        self._card_position = CardPosition()
+        self._card_position = CardPosition(sort_mode)
         self._residual_pool = ResidualPool()
         self._pick_list = []
         self._solve_first_percentage = percentage
@@ -28,7 +28,7 @@ class SheepSolver(object):
         self._card_position.generate_head_data()
 
     def solve(self):
-        # print("当前进度为: {}/{}".format(len(self._pick_list), self._card_count))
+        print("当前进度为: {}/{}".format(len(self._pick_list), self._card_count))
         head_list = self._card_position.get_head_key_list()
         if len(self._pick_list) / self._card_count >= self._solve_first_percentage:
             head_list = self._get_head_list_sorted_by_residual(head_list)
