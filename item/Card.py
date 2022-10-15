@@ -1,10 +1,21 @@
 class Card(object):
     def __init__(self, origin_data):
-        self._origin_data = origin_data
+        self._origin_data = self.generate_format_data_item(origin_data)
         self._parent_note = set()
         self._children_node = set()
 
-    def get_type(self):
+    @staticmethod
+    def generate_format_data_item(origin_data):
+        level = int(origin_data["id"].split("-")[0])
+        card_type = origin_data["type"]
+        min_x, max_x = origin_data["rolNum"], origin_data["rolNum"] + 8
+        min_y, max_y = origin_data["rowNum"], origin_data["rowNum"] + 8
+        return {"level": level, "type": card_type, "min_x": min_x, "max_x": max_x, "min_y": min_y, "max_y": max_y}
+
+    def get_card_level(self):
+        return self._origin_data["level"]
+
+    def get_card_type(self):
         return self._origin_data["type"]
 
     def clac_area(self):

@@ -18,7 +18,7 @@ class ResidualPool(object):
 
     def pick_card(self, card_detail):
         self._pool_count += 1
-        card_type = card_detail.get_type()
+        card_type = card_detail.get_card_type()
         if card_type in self._pool_card:
             self._pool_card[card_type] += 1
         else:
@@ -26,7 +26,7 @@ class ResidualPool(object):
         self._make_card_disappear(card_type)
 
     def recover_card(self, card_detail):
-        card_type = card_detail.get_type()
+        card_type = card_detail.get_card_type()
         if card_type in self._pool_card:
             if self._pool_card[card_type] == 1:
                 self._pool_card.pop(card_type)
