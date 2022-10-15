@@ -7,19 +7,21 @@
 
 # 使用教程
 ## 部署第三方项目
-- 下载并部署该[开源项目](https://github.com/BugMaker888/sheep)
+- 下载[开源项目](https://github.com/BugMaker888/sheep)
 ```shell
 git clone https://github.com/BugMaker888/sheep
-cd sheep && git checkout 67e0c4c5b035fee354c08915e9d8579df97549e5
+cd sheep && git checkout f73548a5e41360da37d7b1877164c7b5f547184c
 ```
 
+- 按照第三方开源项目的说明进行部署
+
 ## 修改本地文件
-- 修改`web/sheep.py`文件中第13行代码，将路径修改为本项目的绝对路径，如下面所示
+- 修改`web/sheep.py`文件中第57行代码，将路径修改为本项目的绝对路径，如下面所示
 ```text
 # 替换前
-self.solve_origin_path = "path/to/your/SheepSolver/online_data.json"
+save_path = "path/to/your/SheepSolver/online_data.json"
 # 替换后
-self.solve_origin_path = "/home/root/SheepSolver/online_data.json"
+save_path = "/home/root/SheepSolver/online_data.json"
 ```
 
 ## 替换第三方项目
@@ -35,14 +37,7 @@ self.solve_origin_path = "/home/root/SheepSolver/online_data.json"
 - 打开终端并进入到本项目的根路径
 - 执行命令`python main.py`
 - 等到结果成功打印出来后，把倒数第二行的数据复制出来
-- 把结果粘贴到已成功部署的第三方项目文件`three.js/examples/sheep.html`的第50行代码，如下面所示
-
-```text
-# 替换前
-let answer = ["把答案粘贴到这里"];
-# 替换后
-let answer = [29, 37, 56, ......];
-```
+- 按照第三方项目说明，把结果粘贴到对应文件
 
 # 许可证
 GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007

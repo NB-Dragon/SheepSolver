@@ -55,17 +55,17 @@ class Sheep():
     
     def write_outside_solve_data(self, origin_data):
         save_path = "/home/am/文档/PycharmProjects/SheepSlover"
-        slove_map_data = {}
+        solve_map_data = {}
         for level, data_list in origin_data["levelData"].items():
-            slove_map_data[level] = []
+            solve_map_data[level] = []
             for data_item in data_list:
                 slove_item = {"id": data_item["id"],
                 "type": data_item["type"],
                 "rolNum": data_item["rolNum"],
                 "rowNum": data_item["rowNum"]}
-                slove_map_data[level].append(slove_item)
+                solve_map_data[level].append(slove_item)
         writer = open(save_path, "w")
-        writer.write(json.dumps(slove_map_data))
+        writer.write(json.dumps(solve_map_data))
         writer.close()
         
 
