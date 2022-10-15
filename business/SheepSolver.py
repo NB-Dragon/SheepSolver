@@ -8,7 +8,7 @@ from item.ResidualPool import ResidualPool
 
 
 class SheepSolver(object):
-    def __init__(self):
+    def __init__(self, percentage):
         self._code_entrance_path = os.path.split(os.path.abspath(sys.argv[0]))[0]
         self._origin_data_file = os.path.join(self._code_entrance_path, "online_data.json")
         self._origin_data = FileHelper().read_json_data(self._origin_data_file)
@@ -16,6 +16,7 @@ class SheepSolver(object):
         self._card_position = CardPosition()
         self._residual_pool = ResidualPool()
         self._pick_list = []
+        self._solve_first_percentage = percentage
         self._situation_history = set()
 
     def init_card_data(self):
@@ -27,8 +28,10 @@ class SheepSolver(object):
         self._card_position.generate_head_data()
 
     def solve(self):
-        print("当前进度为: {}/{}".format(len(self._pick_list), self._card_count))
+        # print("当前进度为: {}/{}".format(len(self._pick_list), self._card_count))
         head_list = self._card_position.get_head_key_list()
+        if len(self._pick_list) / self._card_count >= self._solve_first_percentage:
+            head_list = self._get_head_list_sorted_by_residual(head_list)
         for head_item in head_list:
             self._operation_pick_card(head_item)
             head_fingerprint = self._card_position.get_head_description()
@@ -45,6 +48,17 @@ class SheepSolver(object):
                     self._operation_recover_card(head_item)
                 else:
                     break
+
+    def _get_head_list_sorted_by_residual(self, head_list):
+        residual_pool_detail = self._residual_pool.get_pool_detail()
+        residual_pool_detail = dict(sorted(residual_pool_detail.items(), key=lambda a: a[1], reverse=True))
+        card_detail_dict = {index: self._card_position.get_card_detail(index) for index in head_list}
+        result_list = []
+        for card_type, card_count in residual_pool_detail.items():
+            match_list = [index for index, detail in card_detail_dict.items() if detail.get_card_type() == card_type]
+            result_list.extend(match_list)
+        result_list.extend([index for index in head_list if index not in result_list])
+        return result_list
 
     def test_result(self, pick_list: list):
         for pick_index in pick_list:

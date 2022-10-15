@@ -16,6 +16,9 @@ class ResidualPool(object):
     def show_pool_state(self):
         return "count: {}, detail: {}".format(self._pool_count, json.dumps(self._pool_card))
 
+    def get_pool_detail(self):
+        return self._pool_card
+
     def pick_card(self, card_detail):
         self._pool_count += 1
         card_type = card_detail.get_card_type()
