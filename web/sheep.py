@@ -52,22 +52,21 @@ class Sheep():
             return self.map_data_topic_path
         else:
             return self.map_data_path
-    
+
     def write_outside_solve_data(self, origin_data):
-        save_path = "/home/am/文档/PycharmProjects/SheepSlover"
+        save_path = "path/to/your/SheepSolver/online_data.json"
         solve_map_data = {}
         for level, data_list in origin_data["levelData"].items():
             solve_map_data[level] = []
             for data_item in data_list:
-                slove_item = {"id": data_item["id"],
-                "type": data_item["type"],
-                "rolNum": data_item["rolNum"],
-                "rowNum": data_item["rowNum"]}
-                solve_map_data[level].append(slove_item)
+                solve_item = {"id": data_item["id"],
+                              "type": data_item["type"],
+                              "rolNum": data_item["rolNum"],
+                              "rowNum": data_item["rowNum"]}
+                solve_map_data[level].append(solve_item)
         writer = open(save_path, "w")
         writer.write(json.dumps(solve_map_data))
         writer.close()
-        
 
     def make_map_data(self, is_topic):
         """ 制作地图数据 """
@@ -85,7 +84,7 @@ class Sheep():
         # 根据"blockTypeData"字段按顺序生成所有类型的方块，存放到数组
         block_type_data = map_data["blockTypeData"]
         block_types = []
-        for i in range(1, 16+1):
+        for i in range(1, 16 + 1):
             block_type = str(i)
             if block_type in block_type_data:
                 count = block_type_data[block_type] * 3
