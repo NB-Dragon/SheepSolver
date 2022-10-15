@@ -25,11 +25,10 @@ save_path = "/home/root/SheepSolver/online_data.json"
 ```
 
 ## 替换第三方项目
-- 把`web/html`目录下的内容，替换到已成功部署的第三方项目的路径`three.js/examples`
-- 把`web`目录下的两个文件，替换到已成功部署的第三方项目的根路径
+- 把`web`目录下的`sheep.py`文件，替换到已成功部署的第三方项目的根路径
 
 ## 获取游戏地图数据
-- 按照说明，启动`mitmweb`服务和`npm`服务
+- 按照说明，启动`mitmweb`服务和`live-server`服务
 - 打开小程序并进入游戏
 - 注意此时本项目根路径下的`online_data.json`文件会更新
 
