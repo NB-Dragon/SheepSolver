@@ -1,5 +1,10 @@
 class CardPosition(object):
     def __init__(self, sort_mode):
+        """
+        reverse: 按序号倒序抽牌
+        top_level: 按最高层优先抽牌
+        normal: 默认模式
+        """
         # 当前抽牌的选择方式
         self._sort_mode = sort_mode
         # 以序号注册所有卡牌数据
