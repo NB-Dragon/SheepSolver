@@ -62,12 +62,12 @@ class SheepSolver(object):
 
     def _predict_card_have_dead(self):
         residual_pool_detail = self._residual_pool.get_pool_detail()
-        if len(residual_pool_detail.keys()) == 6:
-            return True
-        elif len(residual_pool_detail.keys()) == 5:
+        if len(residual_pool_detail.keys()) == 5:
             head_list = self._card_position.get_head_key_list()
             card_type_set = {self._card_position.get_card_detail(item).get_card_type() for item in head_list}
             return len([item for item in card_type_set if item in residual_pool_detail]) == 0
+        elif len(residual_pool_detail.keys()) == 6:
+            return True
         else:
             return False
 
