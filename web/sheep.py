@@ -55,17 +55,8 @@ class Sheep():
 
     def write_outside_solve_data(self, origin_data):
         save_path = "path/to/your/SheepSolver/online_data.json"
-        solve_map_data = {}
-        for level, data_list in origin_data["levelData"].items():
-            solve_map_data[level] = []
-            for data_item in data_list:
-                solve_item = {"id": data_item["id"],
-                              "type": data_item["type"],
-                              "rolNum": data_item["rolNum"],
-                              "rowNum": data_item["rowNum"]}
-                solve_map_data[level].append(solve_item)
         writer = open(save_path, "w")
-        writer.write(json.dumps(solve_map_data))
+        writer.write(json.dumps(origin_data["levelData"]))
         writer.close()
 
     def make_map_data(self, is_topic):
