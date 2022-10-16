@@ -38,5 +38,11 @@ save_path = "/home/root/SheepSolver/online_data.json"
 - 等到结果成功打印出来后，把倒数第二行的数据复制出来
 - 按照第三方项目说明，把结果粘贴到对应文件
 
+# 算法的选择
+> 本算法目前提供三种选牌方式，可在`main.py`的第5行代码处自行修改
+- normal: 默认模式，该模式下取牌顺序由程序进度决定
+- reverse: 反转模式，该模式下取牌顺序由卡牌的逆序号决定，序号大的优先
+- top-first: 高层优先模式，该模式下取牌顺序由卡牌的层数决定，高层优先
+
 # 许可证
 GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007

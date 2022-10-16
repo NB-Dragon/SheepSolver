@@ -1,10 +1,5 @@
 class CardPosition(object):
     def __init__(self, sort_mode):
-        """
-        reverse: 按序号倒序抽牌
-        top_level: 按最高层优先抽牌
-        normal: 默认模式
-        """
         # 当前抽牌的选择方式
         self._sort_mode = sort_mode
         # 以序号注册所有卡牌数据
@@ -52,13 +47,13 @@ class CardPosition(object):
                 self._head_data.pop(children_key)
 
     def get_head_key_list(self):
-        if self._sort_mode == "reverse":
+        if self._sort_mode == "normal":
+            return list(self._head_data.keys())
+        elif self._sort_mode == "reverse":
             return sorted(self._head_data.keys(), reverse=True)
-        elif self._sort_mode == "top_level":
+        elif self._sort_mode == "top-first":
             sorted_dict = dict(sorted(self._head_data.items(), key=lambda a: a[1].get_card_level(), reverse=True))
             return list(sorted_dict.keys())
-        elif self._sort_mode == "normal":
-            return list(self._head_data.keys())
         else:
             return []
 
