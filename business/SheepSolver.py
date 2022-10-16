@@ -40,7 +40,7 @@ class SheepSolver(object):
                 continue
             else:
                 self._situation_history.add(head_fingerprint)
-                if self._residual_pool.is_pool_full():
+                if self._residual_pool.is_pool_full() or self._predict_card_have_dead():
                     self._operation_recover_card(head_item)
                     continue
                 self.solve()
@@ -59,6 +59,17 @@ class SheepSolver(object):
             result_list.extend(match_list)
         result_list.extend([index for index in head_list if index not in result_list])
         return result_list
+
+    def _predict_card_have_dead(self):
+        residual_pool_detail = self._residual_pool.get_pool_detail()
+        if len(residual_pool_detail.keys()) == 6:
+            return True
+        elif len(residual_pool_detail.keys()) == 5:
+            head_list = self._card_position.get_head_key_list()
+            card_type_set = {self._card_position.get_card_detail(item).get_card_type() for item in head_list}
+            return len([item for item in card_type_set if item in residual_pool_detail]) == 0
+        else:
+            return False
 
     def test_result(self, pick_list: list):
         for pick_index in pick_list:

@@ -11,7 +11,7 @@ class ResidualPool(object):
         self._pool_card = {}
 
     def is_pool_full(self):
-        return len(self._pool_card) >= 6 or self._pool_count >= self._pool_limit
+        return self._pool_count >= self._pool_limit
 
     def show_pool_state(self):
         return "count: {}, detail: {}".format(self._pool_count, json.dumps(self._pool_card))
