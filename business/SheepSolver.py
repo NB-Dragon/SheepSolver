@@ -30,6 +30,7 @@ class SheepSolver(object):
     def solve(self):
         print("当前进度为: {}/{}".format(len(self._pick_list), self._card_count))
         head_list = self._card_position.get_head_key_list()
+        head_list = self._get_head_list_for_alive(head_list)
         if len(self._pick_list) / self._card_count >= self._solve_first_percentage:
             head_list = self._get_head_list_sorted_by_residual(head_list)
         for head_item in head_list:
@@ -40,36 +41,38 @@ class SheepSolver(object):
                 continue
             else:
                 self._situation_history.add(head_fingerprint)
-                if self._residual_pool.is_pool_full() or self._predict_card_have_dead():
-                    self._operation_recover_card(head_item)
-                    continue
                 self.solve()
                 if not self._card_position.is_head_data_empty():
                     self._operation_recover_card(head_item)
                 else:
                     break
 
+    def _get_head_list_for_alive(self, head_list):
+        residual_pool_detail = self._residual_pool.get_pool_detail()
+        card_type_dict = {index: self._card_position.get_card_detail(index).get_card_type() for index in head_list}
+        if len(residual_pool_detail.keys()) == 6:
+            return []
+        elif self._residual_pool.get_pool_count() == 6:
+            expect_type_list = [card_type for card_type, card_count in residual_pool_detail.items() if card_count == 2]
+            match_list = [index for index, current_type in card_type_dict.items() if current_type in expect_type_list]
+            return match_list
+        elif len(residual_pool_detail.keys()) == 5:
+            expect_type_list = list(residual_pool_detail.keys())
+            match_list = [index for index, current_type in card_type_dict.items() if current_type in expect_type_list]
+            return match_list
+        else:
+            return head_list
+
     def _get_head_list_sorted_by_residual(self, head_list):
         residual_pool_detail = self._residual_pool.get_pool_detail()
         residual_pool_detail = dict(sorted(residual_pool_detail.items(), key=lambda a: a[1], reverse=True))
-        card_detail_dict = {index: self._card_position.get_card_detail(index) for index in head_list}
+        card_type_dict = {index: self._card_position.get_card_detail(index).get_card_type() for index in head_list}
         result_list = []
         for card_type, card_count in residual_pool_detail.items():
-            match_list = [index for index, detail in card_detail_dict.items() if detail.get_card_type() == card_type]
+            match_list = [index for index, current_type in card_type_dict.items() if current_type == card_type]
             result_list.extend(match_list)
         result_list.extend([index for index in head_list if index not in result_list])
         return result_list
-
-    def _predict_card_have_dead(self):
-        residual_pool_detail = self._residual_pool.get_pool_detail()
-        if len(residual_pool_detail.keys()) == 5:
-            head_list = self._card_position.get_head_key_list()
-            card_type_set = {self._card_position.get_card_detail(item).get_card_type() for item in head_list}
-            return len([item for item in card_type_set if item in residual_pool_detail]) == 0
-        elif len(residual_pool_detail.keys()) == 6:
-            return True
-        else:
-            return False
 
     def test_result(self, pick_list: list):
         for pick_index in pick_list:
