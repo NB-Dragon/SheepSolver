@@ -93,8 +93,8 @@ class SheepSolver(object):
 
     def print_result(self):
         if self._card_position.is_head_data_empty():
-            card_detail_list = [self._card_position.get_card_detail(index) for index in self._pick_list]
-            id_list = [item.get_card_id() for item in card_detail_list]
-            print(json.dumps(id_list))
+            print(json.dumps(self._pick_list))
+            card_id_list = [self._card_position.get_card_detail(index).get_card_id() for index in self._pick_list]
+            print(json.dumps(card_id_list))
         else:
             print("牌面无解")
