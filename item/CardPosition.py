@@ -1,3 +1,6 @@
+import random
+
+
 class CardPosition(object):
     def __init__(self, sort_mode):
         # 当前抽牌的选择方式
@@ -49,6 +52,10 @@ class CardPosition(object):
     def get_head_key_list(self):
         if self._sort_mode == "normal":
             return list(self._head_data.keys())
+        elif self._sort_mode == "random":
+            origin_list = list(self._head_data.keys())
+            random.shuffle(origin_list)
+            return origin_list
         elif self._sort_mode == "reverse":
             return sorted(self._head_data.keys(), reverse=True)
         elif self._sort_mode == "top-first":
