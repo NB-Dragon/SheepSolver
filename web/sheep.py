@@ -53,7 +53,8 @@ class Sheep():
         else:
             return self.map_data_path
 
-    def write_outside_solve_data(self, origin_data):
+    @staticmethod
+    def write_outside_solve_data(origin_data):
         save_path = "path/to/your/SheepSolver/online_data.json"
         writer = open(save_path, "w")
         writer.write(json.dumps(origin_data["levelData"]))
@@ -104,6 +105,7 @@ class Sheep():
                 index += 1
 
         # 保存地图数据
+        map_data["operations"] = []
         data_string = f"const map_data = {json.dumps(map_data, indent=4)};"
         save_path = "./html/map_data.js"
         with open(save_path, "w") as f:
