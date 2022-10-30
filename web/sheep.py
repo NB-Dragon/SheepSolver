@@ -1,5 +1,5 @@
 from mitmproxy import ctx
-from datetime import date
+import datetime
 import execjs
 import json
 import os
@@ -26,19 +26,13 @@ class Sheep():
             self.seed = response["data"]["map_seed"]
             self.make_map_data(True)
         elif "/maps/" in flow.request.path:
-            # 获取地图数据的接口，不解析第一关
-            if "046ef1bab26e5b9bfe2473ded237b572" in flow.request.path:
-                # 游戏第一关
-                return
-            if "a92ee0f5f116b13b7b594e67a53defad" in flow.request.path:
-                # 今日话题第一关
-                return
             # 解析原始地图数据
             response = json.loads(flow.response.content)
+            # 不解析第一关
+            if response["levelKey"] < 90000:
+                return
             # 判断是否是话题挑战
-            is_topic = False
-            if response["levelKey"] == 100000 + date.today().day:
-                is_topic = True
+            is_topic = (response["levelKey"] >= 100000)
             # 保存原始地图数据
             map_data_path = self.get_map_data_path(is_topic)
             with open(map_data_path, "w") as f:
@@ -72,6 +66,12 @@ class Sheep():
 
         # 读取原始地图数据
         map_data = json.loads(open(map_data_path).read())
+
+        # 判断是否使用了旧地图数据
+        # !!!: 当前只判断了day，在不同月份使用相同day的地图文件不会出现提示
+        day = int(map_data["levelKey"]) % 100
+        if day != datetime.datetime.today().day:
+            ctx.log.error(f"当前使用的地图数据文件为{day}号地图，请删除游戏缓存后重新进入游戏！")
 
         # 根据"blockTypeData"字段按顺序生成所有类型的方块，存放到数组
         block_type_data = map_data["blockTypeData"]
@@ -113,7 +113,6 @@ class Sheep():
             f.close()
 
         print("==========================================")
-
         self.write_outside_solve_data(map_data)
         print("==========================================")
 
