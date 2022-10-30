@@ -20,8 +20,8 @@ class SheepSolver(object):
         self._situation_history = set()
 
     def init_card_data(self):
-        self._origin_data = dict(sorted(self._origin_data.items(), key=lambda item: int(item[0])))
-        for level, level_data in self._origin_data.items():
+        map_level_data = dict(sorted(self._origin_data["levelData"].items(), key=lambda item: int(item[0])))
+        for level, level_data in map_level_data.items():
             self._card_count += len(level_data)
             card_list = [Card(item) for item in level_data]
             self._card_position.append_level_card(card_list)
