@@ -4,29 +4,27 @@
 # 项目公示
 > 算法的基本思路为回溯算法，尝试解决的`NP问题`为：是否存在一个解使得游戏通关<br>
 > 从代码逻辑中体现为卡牌的抽取顺序，不同的优先抽取方式会决定能否在短时间内得到答案<br>
-> 如果解题时间超过5分钟，建议放弃挑战并重新开始
+> 不保证在短时间内计算出答案，如果解题时间超过5分钟，建议放弃挑战并重新开始<br>
 
 # 使用教程
-## 部署第三方项目
-- 下载[开源项目](https://github.com/BugMaker888/sheep)
+## 部署可视化项目
+- 下载开源项目: [sheep](https://github.com/BugMaker888/sheep)
 ```shell
-git clone https://github.com/BugMaker888/sheep
+git clone https://github.com/BugMaker888/sheep.git
 cd sheep && git checkout f73548a5e41360da37d7b1877164c7b5f547184c
 ```
+- 按照可视化项目的说明完成部署
 
-- 按照第三方开源项目的说明进行部署
-
-## 修改本地文件
-- 修改`web/sheep.py`文件中第57行代码，将路径修改为本项目的绝对路径，如下面所示
-```text
-# 替换前
-save_path = "path/to/your/SheepSolver/online_data.json"
-# 替换后
-save_path = "/home/root/SheepSolver/online_data.json"
+## 部署当前项目
+- 下载开源项目: [SheepSolver](https://github.com/NB-Dragon/SheepSolver)
+```shell
+git clone https://github.com/NB-Dragon/SheepSolver.git
 ```
 
-## 替换第三方项目
-- 把`web`目录下的`sheep.py`文件，替换到已成功部署的第三方项目的根路径
+## 配置并替换抓包脚本
+> 下述步骤涉及的文件均在该路径`web/sheep.py`
+- 配置解题数据文件路径，将第58行的路径修改为当前项目根路径
+- 把修改好的抓包脚本，替换到第三方开源项目的根路径
 
 ## 获取游戏地图数据
 - 按照说明，启动`mitmweb`服务和`live-server`服务
