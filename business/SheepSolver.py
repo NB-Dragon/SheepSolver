@@ -1,26 +1,22 @@
 import json
-import os
-import sys
-from hepler.FileHelper import FileHelper
 from item.Card import Card
 from item.CardPosition import CardPosition
 from item.ResidualPool import ResidualPool
 
 
 class SheepSolver(object):
-    def __init__(self, percentage, sort_mode):
-        self._code_entrance_path = os.path.split(os.path.abspath(sys.argv[0]))[0]
-        self._origin_data_file = os.path.join(self._code_entrance_path, "online_data.json")
-        self._origin_data = FileHelper().read_json_data(self._origin_data_file)
-        self._card_count = 0
+    def __init__(self, sort_mode, percentage, show_progress):
         self._card_position = CardPosition(sort_mode)
-        self._residual_pool = ResidualPool()
-        self._pick_list = []
         self._solve_first_percentage = percentage
+        self._show_progress_method = self._generate_progress_pointer(show_progress)
+
+        self._residual_pool = ResidualPool()
+        self._card_count = 0
+        self._pick_list = []
         self._situation_history = set()
 
-    def init_card_data(self):
-        map_level_data = dict(sorted(self._origin_data["levelData"].items(), key=lambda item: int(item[0])))
+    def init_card_data(self, map_data: dict):
+        map_level_data = dict(sorted(map_data["levelData"].items(), key=lambda item: int(item[0])))
         for level, level_data in map_level_data.items():
             self._card_count += len(level_data)
             card_list = [Card(item) for item in level_data]
@@ -28,7 +24,7 @@ class SheepSolver(object):
         self._card_position.generate_head_data()
 
     def solve(self):
-        print("当前进度为: {}/{}".format(len(self._pick_list), self._card_count))
+        self._show_progress_method()
         head_list = self._card_position.get_head_key_list()
         head_list = self._get_head_list_for_alive(head_list)
         if len(self._pick_list) / self._card_count >= self._solve_first_percentage:
@@ -46,6 +42,15 @@ class SheepSolver(object):
                     self._operation_recover_card(head_item)
                 else:
                     break
+
+    def _generate_progress_pointer(self, show_progress):
+        def do_something():
+            print("当前进度为: {}/{}".format(len(self._pick_list), self._card_count))
+
+        def do_nothing():
+            """do nothing here"""
+
+        return do_something if show_progress else do_nothing
 
     def _get_head_list_for_alive(self, head_list):
         residual_pool_detail = self._residual_pool.get_pool_detail()
@@ -74,11 +79,6 @@ class SheepSolver(object):
         result_list.extend([index for index in head_list if index not in result_list])
         return result_list
 
-    def test_result(self, pick_list: list):
-        for pick_index in pick_list:
-            self._operation_pick_card(pick_index)
-            print(self._residual_pool.show_pool_state())
-
     def _operation_pick_card(self, card_index):
         self._card_position.pick_card(card_index)
         card_detail = self._card_position.get_card_detail(card_index)
@@ -91,10 +91,17 @@ class SheepSolver(object):
         self._residual_pool.recover_card(card_detail)
         self._pick_list.remove(card_index)
 
-    def print_result(self):
+    def generate_card_id_result(self):
         if self._card_position.is_head_data_empty():
-            print(json.dumps(self._pick_list))
-            card_id_list = [self._card_position.get_card_detail(index).get_card_id() for index in self._pick_list]
-            print(json.dumps(card_id_list))
+            result_list = [self._card_position.get_card_detail(index).get_card_id() for index in self._pick_list]
+            return json.dumps(result_list)
         else:
-            print("牌面无解")
+            return None
+
+    def generate_card_type_result(self):
+        if self._card_position.is_head_data_empty():
+            card_detail_dict = {index: self._card_position.get_card_detail(index) for index in self._pick_list}
+            card_type_dict = {index: card_detail.get_card_type() for index, card_detail in card_detail_dict.items()}
+            return json.dumps(card_type_dict)
+        else:
+            return None
