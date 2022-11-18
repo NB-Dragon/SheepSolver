@@ -13,9 +13,9 @@ class CardPosition(object):
         self._card_count = 0
 
     def append_level_card(self, card_list):
-        start_index = len(self._origin_data) + 1
+        start_index = len(self._origin_data)
         self._append_origin_data(card_list)
-        end_index = len(self._origin_data) + 1
+        end_index = len(self._origin_data)
         new_card_data = {key: self._origin_data[key] for key in range(start_index, end_index)}
         self._handle_overlap_data(new_card_data)
 
@@ -69,8 +69,8 @@ class CardPosition(object):
 
     def _append_origin_data(self, card_list):
         for card_item in card_list:
-            self._card_count += 1
             self._origin_data[self._card_count] = card_item
+            self._card_count += 1
 
     def _handle_overlap_data(self, card_dict):
         old_card_dict = {key: self._origin_data[key] for key in self._origin_data.keys() if key not in card_dict}
