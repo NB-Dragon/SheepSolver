@@ -1,0 +1,53 @@
+import os
+import sys
+import urllib.parse
+from hepler.MapDataHelper import MapDataHelper
+
+
+class DataAnalyzer(object):
+    def __init__(self):
+        self._code_entrance_path = self._get_project_path()
+        self._map_data_helper = MapDataHelper(self._code_entrance_path)
+
+    def response(self, flow):
+        link_parse_result = urllib.parse.urlparse(flow.request.url)
+        if link_parse_result.netloc == "cat-match.easygame2021.com":
+            request_header = dict(flow.request.headers)
+            if "game/map_info_ex" in link_parse_result.path:
+                self._handle_response_result(flow.response.content, request_header)
+            elif "topic/game_start" in link_parse_result.path:
+                self._handle_response_result(flow.response.content, request_header)
+
+    def _get_project_path(self):
+        sys_argv = sys.argv
+        if len(sys_argv) == 1:
+            class_save_path = os.path.split(os.path.abspath(sys.argv[0]))[0]
+            script_item_list = class_save_path.split(os.path.sep)
+        else:
+            script_path = self._get_script_path(sys_argv)
+            class_save_path = os.path.split(os.path.abspath(script_path))[0]
+            script_item_list = class_save_path.split(os.path.sep)
+        self._remove_path_item(script_item_list)
+        return os.path.sep.join(script_item_list)
+
+    @staticmethod
+    def _get_script_path(sys_argv: list):
+        for index in range(len(sys_argv)):
+            if sys_argv[index] in ["-s", "--script"]:
+                return sys_argv[index + 1]
+        return None
+
+    @staticmethod
+    def _remove_path_item(origin_list):
+        relative_path_list = []
+        for remove_item in relative_path_list:
+            if remove_item in origin_list:
+                origin_list.remove(remove_item)
+
+    def _handle_response_result(self, content, header=None):
+        header = {key.lower(): value for key, value in header.items()}
+        print("=====> 当前用户token为: {}".format(header.get("t")))
+        self._map_data_helper.update_map_data(content)
+
+
+addons = [DataAnalyzer()]
