@@ -66,8 +66,9 @@ class MapDataHelper(object):
         current_index = 0
         for level, level_data in map_cache_data["levelData"].items():
             for each_card in level_data:
-                each_card["type"] = block_type_list[current_index]
-                current_index += 1
+                if each_card["type"] == 0:
+                    each_card["type"] = block_type_list[current_index]
+                    current_index += 1
 
     def _generate_map_cache_path(self, map_hash):
         map_cache_name = "{}.json".format(map_hash)
