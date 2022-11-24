@@ -14,7 +14,7 @@ class FileHelper(object):
     @staticmethod
     def read_file_content(file_path):
         try:
-            if os.path.exists(file_path):
+            if os.path.isfile(file_path):
                 reader = open(file_path, "r")
                 content = reader.read()
                 reader.close()
