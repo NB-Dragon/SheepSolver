@@ -1,13 +1,13 @@
 import os
 import sys
 import urllib.parse
-from hepler.MapDataHelper import MapDataHelper
+from hepler.OnlineDataHelper import OnlineDataHelper
 
 
 class DataAnalyzer(object):
     def __init__(self):
         self._code_entrance_path = self._get_project_path()
-        self._map_data_helper = MapDataHelper(self._code_entrance_path)
+        self._online_data_helper = OnlineDataHelper(self._code_entrance_path)
 
     def response(self, flow):
         link_parse_result = urllib.parse.urlparse(flow.request.url)
@@ -47,7 +47,7 @@ class DataAnalyzer(object):
     def _handle_response_result(self, content, header=None):
         header = {key.lower(): value for key, value in header.items()}
         print("=====> 当前用户token为: {}".format(header.get("t")))
-        self._map_data_helper.update_map_data(content)
+        self._online_data_helper.create_online_data(content)
 
 
 addons = [DataAnalyzer()]
