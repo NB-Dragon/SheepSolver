@@ -1,7 +1,7 @@
 import time
 from business.SheepSolver import SheepSolver
 from hepler.FileHelper import FileHelper
-
+import sys
 
 def read_online_data():
     online_file_path = "online_data.json"
