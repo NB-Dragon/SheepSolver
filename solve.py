@@ -24,7 +24,7 @@ else:
 	mode="normal"
 
 if __name__ == '__main__':
-    sheep_solver = SheepSolver("normal", 0.8, True)
+    sheep_solver = SheepSolver(mode, 0.8, True)
     sheep_solver.init_card_data(read_online_data())
     start_time = time.time()
     sheep_solver.solve()
