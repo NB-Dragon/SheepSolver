@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# Create Time: 2022/11/30 00:00
+# Create User: NB-Dragon
 import os
 from hepler.FileHelper import FileHelper
 from hepler.ShuffleHelper import ShuffleHelper
