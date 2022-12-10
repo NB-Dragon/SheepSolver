@@ -19,7 +19,7 @@ class DataAnalyzer(object):
             request_header = dict(flow.request.headers)
             if "game/map_info_ex" in link_parse_result.path:
                 self._handle_response_result(flow.response.content, request_header)
-            elif "tag/game" in link_parse_result.path:
+            elif "tag/game/start" in link_parse_result.path:
                 self._handle_response_result(flow.response.content, request_header)
 
     def _get_project_path(self):
