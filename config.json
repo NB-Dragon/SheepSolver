@@ -1,0 +1,27 @@
+{
+  "domain": {
+    "user": "https://cat-match.easygame2021.com",
+    "static": "https://cat-match-static.easygame2021.com"
+  },
+  "game": {
+    "normal": {
+      "start": "sheep/v1/game/map_info_ex",
+      "over": "sheep/v1/game/game_over_ex"
+    },
+    "topic": {
+      "join": "sheep/v1/game/topic/game_join",
+      "start": "sheep/v1/game/topic/game_start",
+      "over": "sheep/v1/game/topic/game_over"
+    },
+    "tag": {
+      "start": "sheep/v1/game/tag/game/start",
+      "over": "sheep/v1/game/tag/game/over"
+    }
+  },
+  "other": {
+    "static_map": "maps",
+    "topic_info": "sheep/v1/game/topic/info",
+    "skin_info": "sheep/v1/game/skin/info",
+    "challenge_info": "sheep/v1/game/challenge/info"
+  }
+}
