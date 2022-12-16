@@ -5,6 +5,7 @@
 import os
 import sys
 import urllib.parse
+from business.InterfaceTool import InterfaceTool
 from hepler.OnlineDataHelper import OnlineDataHelper
 
 
@@ -12,15 +13,21 @@ class DataAnalyzer(object):
     def __init__(self):
         self._code_entrance_path = self._get_project_path()
         self._online_data_helper = OnlineDataHelper(self._code_entrance_path)
+        self._interface_tool = InterfaceTool(self._code_entrance_path)
+        self._game_start_link_list = self._interface_tool.get_game_start_link_list()
 
     def response(self, flow):
         link_parse_result = urllib.parse.urlparse(flow.request.url)
         if link_parse_result.netloc == "cat-match.easygame2021.com":
             request_header = dict(flow.request.headers)
-            if "game/map_info_ex" in link_parse_result.path:
+            if self._judge_game_start(link_parse_result.path):
                 self._handle_response_result(flow.response.content, request_header)
-            elif "tag/game/start" in link_parse_result.path:
-                self._handle_response_result(flow.response.content, request_header)
+
+    def _judge_game_start(self, request_path):
+        for item in self._game_start_link_list:
+            if item in request_path:
+                return True
+        return False
 
     def _get_project_path(self):
         sys_argv = sys.argv
