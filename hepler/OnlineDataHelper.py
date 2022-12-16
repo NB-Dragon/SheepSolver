@@ -7,6 +7,7 @@ import os
 import time
 import certifi
 import urllib3
+from business.InterfaceTool import InterfaceTool
 from hepler.FileHelper import FileHelper
 from hepler.MapDataHelper import MapDataHelper
 
@@ -16,6 +17,7 @@ class OnlineDataHelper(object):
         self._code_entrance_path = code_entrance_path
         self._static_map_path = os.path.join(self._code_entrance_path, "static", "map")
         self._final_data_path = os.path.join(self._code_entrance_path, "online_data.json")
+        self._interface_tool = InterfaceTool(self._code_entrance_path)
         self._map_data_helper = MapDataHelper(self._static_map_path)
         self._map_seed_dict = dict()
         self._map_hash = None
@@ -57,7 +59,8 @@ class OnlineDataHelper(object):
             print("=====> 地图初始结构缓存成功: {}".format(self._map_hash))
 
     def _generate_map_struct_request_link(self):
-        return "https://cat-match-static.easygame2021.com/maps/{}.txt".format(self._map_hash)
+        static_map_link = self._interface_tool.get_static_map_link()
+        return "{}/{}.txt".format(static_map_link, self._map_hash)
 
     @staticmethod
     def _request_get_method(request_link):
