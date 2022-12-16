@@ -22,11 +22,7 @@ class InterfaceTool(object):
         return self._project_config["domain"]["static"]
 
     def get_game_start_link_list(self):
-        result_list = list()
-        result_list.append(self._project_config["game"]["normal"]["start"])
-        result_list.append(self._project_config["game"]["topic"]["start"])
-        result_list.append(self._project_config["game"]["tag"]["start"])
-        return result_list
+        return [item["start"] for item in self._project_config["game"].values()]
 
     def get_normal_start_link(self):
         user_domain = self._get_user_domain()
