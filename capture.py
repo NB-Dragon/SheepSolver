@@ -22,6 +22,17 @@ class DataAnalyzer(object):
             request_header = dict(flow.request.headers)
             if self._judge_game_start(link_parse_result.path):
                 self._handle_response_result(flow.response.content, request_header)
+        elif link_parse_result.netloc == "cat-match-static.easygame2021.com":
+            if self._judge_name_important(flow.response.content):
+                print(flow.response.content.decode())
+
+    @staticmethod
+    def _judge_name_important(byte_data):
+        important_name_list = [b"gd_topic_list", b"gd_skin_list", b"gd_language"]
+        for name_item in important_name_list:
+            if name_item in byte_data:
+                return True
+        return False
 
     def _judge_game_start(self, request_path):
         for item in self._game_start_link_list:
