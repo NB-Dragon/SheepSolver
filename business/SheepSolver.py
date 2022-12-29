@@ -41,11 +41,11 @@ class SheepSolver(object):
                 continue
             else:
                 self._situation_history.add(head_fingerprint)
-                self.solve()
-                if not self._card_position.is_head_data_empty():
-                    self._operation_recover_card(head_item)
-                else:
-                    break
+            self.solve()
+            if not self._card_position.is_head_data_empty():
+                self._operation_recover_card(head_item)
+            else:
+                break
 
     def _generate_progress_pointer(self, show_progress):
         def do_something():
