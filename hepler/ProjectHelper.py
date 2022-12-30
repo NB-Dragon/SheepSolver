@@ -29,12 +29,9 @@ class ProjectHelper(object):
     def get_project_config(self):
         return self._project_config
 
-    def get_code_entrance_path(self):
-        return self._code_entrance_path
-
     def _get_project_path(self):
         sys_argv = sys.argv
-        if len(sys_argv) == 1:
+        if self._is_self_running(sys_argv):
             class_save_path = os.path.split(os.path.abspath(sys_argv[0]))[0]
             script_item_list = class_save_path.split(os.path.sep)
         else:
@@ -42,6 +39,11 @@ class ProjectHelper(object):
             class_save_path = os.path.split(os.path.abspath(script_path))[0]
             script_item_list = class_save_path.split(os.path.sep)
         return os.path.sep.join(script_item_list)
+
+    @staticmethod
+    def _is_self_running(sys_argv: list):
+        execute_file_path = sys_argv[0]
+        return "SheepSolver" in execute_file_path
 
     @staticmethod
     def _get_script_path(sys_argv: list):
