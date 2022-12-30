@@ -13,8 +13,8 @@ from hepler.MapDataHelper import MapDataHelper
 
 class OnlineDataHelper(object):
     def __init__(self, project_helper, static_map_link):
-        self._static_map_path = project_helper.get_project_path("static_map")
-        self._final_data_path = project_helper.get_project_path("online_data")
+        self._static_map_path = project_helper.get_project_directory_path("static_map")
+        self._final_data_path = project_helper.get_project_file_path("online_data")
         self._map_data_helper = MapDataHelper(self._static_map_path)
         self._static_map_link = static_map_link
         self._map_seed_dict = dict()

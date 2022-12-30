@@ -6,8 +6,11 @@
 
 class InterfaceTool(object):
     def __init__(self, project_helper):
-        self._project_config = project_helper.get_project_config()
-        self._link_config = self._project_config["link"]
+        self._project_helper = project_helper
+        self._link_config = self._get_link_config()
+
+    def _get_link_config(self):
+        return self._project_helper.get_project_config()["link"]
 
     def _get_user_domain(self):
         return self._link_config["domain"]["user"]
