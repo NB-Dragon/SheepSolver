@@ -3,17 +3,19 @@
 # Create Time: 2022/11/30 00:00
 # Create User: NB-Dragon
 import json
+from hepler.ProjectHelper import ProjectHelper
 from item.Card import Card
 from item.CardPosition import CardPosition
 from item.ResidualPool import ResidualPool
 
 
 class SheepSolver(object):
-    def __init__(self, sort_mode, percentage, show_progress):
-        self._card_position = CardPosition(sort_mode)
-        self._solve_first_percentage = percentage
-        self._show_progress_method = self._generate_progress_pointer(show_progress)
+    def __init__(self, sort_mode):
+        self._project_helper = ProjectHelper()
+        self._show_progress_method = self._generate_show_progress_method()
+        self._solve_first_percentage = self._generate_solve_first_percentage()
 
+        self._card_position = CardPosition(sort_mode)
         self._residual_pool = ResidualPool()
         self._card_count = 0
         self._pick_list = []
@@ -31,7 +33,7 @@ class SheepSolver(object):
         self._show_progress_method()
         head_list = self._card_position.get_head_key_list()
         head_list = self._get_head_list_for_alive(head_list)
-        if len(self._pick_list) / self._card_count >= self._solve_first_percentage:
+        if self._get_progress_percentage() >= self._solve_first_percentage:
             head_list = self._get_head_list_sorted_by_residual(head_list)
         for head_item in head_list:
             self._operation_pick_card(head_item)
@@ -47,14 +49,19 @@ class SheepSolver(object):
             else:
                 break
 
-    def _generate_progress_pointer(self, show_progress):
+    def _generate_solve_first_percentage(self):
+        global_config = self._project_helper.get_project_config()["global"]
+        return global_config["solve_first"]
+
+    def _generate_show_progress_method(self):
         def do_something():
             print("当前进度为: {}/{}".format(len(self._pick_list), self._card_count))
 
         def do_nothing():
             """do nothing here"""
 
-        return do_something if show_progress else do_nothing
+        global_config = self._project_helper.get_project_config()["global"]
+        return do_something if global_config["show_progress"] else do_nothing
 
     def _get_head_list_for_alive(self, head_list):
         residual_pool_detail = self._residual_pool.get_pool_detail()
@@ -82,6 +89,9 @@ class SheepSolver(object):
             result_list.extend(match_list)
         result_list.extend([index for index in head_list if index not in result_list])
         return result_list
+
+    def _get_progress_percentage(self):
+        return len(self._pick_list) / self._card_count
 
     def _operation_pick_card(self, card_index):
         self._card_position.pick_card(card_index)

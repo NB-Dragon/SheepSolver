@@ -1,6 +1,7 @@
 {
   "global": {
     "show_progress": false,
+    "solve_first": 0.8,
     "type_name": {
       "1": "绿草",
       "2": "萝卜",
