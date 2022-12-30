@@ -27,11 +27,11 @@ class ResidualPool(object):
     def is_card_type_close_to_possible(self):
         return len(self._pool_card.keys()) == self._pool_limit - 2
 
-    def get_pool_state(self):
-        result_text = ""
+    def get_card_name_description(self):
+        result_text = []
         for card_type, card_count in self._pool_card.items():
-            result_text += self._card_type_name[card_type] * card_count
-        return result_text
+            result_text.extend([self._card_type_name[str(card_type)]] * card_count)
+        return "|".join(result_text)
 
     def pick_card(self, card_detail):
         self._pool_count += 1
