@@ -52,7 +52,7 @@ class ProjectHelper(object):
 
     @staticmethod
     def _is_self_running(sys_argv: list):
-        execute_file_path = sys_argv[0]
+        execute_file_path = os.path.abspath(sys_argv[0])
         return "SheepSolver" in execute_file_path
 
     @staticmethod
