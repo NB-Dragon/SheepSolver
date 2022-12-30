@@ -16,7 +16,7 @@ class SheepSolver(object):
         self._solve_first_percentage = self._generate_solve_first_percentage()
 
         self._card_position = CardPosition(sort_mode)
-        self._residual_pool = ResidualPool()
+        self._residual_pool = ResidualPool(self._project_helper)
         self._card_count = 0
         self._pick_list = []
         self._situation_history = set()
@@ -66,13 +66,13 @@ class SheepSolver(object):
     def _get_head_list_for_alive(self, head_list):
         residual_pool_detail = self._residual_pool.get_pool_detail()
         card_type_dict = {index: self._card_position.get_card_detail(index).get_card_type() for index in head_list}
-        if len(residual_pool_detail.keys()) == 6:
+        if self._residual_pool.is_card_type_close_to_limit():
             return []
-        elif self._residual_pool.get_pool_count() == 6:
+        elif self._residual_pool.is_pool_count_close_to_limit():
             expect_type_list = [card_type for card_type, card_count in residual_pool_detail.items() if card_count == 2]
             match_list = [index for index, current_type in card_type_dict.items() if current_type in expect_type_list]
             return match_list
-        elif len(residual_pool_detail.keys()) == 5:
+        elif self._residual_pool.is_card_type_close_to_possible():
             expect_type_list = list(residual_pool_detail.keys())
             match_list = [index for index, current_type in card_type_dict.items() if current_type in expect_type_list]
             return match_list
