@@ -16,6 +16,8 @@ class ProjectHelper(object):
     def _init_project_path(self):
         result_dict = dict()
         result_dict["config"] = os.path.join(self._code_entrance_path, "config.json")
+        result_dict["static_map"] = os.path.join(self._code_entrance_path, "static", "map")
+        result_dict["online_data"] = os.path.join(self._code_entrance_path, "online_data.json")
         return result_dict
 
     def _init_project_config(self):
