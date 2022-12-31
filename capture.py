@@ -11,7 +11,7 @@ from hepler.ProjectHelper import ProjectHelper
 class DataAnalyzer(object):
     def __init__(self):
         self._project_helper = ProjectHelper()
-        self._interface_tool = InterfaceTool(self._project_helper)
+        self._interface_tool = self._generate_interface_tool()
         self._static_map_link = self._interface_tool.get_static_map_link()
         self._game_start_list = self._interface_tool.get_game_start_list()
         self._online_data_helper = OnlineDataHelper(self._project_helper, self._static_map_link)
@@ -25,6 +25,10 @@ class DataAnalyzer(object):
         elif link_parse_result.netloc == "cat-match-static.easygame2021.com":
             if self._judge_name_important(flow.response.content):
                 print(flow.response.content.decode())
+
+    def _generate_interface_tool(self):
+        link_config = self._project_helper.get_project_config()["link"]
+        return InterfaceTool(link_config)
 
     @staticmethod
     def _judge_name_important(byte_data):

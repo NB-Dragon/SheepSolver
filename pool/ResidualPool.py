@@ -40,54 +40,48 @@ class ResidualPool(object):
             card_pair = self._create_new_card_pair(card_detail)
         card_pair["card_list"].append(card_index)
         self._pool_count += 1
-        self._make_card_disappear(card_pair)
+        self._card_disappear_for_same(card_pair)
 
     def recover_card(self, card_index):
         card_detail = self._card_container.get_card_detail(card_index)
         card_pair = self._find_match_card_pair(card_detail)
         if card_pair is None:
-            card_pair = self._make_card_appear(card_index)
-        if len(card_pair["card_list"]) == 1:
-            self._pool_card.remove(card_pair)
-        else:
-            card_pair["card_list"].remove(card_index)
+            card_pair = self._create_old_card_pair(card_index)
+            self._pool_count += 3
+        card_pair["card_list"].remove(card_index)
         self._pool_count -= 1
+        self._card_disappear_for_back(card_pair)
 
-    def _make_card_disappear(self, card_pair):
+    def _card_disappear_for_same(self, card_pair):
         if len(card_pair["card_list"]) == 3:
-            disappear_item = self._create_disappear_card(card_pair)
+            disappear_item = self._create_disappear_item(card_pair)
             self._disappear_card.append(disappear_item)
             self._pool_card.remove(card_pair)
             self._pool_count -= 3
 
-    def _make_card_appear(self, card_index):
-        disappear_item = self._find_disappear_card(card_index)
-        pair_index, card_pair = disappear_item["pair_index"], disappear_item["card_pair"]
-        self._disappear_card.remove(disappear_item)
-        self._pool_card.insert(pair_index, card_pair)
-        self._pool_count += 3
-        return card_pair
+    def _card_disappear_for_back(self, card_pair):
+        if len(card_pair["card_list"]) == 0:
+            self._pool_card.remove(card_pair)
+
+    def _create_disappear_item(self, card_pair):
+        pair_index = self._pool_card.index(card_pair)
+        return {"pair_index": pair_index, "card_pair": card_pair}
 
     def _create_new_card_pair(self, card_detail):
         card_type = card_detail.get_card_type()
-        new_card_pair = {"card_type": card_type, "card_list": []}
-        self._pool_card.append(new_card_pair)
-        return new_card_pair
+        card_pair = {"card_type": card_type, "card_list": []}
+        self._pool_card.append(card_pair)
+        return card_pair
 
-    def _create_disappear_card(self, card_pair):
-        pair_key = card_pair["card_list"][-1]
-        pair_index = self._pool_card.index(card_pair)
-        return {"pair_key": pair_key, "pair_index": pair_index, "card_pair": card_pair}
+    def _create_old_card_pair(self, card_detail):
+        disappear_item = self._disappear_card.pop(-1)
+        pair_index, card_pair = disappear_item["pair_index"], disappear_item["card_pair"]
+        self._pool_card.insert(pair_index, card_pair)
+        return card_pair
 
     def _find_match_card_pair(self, card_detail):
         card_type = card_detail.get_card_type()
         for pair_item in self._pool_card:
             if pair_item["card_type"] == card_type:
                 return pair_item
-        return None
-
-    def _find_disappear_card(self, card_index):
-        for disappear_item in self._disappear_card:
-            if disappear_item["pair_key"] == card_index:
-                return disappear_item
         return None

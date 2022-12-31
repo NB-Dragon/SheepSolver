@@ -2,15 +2,9 @@
 # -*- coding: utf-8 -*-
 # Create Time: 2022/12/15 00:00
 # Create User: NB-Dragon
-
-
 class InterfaceTool(object):
-    def __init__(self, project_helper):
-        self._project_helper = project_helper
-        self._link_config = self._get_link_config()
-
-    def _get_link_config(self):
-        return self._project_helper.get_project_config()["link"]
+    def __init__(self, link_config):
+        self._link_config = link_config
 
     def _get_user_domain(self):
         return self._link_config["domain"]["user"]

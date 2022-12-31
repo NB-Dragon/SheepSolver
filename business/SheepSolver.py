@@ -110,15 +110,13 @@ class SheepSolver(object):
     def generate_card_id_result(self):
         if self._operation_pool.is_game_over():
             card_detail_dict = {index: self._card_container.get_card_detail(index) for index in self._pick_list}
-            result_list = [card_detail.get_card_id() for index, card_detail in card_detail_dict.items()]
-            return result_list
+            return [card_detail.get_card_id() for index, card_detail in card_detail_dict.items()]
         else:
             return None
 
     def generate_card_type_result(self):
         if self._operation_pool.is_game_over():
             card_detail_dict = {index: self._card_container.get_card_detail(index) for index in self._pick_list}
-            card_type_dict = {index: card_detail.get_card_type() for index, card_detail in card_detail_dict.items()}
-            return card_type_dict
+            return {index: card_detail.get_card_type() for index, card_detail in card_detail_dict.items()}
         else:
             return None
