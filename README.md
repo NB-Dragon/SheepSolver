@@ -49,9 +49,9 @@ mitmdump -p 6666 -s capture.py
 # 算法的选择
 > 本算法目前提供四种选牌方式，可在脚本的启动参数中进行修改
 - normal: 默认模式，该模式下取牌顺序由程序进度决定
-- random: 随机模式，该模式下取牌顺序完全随机
 - reverse: 反转模式，该模式下取牌顺序由卡牌的逆序号决定，序号大的优先
 - top-first: 高层优先模式，该模式下取牌顺序由卡牌的层数决定，高层优先
+- random: 随机模式，该模式下取牌顺序完全随机
 
 # 特别鸣谢
 - 地图数据的解析思路: [BugMaker888/sheep](https://github.com/BugMaker888/sheep)
