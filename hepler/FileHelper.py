@@ -19,7 +19,7 @@ class FileHelper(object):
     def read_file_content(file_path):
         try:
             if os.path.isfile(file_path):
-                reader = open(file_path, "r")
+                reader = open(file_path, "r", encoding="utf-8")
                 content = reader.read()
                 reader.close()
                 return content
@@ -31,7 +31,7 @@ class FileHelper(object):
     @staticmethod
     def write_file_content(file_path, content):
         try:
-            writer = open(file_path, "w")
+            writer = open(file_path, "w", encoding="utf-8")
             writer.write(content)
             writer.close()
         except Exception as e:
