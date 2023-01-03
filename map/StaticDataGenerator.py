@@ -7,7 +7,7 @@ from hepler.FileHelper import FileHelper
 from hepler.ShuffleHelper import ShuffleHelper
 
 
-class MapDataHelper(object):
+class StaticDataGenerator(object):
     def __init__(self, static_map_path):
         self._static_map_path = static_map_path
 

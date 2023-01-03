@@ -4,8 +4,8 @@
 # Create User: NB-Dragon
 import urllib.parse
 from business.InterfaceTool import InterfaceTool
-from hepler.OnlineDataHelper import OnlineDataHelper
 from hepler.ProjectHelper import ProjectHelper
+from map.OnlineDataAnalyzer import OnlineDataAnalyzer
 
 
 class DataAnalyzer(object):
@@ -14,7 +14,7 @@ class DataAnalyzer(object):
         self._interface_tool = self._generate_interface_tool()
         self._static_map_link = self._interface_tool.get_static_map_link()
         self._game_start_list = self._interface_tool.get_game_start_list()
-        self._online_data_helper = OnlineDataHelper(self._project_helper, self._static_map_link)
+        self._online_data_analyzer = OnlineDataAnalyzer(self._project_helper, self._static_map_link)
 
     def response(self, flow):
         link_parse_result = urllib.parse.urlparse(flow.request.url)
@@ -47,7 +47,7 @@ class DataAnalyzer(object):
     def _handle_response_result(self, content, header=None):
         header = {key.lower(): value for key, value in header.items()}
         print("=====> 当前用户token为: {}".format(header.get("t")))
-        self._online_data_helper.create_online_data(content)
+        self._online_data_analyzer.create_game_map_data(content)
 
 
 addons = [DataAnalyzer()]

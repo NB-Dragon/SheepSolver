@@ -8,19 +8,19 @@ import time
 import certifi
 import urllib3
 from hepler.FileHelper import FileHelper
-from hepler.MapDataHelper import MapDataHelper
+from map.StaticDataGenerator import StaticDataGenerator
 
 
-class OnlineDataHelper(object):
+class OnlineDataAnalyzer(object):
     def __init__(self, project_helper, static_map_link):
         self._static_map_path = project_helper.get_project_directory_path("static_map")
         self._final_data_path = project_helper.get_project_file_path("online_data")
-        self._map_data_helper = MapDataHelper(self._static_map_path)
+        self._static_data_generator = StaticDataGenerator(self._static_map_path)
         self._static_map_link = static_map_link
         self._map_seed_dict = dict()
         self._map_hash = None
 
-    def create_online_data(self, map_summary_content):
+    def create_game_map_data(self, map_summary_content):
         summary_data = json.loads(map_summary_content)
         self._reset_map_hash_and_seed(summary_data)
         self._load_map_struct_data()
@@ -40,7 +40,7 @@ class OnlineDataHelper(object):
             self._save_map_struct_data(map_cache_file, map_struct_content)
 
     def _generate_final_map_file(self):
-        map_real_data = self._map_data_helper.generate_map_data(self._map_hash, self._map_seed_dict)
+        map_real_data = self._static_data_generator.generate_map_data(self._map_hash, self._map_seed_dict)
         if isinstance(map_real_data, dict):
             FileHelper().write_json_data(self._final_data_path, map_real_data)
             print("=====> 当前游戏的地图数据生成成功")
