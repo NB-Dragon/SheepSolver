@@ -7,8 +7,8 @@ import os
 import time
 import certifi
 import urllib3
+from core.map.StaticDataGenerator import StaticDataGenerator
 from hepler.FileHelper import FileHelper
-from map.StaticDataGenerator import StaticDataGenerator
 
 
 class OnlineDataAnalyzer(object):

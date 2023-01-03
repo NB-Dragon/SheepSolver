@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # Create Time: 2022/12/31 00:00
 # Create User: NB-Dragon
-from card.CardDetail import CardDetail
+from core.card.CardDetail import CardDetail
 
 
 class CardContainer(object):

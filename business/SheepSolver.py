@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # Create Time: 2022/11/30 00:00
 # Create User: NB-Dragon
-from card.CardContainer import CardContainer
+from core.card.CardContainer import CardContainer
+from core.pool.OperationPool import OperationPool
+from core.pool.ResidualPool import ResidualPool
 from hepler.ProjectHelper import ProjectHelper
-from pool.OperationPool import OperationPool
-from pool.ResidualPool import ResidualPool
 
 
 class SheepSolver(object):

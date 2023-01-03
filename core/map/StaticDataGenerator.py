@@ -3,8 +3,8 @@
 # Create Time: 2022/11/30 00:00
 # Create User: NB-Dragon
 import os
+from core.data.ShuffleHelper import ShuffleHelper
 from hepler.FileHelper import FileHelper
-from hepler.ShuffleHelper import ShuffleHelper
 
 
 class StaticDataGenerator(object):

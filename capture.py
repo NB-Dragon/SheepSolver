@@ -5,7 +5,7 @@
 import urllib.parse
 from business.InterfaceTool import InterfaceTool
 from hepler.ProjectHelper import ProjectHelper
-from map.OnlineDataAnalyzer import OnlineDataAnalyzer
+from core.map.OnlineDataAnalyzer import OnlineDataAnalyzer
 
 
 class DataAnalyzer(object):
