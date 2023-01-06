@@ -5,7 +5,7 @@
 class CardDetail(object):
     def __init__(self, origin_data):
         self._generate_card_attribute(origin_data)
-        self._parent_note = set()
+        self._parent_node = set()
         self._children_node = set()
 
     def _generate_card_attribute(self, origin_data):
@@ -17,14 +17,6 @@ class CardDetail(object):
         self._attribute["min_y"] = origin_data["rowNum"]
         self._attribute["max_x"] = origin_data["rolNum"] + 8
         self._attribute["max_y"] = origin_data["rowNum"] + 8
-
-    def reset_card_position(self, min_x, min_y):
-        self._attribute["min_x"] = min_x
-        self._attribute["min_y"] = min_y
-        self._attribute["max_x"] = min_x + 8
-        self._attribute["max_y"] = min_y + 8
-        self._parent_note.clear()
-        self._children_node.clear()
 
     def get_card_id(self):
         return self._attribute["id"]
@@ -44,10 +36,10 @@ class CardDetail(object):
         return [self._attribute["min_x"], self._attribute["min_y"], self._attribute["max_x"], self._attribute["max_y"]]
 
     def add_parent(self, card_index):
-        self._parent_note.add(card_index)
+        self._parent_node.add(card_index)
 
     def remove_parent(self, card_index):
-        self._parent_note.remove(card_index)
+        self._parent_node.remove(card_index)
 
     def add_children(self, card_index):
         self._children_node.add(card_index)
@@ -56,7 +48,7 @@ class CardDetail(object):
         self._children_node.remove(card_index)
 
     def is_card_freedom(self):
-        return len(self._parent_note) == 0
+        return len(self._parent_node) == 0
 
     def get_children_set(self):
         return self._children_node

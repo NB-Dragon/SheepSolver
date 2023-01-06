@@ -31,31 +31,31 @@ class CardContainer(object):
             current_index += 1
 
     def _handle_overlap_data(self, level_card_data):
-        old_card_dict = self._generate_old_card_dict(len(level_card_data))
         new_card_dict = self._generate_new_card_dict(len(level_card_data))
+        old_card_dict = self._generate_old_card_dict(len(level_card_data))
         for new_card_key, new_card_value in new_card_dict.items():
             for old_card_key, old_card_value in old_card_dict.items():
                 if self._clac_iou(new_card_value, old_card_value) > 0:
                     new_card_value.add_children(old_card_key)
                     old_card_value.add_parent(new_card_key)
 
-    def _generate_old_card_dict(self, new_card_count):
-        old_card_key_list = self._get_old_card_key_list(new_card_count)
-        return {card_index: self._card_dict[card_index] for card_index in old_card_key_list}
-
     def _generate_new_card_dict(self, new_card_count):
         new_card_key_list = self._get_new_card_key_list(new_card_count)
         return {card_index: self._card_dict[card_index] for card_index in new_card_key_list}
 
-    def _get_old_card_key_list(self, new_card_count):
-        current_card_count = self._get_card_count()
-        end_index = current_card_count - new_card_count
-        return [item for item in range(0, end_index)]
+    def _generate_old_card_dict(self, new_card_count):
+        old_card_key_list = self._get_old_card_key_list(new_card_count)
+        return {card_index: self._card_dict[card_index] for card_index in old_card_key_list}
 
     def _get_new_card_key_list(self, new_card_count):
         current_card_count = self._get_card_count()
         begin_index = current_card_count - new_card_count
         return [item for item in range(begin_index, current_card_count)]
+
+    def _get_old_card_key_list(self, new_card_count):
+        current_card_count = self._get_card_count()
+        end_index = current_card_count - new_card_count
+        return [item for item in range(0, end_index)]
 
     def _get_card_count(self):
         return len(self._card_dict)
