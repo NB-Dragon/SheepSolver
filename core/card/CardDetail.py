@@ -47,6 +47,10 @@ class CardDetail(object):
     def remove_children(self, card_index):
         self._children_node.remove(card_index)
 
+    def clear_all_relation(self):
+        self._parent_node.clear()
+        self._children_node.clear()
+
     def is_card_freedom(self):
         return len(self._parent_node) == 0
 
