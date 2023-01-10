@@ -50,6 +50,16 @@ class InterfaceTool(object):
         game_over_path = self._link_config["game"]["tag"]["over"]
         return "{}/{}".format(user_domain, game_over_path)
 
+    def get_world_start_link(self):
+        user_domain = self._get_user_domain()
+        game_start_path = self._link_config["game"]["world"]["start"]
+        return "{}/{}".format(user_domain, game_start_path)
+
+    def get_world_over_link(self):
+        user_domain = self._get_user_domain()
+        game_over_path = self._link_config["game"]["world"]["over"]
+        return "{}/{}".format(user_domain, game_over_path)
+
     def get_static_map_link(self):
         static_domain = self._get_static_domain()
         map_path = self._link_config["other"]["static_map"]
@@ -63,4 +73,9 @@ class InterfaceTool(object):
     def get_skin_info_link(self):
         user_domain = self._get_user_domain()
         skin_info_path = self._link_config["other"]["skin_info"]
+        return "{}/{}".format(user_domain, skin_info_path)
+
+    def get_challenge_info_link(self):
+        user_domain = self._get_user_domain()
+        skin_info_path = self._link_config["other"]["challenge_info"]
         return "{}/{}".format(user_domain, skin_info_path)

@@ -39,6 +39,10 @@
       "tag": {
         "start": "sheep/v1/game/tag/game/start",
         "over": "sheep/v1/game/tag/game/over"
+      },
+      "world": {
+        "start": "sheep/v1/game/world/game_start",
+        "over": "sheep/v1/game/world/game_over"
       }
     },
     "other": {
