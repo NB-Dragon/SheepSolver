@@ -45,7 +45,7 @@ class OnlineDataAnalyzer(object):
             FileHelper().write_json_data(self._final_data_path, map_real_data)
             print("=====> 当前游戏的地图数据生成成功")
         else:
-            print("=====> 当前游戏的地图数据生成失败")
+            print("=====> 当前游戏的地图数据生成失败，请联系作者获取地图文件")
 
     def _request_map_struct_data(self):
         map_link = self._generate_map_struct_request_link()
@@ -55,6 +55,8 @@ class OnlineDataAnalyzer(object):
         if isinstance(map_struct_data, str) and len(map_struct_data):
             FileHelper().write_file_content(map_cache_file, map_struct_data)
             print("=====> 地图初始结构缓存成功: {}".format(self._map_hash))
+        else:
+            print("=====> 地图初始结构缓存失败: {}".format(self._map_hash))
 
     def _generate_map_struct_request_link(self):
         return "{}/{}.txt".format(self._static_map_link, self._map_hash)
@@ -64,9 +66,9 @@ class OnlineDataAnalyzer(object):
         try:
             pool_manager = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where(), timeout=30)
             response = pool_manager.request("GET", request_link, preload_content=False)
-            content = response.read()
+            content, status = response.read(), response.status
             response.close()
-            return content.decode()
+            return content.decode() if status in [200] else None
         except Exception as e:
             print("[GET] 请求异常，异常信息为: {}".format(str(e)))
             return None
