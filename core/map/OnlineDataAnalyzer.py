@@ -2,65 +2,44 @@
 # -*- coding: utf-8 -*-
 # Create Time: 2022/11/30 00:00
 # Create User: NB-Dragon
-import json
 import os
 import time
 import certifi
 import urllib3
-from core.map.StaticDataGenerator import StaticDataGenerator
 from hepler.FileHelper import FileHelper
 
 
 class OnlineDataAnalyzer(object):
     def __init__(self, project_helper, static_map_link):
-        self._static_map_path = project_helper.get_project_directory_path("static_map")
         self._final_data_path = project_helper.get_project_file_path("online_data")
-        self._static_data_generator = StaticDataGenerator(self._static_map_path)
+        self._static_map_path = project_helper.get_project_directory_path("static_map")
         self._static_map_link = static_map_link
-        self._map_seed_dict = dict()
-        self._map_hash = None
 
-    def create_game_map_data(self, map_summary_content):
-        summary_data = json.loads(map_summary_content)
-        self._reset_map_hash_and_seed(summary_data)
-        self._load_map_struct_data()
-        self._generate_final_map_file()
+    def download_map_struct_data(self, summary_data: dict):
+        if summary_data["err_code"] == 0:
+            map_hash = self._get_game_map_hash(summary_data)
+            self._create_local_struct_data(map_hash)
 
-    def _reset_map_hash_and_seed(self, response_data):
-        self._map_seed_dict["map_seed"] = response_data["data"]["map_seed"]
-        self._map_seed_dict["map_seed_2"] = response_data["data"]["map_seed_2"]
-        print("=====> 当前游戏的随机种子已更新")
-        self._map_hash = response_data["data"]["map_md5"][1]
-        print("=====> 当前游戏的地图结构密钥已更新")
+    def _create_local_struct_data(self, map_hash):
+        map_cache_file = self._generate_map_cache_path(map_hash)
+        if not self._is_file_up_to_date(map_cache_file):
+            map_struct_content = self._request_map_struct_data(map_hash)
+            self._save_local_struct_data(map_cache_file, map_struct_content, map_hash)
 
-    def _load_map_struct_data(self):
-        map_cache_file = self._generate_map_cache_path()
-        if not self._map_cache_file_match_date(map_cache_file):
-            map_struct_content = self._request_map_struct_data()
-            self._save_map_struct_data(map_cache_file, map_struct_content)
+    def _request_map_struct_data(self, map_hash):
+        map_struct_link = self._generate_map_struct_request_link(map_hash)
+        return self._request_get_method(map_struct_link)
 
-    def _generate_final_map_file(self):
-        map_real_data = self._static_data_generator.generate_map_data(self._map_hash, self._map_seed_dict)
-        if isinstance(map_real_data, dict):
-            FileHelper().write_json_data(self._final_data_path, map_real_data)
-            print("=====> 当前游戏的地图数据生成成功")
-        else:
-            print("=====> 当前游戏的地图数据生成失败")
-            print("=====> 众筹计划: 每日手动重制地图数据; 加入Q群\"331240392\"了解详情")
-
-    def _request_map_struct_data(self):
-        map_link = self._generate_map_struct_request_link()
-        return self._request_get_method(map_link)
-
-    def _save_map_struct_data(self, map_cache_file, map_struct_data):
+    @staticmethod
+    def _save_local_struct_data(map_cache_file, map_struct_data, map_hash):
         if isinstance(map_struct_data, str) and len(map_struct_data):
             FileHelper().write_file_content(map_cache_file, map_struct_data)
-            print("=====> 地图初始结构缓存成功: {}".format(self._map_hash))
+            print("=====> 地图初始结构缓存成功: {}".format(map_hash))
         else:
-            print("=====> 地图初始结构缓存失败: {}".format(self._map_hash))
+            print("=====> 地图初始结构缓存失败: {}".format(map_hash))
 
-    def _generate_map_struct_request_link(self):
-        return "{}/{}.txt".format(self._static_map_link, self._map_hash)
+    def _generate_map_struct_request_link(self, map_hash):
+        return "{}/{}.txt".format(self._static_map_link, map_hash)
 
     @staticmethod
     def _request_get_method(request_link):
@@ -74,16 +53,21 @@ class OnlineDataAnalyzer(object):
             print("[GET] 请求异常，异常信息为: {}".format(str(e)))
             return None
 
-    def _generate_map_cache_path(self):
-        map_cache_name = "{}.json".format(self._map_hash)
+    def _generate_map_cache_path(self, map_hash):
+        map_cache_name = "{}.json".format(map_hash)
         return os.path.join(self._static_map_path, map_cache_name)
 
-    def _map_cache_file_match_date(self, map_cache_file):
-        if os.path.isfile(map_cache_file):
+    def _is_file_up_to_date(self, file_path):
+        if os.path.isfile(file_path):
             system_date = self._get_current_date()
-            modify_date = self._get_file_modify_date(map_cache_file)
+            modify_date = self._get_file_modify_date(file_path)
             return system_date == modify_date
         return False
+
+    @staticmethod
+    def _get_game_map_hash(summary_data):
+        print("=====> 当前游戏的地图结构密钥已更新")
+        return summary_data["data"]["map_md5"][1]
 
     @staticmethod
     def _get_current_date():

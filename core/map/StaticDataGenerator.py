@@ -8,10 +8,17 @@ from hepler.FileHelper import FileHelper
 
 
 class StaticDataGenerator(object):
-    def __init__(self, static_map_path):
-        self._static_map_path = static_map_path
+    def __init__(self, project_helper):
+        self._static_map_path = project_helper.get_project_directory_path("static_map")
 
-    def generate_map_data(self, map_hash, map_seed_dict):
+    def generate_final_map_file(self, summary_data: dict, save_path):
+        if summary_data["err_code"] == 0:
+            map_hash = self._get_game_map_hash(summary_data)
+            map_seed = self._get_game_map_seed(summary_data)
+            map_real_data = self._generate_shuffle_map_data(map_hash, map_seed)
+            self._handle_save_file(map_real_data, save_path)
+
+    def _generate_shuffle_map_data(self, map_hash, map_seed_dict):
         origin_map_data = self._load_map_cache_data(map_hash)
         if isinstance(origin_map_data, dict):
             self._ensure_map_key_sorted(origin_map_data)
@@ -52,3 +59,23 @@ class StaticDataGenerator(object):
                 if each_card["type"] == 0:
                     each_card["type"] = block_type_list[current_index]
                     current_index += 1
+
+    @staticmethod
+    def _get_game_map_hash(summary_data):
+        return summary_data["data"]["map_md5"][1]
+
+    @staticmethod
+    def _get_game_map_seed(summary_data):
+        result_dict = dict()
+        result_dict["map_seed"] = summary_data["data"]["map_seed"]
+        result_dict["map_seed_2"] = summary_data["data"]["map_seed_2"]
+        return result_dict
+
+    @staticmethod
+    def _handle_save_file(map_real_data, save_path):
+        if isinstance(map_real_data, dict):
+            FileHelper().write_json_data(save_path, map_real_data)
+            print("=====> 当前游戏的地图数据生成成功")
+        else:
+            print("=====> 当前游戏的地图数据生成失败")
+            print("=====> 众筹计划: 每日手动重制地图数据; 加入Q群\"331240392\"了解详情")
