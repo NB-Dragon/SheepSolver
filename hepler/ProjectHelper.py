@@ -39,6 +39,10 @@ class ProjectHelper(object):
     def get_project_file_path(self, key):
         return self._project_file_path.get(key, None)
 
+    def get_unique_online_data(self, user_id, game_type):
+        file_name = "{}_{}.json".format(user_id, game_type)
+        return os.path.join(self._code_entrance_path, file_name)
+
     def _get_project_path(self):
         sys_argv = sys.argv
         if self._is_self_running(sys_argv):
