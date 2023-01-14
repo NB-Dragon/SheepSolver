@@ -65,6 +65,11 @@ class InterfaceTool(object):
         map_path = self._link_config["other"]["static_map"]
         return "{}/{}".format(static_domain, map_path)
 
+    def get_personal_info_link(self):
+        user_domain = self._get_user_domain()
+        topic_info_path = self._link_config["other"]["personal_info"]
+        return "{}/{}".format(user_domain, topic_info_path)
+
     def get_topic_info_link(self):
         user_domain = self._get_user_domain()
         topic_info_path = self._link_config["other"]["topic_info"]

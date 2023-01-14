@@ -47,6 +47,7 @@
     },
     "other": {
       "static_map": "maps",
+      "personal_info": "sheep/v1/game/personal_info",
       "topic_info": "sheep/v1/game/topic/info",
       "skin_info": "sheep/v1/game/skin/info",
       "challenge_info": "sheep/v1/game/challenge/info"
