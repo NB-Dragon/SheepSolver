@@ -45,7 +45,8 @@ class OnlineDataAnalyzer(object):
             FileHelper().write_json_data(self._final_data_path, map_real_data)
             print("=====> 当前游戏的地图数据生成成功")
         else:
-            print("=====> 当前游戏的地图数据生成失败，请联系作者获取地图文件")
+            print("=====> 当前游戏的地图数据生成失败")
+            print("=====> 众筹计划: 每日手动重制地图数据; 加入Q群\"331240392\"了解详情")
 
     def _request_map_struct_data(self):
         map_link = self._generate_map_struct_request_link()
