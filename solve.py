@@ -22,7 +22,7 @@ def read_solve_mode():
 
 if __name__ == '__main__':
     solve_mode = read_solve_mode()
-    sheep_solver = SheepSolver(solve_mode)
+    sheep_solver = SheepSolver(solve_mode, 60)
     sheep_solver.init_card_data(read_online_data())
     start_time = time.time()
     sheep_solver.solve()

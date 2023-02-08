@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # Create Time: 2022/11/30 00:00
 # Create User: NB-Dragon
+import time
 from core.card.CardContainer import CardContainer
 from core.pool.OperationPool import OperationPool
 from core.pool.ResidualPool import ResidualPool
@@ -9,7 +10,7 @@ from hepler.ProjectHelper import ProjectHelper
 
 
 class SheepSolver(object):
-    def __init__(self, sort_mode):
+    def __init__(self, sort_mode, run_time):
         self._project_helper = ProjectHelper()
         self._show_progress_method = self._generate_show_progress_method()
         self._solve_first_percentage = self._generate_solve_first_percentage()
@@ -18,6 +19,8 @@ class SheepSolver(object):
         self._operation_pool = OperationPool(self._card_container, sort_mode)
         self._residual_pool = ResidualPool(self._card_container)
 
+        self._run_time = run_time
+        self._start_time = None
         self._card_count = 0
         self._pick_list = []
         self._situation_history = set()
@@ -36,6 +39,8 @@ class SheepSolver(object):
         if self._get_progress_percentage() >= self._solve_first_percentage:
             head_list = self._get_head_list_sorted_by_residual(head_list)
         for head_item in head_list:
+            if self._is_solver_time_out():
+                break
             self._operation_pick_card(head_item)
             head_fingerprint = self._operation_pool.generate_head_description()
             if head_fingerprint in self._situation_history:
@@ -48,6 +53,14 @@ class SheepSolver(object):
                 self._operation_recover_card(head_item)
             else:
                 break
+
+    def _is_solver_time_out(self):
+        if isinstance(self._start_time, float):
+            end_time = time.time()
+            return end_time - self._start_time >= self._run_time
+        else:
+            self._start_time = time.time()
+            return False
 
     def _generate_solve_first_percentage(self):
         global_config = self._project_helper.get_project_config()["global"]
