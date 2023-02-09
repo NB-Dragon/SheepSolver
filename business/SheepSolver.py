@@ -10,17 +10,16 @@ from hepler.ProjectHelper import ProjectHelper
 
 
 class SheepSolver(object):
-    def __init__(self, sort_mode, run_time):
-        self._project_helper = ProjectHelper()
+    def __init__(self, sort_mode):
+        self._global_config = self._generate_global_config()
         self._show_progress_method = self._generate_show_progress_method()
-        self._solve_first_percentage = self._generate_solve_first_percentage()
 
         self._card_container = CardContainer()
         self._operation_pool = OperationPool(self._card_container, sort_mode)
         self._residual_pool = ResidualPool(self._card_container)
 
-        self._run_time = run_time
         self._start_time = None
+        self._maximum_progress = 0
         self._card_count = 0
         self._pick_list = []
         self._situation_history = set()
@@ -36,7 +35,7 @@ class SheepSolver(object):
         self._show_progress_method()
         head_list = self._operation_pool.get_head_key_list()
         head_list = self._get_head_list_for_alive(head_list)
-        if self._get_progress_percentage() >= self._solve_first_percentage:
+        if self._get_progress_percentage() >= self._global_config["solve_first"]:
             head_list = self._get_head_list_sorted_by_residual(head_list)
         for head_item in head_list:
             if self._is_solver_time_out():
@@ -55,16 +54,18 @@ class SheepSolver(object):
                 break
 
     def _is_solver_time_out(self):
-        if isinstance(self._start_time, float):
-            end_time = time.time()
-            return end_time - self._start_time >= self._run_time
+        if self._global_config["time_limit"] < 0:
+            return False
+        elif isinstance(self._start_time, float):
+            time_distance = time.time() - self._start_time
+            return time_distance >= self._global_config["time_limit"]
         else:
             self._start_time = time.time()
             return False
 
-    def _generate_solve_first_percentage(self):
-        global_config = self._project_helper.get_project_config()["global"]
-        return global_config["solve_first"]
+    @staticmethod
+    def _generate_global_config():
+        return ProjectHelper().get_project_config()["global"]
 
     def _generate_show_progress_method(self):
         def do_something():
@@ -73,8 +74,7 @@ class SheepSolver(object):
         def do_nothing():
             """do nothing here"""
 
-        global_config = self._project_helper.get_project_config()["global"]
-        return do_something if global_config["show_progress"] else do_nothing
+        return do_something if self._global_config["show_progress"] else do_nothing
 
     def _get_head_list_for_alive(self, head_list):
         card_type_dict = {index: self._card_container.get_card_detail(index).get_card_type() for index in head_list}
