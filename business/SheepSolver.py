@@ -35,8 +35,7 @@ class SheepSolver(object):
         self._show_progress_method()
         head_list = self._operation_pool.get_head_key_list()
         head_list = self._get_head_list_for_alive(head_list)
-        if self._get_progress_percentage() >= self._global_config["solve_first"]:
-            head_list = self._get_head_list_sorted_by_residual(head_list)
+        head_list = self._get_head_list_sorted_by_residual(head_list)
         for head_item in head_list:
             if self._is_solver_time_out():
                 break
@@ -92,17 +91,31 @@ class SheepSolver(object):
             return head_list
 
     def _get_head_list_sorted_by_residual(self, head_list):
-        expect_type_list = self._residual_pool.get_sorted_card_type_list()
         card_type_dict = {index: self._card_container.get_card_detail(index).get_card_type() for index in head_list}
-        result_list = []
-        for card_type in expect_type_list:
-            match_list = [index for index, current_type in card_type_dict.items() if current_type == card_type]
+        if self._get_progress_percentage() >= self._global_config["solve_first"]:
+            expect_type_list = self._residual_pool.get_sorted_card_type_list()
+            return self._sort_head_list_with_type_list(card_type_dict, expect_type_list)
+        else:
+            return head_list
+
+    @staticmethod
+    def _sort_head_list_with_type_list(card_type_dict, type_list):
+        result_list = list()
+        for type_item in type_list:
+            match_list = [index for index, card_type in card_type_dict.items() if card_type == type_item]
             result_list.extend(match_list)
-        result_list.extend([index for index in head_list if index not in result_list])
+        result_list.extend([index for index in card_type_dict.keys() if index not in result_list])
         return result_list
 
     def _get_progress_percentage(self):
-        return len(self._pick_list) / self._card_count
+        card_list = [item for item in self._pick_list if item != 0]
+        solve_percentage = len(card_list) / self._card_count
+        self._record_maximum_progress(solve_percentage)
+        return solve_percentage
+
+    def _record_maximum_progress(self, current_progress):
+        if current_progress > self._maximum_progress:
+            self._maximum_progress = current_progress
 
     def _operation_pick_card(self, card_index):
         self._operation_pool.pick_card(card_index)
