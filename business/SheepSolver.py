@@ -19,6 +19,8 @@ class SheepSolver(object):
         self._residual_pool = ResidualPool(self._card_container)
 
         self._start_time = None
+        self._iteration_time = 0
+        self._current_progress = 0
         self._maximum_progress = 0
         self._card_count = 0
         self._pick_list = []
@@ -33,11 +35,13 @@ class SheepSolver(object):
 
     def solve(self):
         self._show_progress_method()
+        self._record_current_progress()
         head_list = self._operation_pool.get_head_key_list()
         head_list = self._get_head_list_for_alive(head_list)
         head_list = self._get_head_list_sorted_by_residual(head_list)
         for head_item in head_list:
-            if self._is_solver_time_out():
+            self._generate_current_iteration_time()
+            if self._check_programme_can_continue() is False:
                 break
             self._operation_pick_card(head_item)
             head_fingerprint = self._operation_pool.generate_head_description()
@@ -52,15 +56,28 @@ class SheepSolver(object):
             else:
                 break
 
-    def _is_solver_time_out(self):
-        if self._global_config["time_limit"] < 0:
-            return False
-        elif isinstance(self._start_time, float):
-            time_distance = time.time() - self._start_time
-            return time_distance >= self._global_config["time_limit"]
+    def _generate_current_iteration_time(self):
+        if isinstance(self._start_time, float):
+            self._iteration_time = time.time() - self._start_time
         else:
             self._start_time = time.time()
+            self._iteration_time = 0
+
+    def _check_programme_can_continue(self):
+        if self._is_solver_in_time_limit():
+            return self._is_solver_progress_meets_expect()
+        else:
             return False
+
+    def _is_solver_progress_meets_expect(self):
+        expect_progress = self._global_config["expect_progress"]
+        expect_time, expect_progress = expect_progress["time"], expect_progress["percentage"]
+        detect_result = self._iteration_time <= expect_time or self._maximum_progress >= expect_progress
+        return True if expect_time < 0 else detect_result
+
+    def _is_solver_in_time_limit(self):
+        time_limit = self._global_config["time_limit"]
+        return True if time_limit < 0 else self._iteration_time <= time_limit
 
     @staticmethod
     def _generate_global_config():
@@ -92,7 +109,7 @@ class SheepSolver(object):
 
     def _get_head_list_sorted_by_residual(self, head_list):
         card_type_dict = {index: self._card_container.get_card_detail(index).get_card_type() for index in head_list}
-        if self._get_progress_percentage() >= self._global_config["solve_first"]:
+        if self._current_progress >= self._global_config["solve_first"]:
             expect_type_list = self._residual_pool.get_sorted_card_type_list()
             return self._sort_head_list_with_type_list(card_type_dict, expect_type_list)
         else:
@@ -107,15 +124,11 @@ class SheepSolver(object):
         result_list.extend([index for index in card_type_dict.keys() if index not in result_list])
         return result_list
 
-    def _get_progress_percentage(self):
+    def _record_current_progress(self):
         card_list = [item for item in self._pick_list if item != 0]
-        solve_percentage = len(card_list) / self._card_count
-        self._record_maximum_progress(solve_percentage)
-        return solve_percentage
-
-    def _record_maximum_progress(self, current_progress):
-        if current_progress > self._maximum_progress:
-            self._maximum_progress = current_progress
+        self._current_progress = len(card_list) / self._card_count
+        if self._current_progress > self._maximum_progress:
+            self._maximum_progress = self._current_progress
 
     def _operation_pick_card(self, card_index):
         self._operation_pool.pick_card(card_index)
