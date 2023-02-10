@@ -53,6 +53,12 @@ mitmdump -p 6666 -s capture.py
 - top-first: 高层优先模式，该模式下取牌顺序由卡牌的层数决定，高层优先
 - random: 随机模式，该模式下取牌顺序完全随机
 
+# 配置说明
+- show_progress: 是否需要显示实时求解进度(布尔值)
+- solve_first: 优先消除策略的启动时机(百分比)
+- time_limit: 程序最长运行时间(秒)，小于0则无限制
+- expect_progress: 在指定时间内达到指定进度则继续求解
+
 # 特别鸣谢
 - 地图数据的解析思路: [BugMaker888/sheep](https://github.com/BugMaker888/sheep)
 - 通关接口的数据剖析: [Protobuf的正逆向学习和基于python的实现](https://www.52pojie.cn/forum.php?mod=viewthread&tid=1692444)
