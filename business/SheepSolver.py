@@ -93,22 +93,24 @@ class SheepSolver(object):
         return do_something if self._global_config["show_progress"] else do_nothing
 
     def _get_head_list_for_alive(self, head_list):
-        card_type_dict = {index: self._card_container.get_card_detail(index).get_card_type() for index in head_list}
+        card_detail_dict = self._generate_card_detail_dict(head_list)
+        card_type_dict = {index: card_detail.get_card_type() for index, card_detail in card_detail_dict.items()}
         if self._residual_pool.is_card_type_close_to_limit():
             return []
         elif self._residual_pool.is_pool_count_close_to_limit():
             expect_type_list = self._residual_pool.get_almost_card_type_list()
-            match_list = [index for index, current_type in card_type_dict.items() if current_type in expect_type_list]
+            match_list = [index for index, card_type in card_type_dict.items() if card_type in expect_type_list]
             return match_list
         elif self._residual_pool.is_card_type_close_to_possible():
             expect_type_list = self._residual_pool.get_all_card_type_list()
-            match_list = [index for index, current_type in card_type_dict.items() if current_type in expect_type_list]
+            match_list = [index for index, card_type in card_type_dict.items() if card_type in expect_type_list]
             return match_list
         else:
             return head_list
 
     def _get_head_list_sorted_by_residual(self, head_list):
-        card_type_dict = {index: self._card_container.get_card_detail(index).get_card_type() for index in head_list}
+        card_detail_dict = self._generate_card_detail_dict(head_list)
+        card_type_dict = {index: card_detail.get_card_type() for index, card_detail in card_detail_dict.items()}
         if self._current_progress >= self._global_config["solve_first"]:
             expect_type_list = self._residual_pool.get_sorted_card_type_list()
             return self._sort_head_list_with_type_list(card_type_dict, expect_type_list)
@@ -125,7 +127,7 @@ class SheepSolver(object):
         return result_list
 
     def _record_current_progress(self):
-        card_list = [item for item in self._pick_list if item != 0]
+        card_list = [item for item in self._pick_list if item >= 0]
         self._current_progress = len(card_list) / self._card_count
         if self._current_progress > self._maximum_progress:
             self._maximum_progress = self._current_progress
@@ -140,6 +142,39 @@ class SheepSolver(object):
         self._residual_pool.recover_card(card_index)
         self._pick_list.remove(card_index)
 
+    def _generate_card_detail_dict(self, card_list):
+        card_filter_list = [item for item in card_list if item >= 0]
+        return {index: self._card_container.get_card_detail(index) for index in card_filter_list}
+
+    @staticmethod
+    def _get_card_id_from_detail(card_detail_dict, index):
+        if index in card_detail_dict:
+            return card_detail_dict[index].get_card_id()
+        else:
+            return "0-0-0"
+
+    @staticmethod
+    def _get_card_type_from_detail(card_detail_dict, index):
+        if index in card_detail_dict:
+            return card_detail_dict[index].get_card_type()
+        else:
+            return index
+
+    def _generate_card_id_list(self, card_detail_dict, card_list):
+        result_list = list()
+        for card_item in card_list:
+            result_item = self._get_card_id_from_detail(card_detail_dict, card_item)
+            result_list.append(result_item)
+        return result_list
+
+    def _generate_card_type_list(self, card_detail_dict, card_list):
+        result_list = list()
+        for card_item in card_list:
+            card_type = self._get_card_type_from_detail(card_detail_dict, card_item)
+            result_item = {"index": card_item, "type": card_type}
+            result_list.append(result_item)
+        return result_list
+
     def generate_card_index_result(self):
         if self._operation_pool.is_game_over():
             return list(self._pick_list)
@@ -148,14 +183,14 @@ class SheepSolver(object):
 
     def generate_card_id_result(self):
         if self._operation_pool.is_game_over():
-            card_detail_dict = {index: self._card_container.get_card_detail(index) for index in self._pick_list}
-            return [card_detail.get_card_id() for index, card_detail in card_detail_dict.items()]
+            card_detail_dict = self._generate_card_detail_dict(self._pick_list)
+            return self._generate_card_id_list(card_detail_dict, self._pick_list)
         else:
             return None
 
     def generate_card_type_result(self):
         if self._operation_pool.is_game_over():
-            card_detail_dict = {index: self._card_container.get_card_detail(index) for index in self._pick_list}
-            return {index: card_detail.get_card_type() for index, card_detail in card_detail_dict.items()}
+            card_detail_dict = self._generate_card_detail_dict(self._pick_list)
+            return self._generate_card_type_list(card_detail_dict, self._pick_list)
         else:
             return None
