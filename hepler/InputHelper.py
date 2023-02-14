@@ -8,6 +8,7 @@ import time
 
 class InputHelper(object):
     def __init__(self):
+        self._expect_list = ["normal", "index", "index-reverse", "level-bottom", "level-top", "random"]
         self._continue_checking = True
 
     def get_runtime_arguments(self, ):
@@ -21,12 +22,12 @@ class InputHelper(object):
 
     def _check_input_args(self, args):
         if not self._check_solve_mode_correct(args.mode):
-            self._send_error_message("The solve mode must be [normal|random|reverse|top-first]")
+            message = "The solve mode must be [{}]".format("|".join(self._expect_list))
+            self._send_error_message(message)
         return self._continue_checking
 
-    @staticmethod
-    def _check_solve_mode_correct(solve_mode):
-        return solve_mode in ["normal", "index", "index-reverse", "level-bottom", "level-top", "random"]
+    def _check_solve_mode_correct(self, solve_mode):
+        return solve_mode in self._expect_list
 
     def _send_error_message(self, message):
         self._continue_checking = False
