@@ -6,81 +6,39 @@ class InterfaceTool(object):
     def __init__(self, link_config):
         self._link_config = link_config
 
-    def _get_user_domain(self):
+    def get_user_domain_link(self):
         return self._link_config["domain"]["user"]
 
-    def _get_static_domain(self):
+    def get_static_domain_link(self):
         return self._link_config["domain"]["static"]
 
     def get_game_start_list(self):
         return [item["start"] for item in self._link_config["game"].values()]
 
-    def get_normal_start_link(self):
-        user_domain = self._get_user_domain()
-        game_start_path = self._link_config["game"]["normal"]["start"]
-        return "{}/{}".format(user_domain, game_start_path)
-
-    def get_normal_over_link(self):
-        user_domain = self._get_user_domain()
-        game_over_path = self._link_config["game"]["normal"]["over"]
-        return "{}/{}".format(user_domain, game_over_path)
-
-    def get_topic_join_link(self):
-        user_domain = self._get_user_domain()
-        game_join_path = self._link_config["game"]["topic"]["join"]
-        return "{}/{}".format(user_domain, game_join_path)
-
-    def get_topic_start_link(self):
-        user_domain = self._get_user_domain()
-        game_start_path = self._link_config["game"]["topic"]["start"]
-        return "{}/{}".format(user_domain, game_start_path)
-
-    def get_topic_over_link(self):
-        user_domain = self._get_user_domain()
-        game_over_path = self._link_config["game"]["topic"]["over"]
-        return "{}/{}".format(user_domain, game_over_path)
-
-    def get_tag_start_link(self):
-        user_domain = self._get_user_domain()
-        game_start_path = self._link_config["game"]["tag"]["start"]
-        return "{}/{}".format(user_domain, game_start_path)
-
-    def get_tag_over_link(self):
-        user_domain = self._get_user_domain()
-        game_over_path = self._link_config["game"]["tag"]["over"]
-        return "{}/{}".format(user_domain, game_over_path)
-
-    def get_world_start_link(self):
-        user_domain = self._get_user_domain()
-        game_start_path = self._link_config["game"]["world"]["start"]
-        return "{}/{}".format(user_domain, game_start_path)
-
-    def get_world_over_link(self):
-        user_domain = self._get_user_domain()
-        game_over_path = self._link_config["game"]["world"]["over"]
-        return "{}/{}".format(user_domain, game_over_path)
+    def get_game_config(self, game_type):
+        return self._link_config["game"][game_type]
 
     def get_static_map_link(self):
-        static_domain = self._get_static_domain()
+        static_domain = self.get_static_domain_link()
         map_path = self._link_config["other"]["static_map"]
         return "{}/{}".format(static_domain, map_path)
 
     def get_personal_info_link(self):
-        user_domain = self._get_user_domain()
+        user_domain = self.get_user_domain_link()
         topic_info_path = self._link_config["other"]["personal_info"]
         return "{}/{}".format(user_domain, topic_info_path)
 
     def get_topic_info_link(self):
-        user_domain = self._get_user_domain()
+        user_domain = self.get_user_domain_link()
         topic_info_path = self._link_config["other"]["topic_info"]
         return "{}/{}".format(user_domain, topic_info_path)
 
     def get_skin_info_link(self):
-        user_domain = self._get_user_domain()
+        user_domain = self.get_user_domain_link()
         skin_info_path = self._link_config["other"]["skin_info"]
         return "{}/{}".format(user_domain, skin_info_path)
 
     def get_challenge_info_link(self):
-        user_domain = self._get_user_domain()
+        user_domain = self.get_user_domain_link()
         skin_info_path = self._link_config["other"]["challenge_info"]
         return "{}/{}".format(user_domain, skin_info_path)
