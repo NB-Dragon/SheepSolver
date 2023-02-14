@@ -8,8 +8,8 @@ from hepler.FileHelper import FileHelper
 
 
 class StaticDataGenerator(object):
-    def __init__(self, project_helper):
-        self._static_map_path = project_helper.get_project_directory_path("static_map")
+    def __init__(self, static_map_path):
+        self._static_map_path = static_map_path
 
     def generate_final_map_file(self, summary_data: dict, save_path):
         if summary_data["err_code"] == 0:

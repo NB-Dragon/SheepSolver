@@ -9,9 +9,9 @@ from hepler.RequestHelper import RequestHelper
 
 
 class OnlineDataAnalyzer(object):
-    def __init__(self, project_helper, static_map_link):
+    def __init__(self, static_map_path, static_map_link):
         self._request_helper = RequestHelper()
-        self._static_map_path = project_helper.get_project_directory_path("static_map")
+        self._static_map_path = static_map_path
         self._static_map_link = static_map_link
 
     def download_map_struct_data(self, summary_data: dict):

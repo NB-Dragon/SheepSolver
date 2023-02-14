@@ -16,8 +16,9 @@ class DataAnalyzer(object):
         self._interface_tool = self._generate_interface_tool()
         self._static_map_link = self._interface_tool.get_static_map_link()
         self._game_start_list = self._interface_tool.get_game_start_list()
-        self._online_data_analyzer = OnlineDataAnalyzer(self._project_helper, self._static_map_link)
-        self._static_data_generator = StaticDataGenerator(self._project_helper)
+        self._static_map_path = self._project_helper.get_project_directory_path("static_map")
+        self._online_data_analyzer = OnlineDataAnalyzer(self._static_map_path, self._static_map_link)
+        self._static_data_generator = StaticDataGenerator(self._static_map_path)
 
     def response(self, flow):
         link_parse_result = urllib.parse.urlparse(flow.request.url)
