@@ -23,8 +23,8 @@ class StaticDataGenerator(object):
         if isinstance(origin_map_data, dict):
             self._ensure_map_key_sorted(origin_map_data)
             block_type_data, shuffle_seed = origin_map_data["blockTypeData"], map_seed_dict["map_seed"]
-            block_type_list = self._generate_shuffle_list(block_type_data, shuffle_seed)
-            self._reset_map_data_type(block_type_list, origin_map_data)
+            type_list = self._generate_shuffle_list(block_type_data, shuffle_seed)
+            self._reset_map_data_type(type_list, origin_map_data)
             origin_map_data.update(map_seed_dict)
         return origin_map_data
 
@@ -45,20 +45,24 @@ class StaticDataGenerator(object):
 
     @staticmethod
     def _generate_shuffle_list(block_type_data, map_seed):
-        block_type_list = []
+        result_list = []
         for key, count in block_type_data.items():
-            block_type_list.extend([int(key)] * count * 3)
-        ShuffleHelper(map_seed).shuffle(block_type_list)
-        return block_type_list
+            result_list.extend([int(key)] * count * 3)
+        ShuffleHelper(map_seed).shuffle(result_list)
+        return result_list
 
     @staticmethod
-    def _reset_map_data_type(block_type_list, map_cache_data):
-        current_index = 0
-        for level, level_data in map_cache_data["levelData"].items():
-            for each_card in level_data:
-                if each_card["type"] == 0:
-                    each_card["type"] = block_type_list[current_index]
-                    current_index += 1
+    def _generate_card_list(origin_map_data):
+        result_list = []
+        for level_index, level_data in origin_map_data["levelData"].items():
+            result_list.extend(level_data)
+        return result_list
+
+    def _reset_map_data_type(self, type_list, origin_map_data):
+        card_list = self._generate_card_list(origin_map_data)
+        card_list = [item for item in card_list if item["type"] == 0]
+        for card_item, card_type in zip(card_list, type_list):
+            card_item["type"] = card_type
 
     @staticmethod
     def _get_game_map_hash(summary_data):
