@@ -26,7 +26,7 @@ class InputHelper(object):
 
     @staticmethod
     def _check_solve_mode_correct(solve_mode):
-        return solve_mode in ["normal", "random", "reverse", "top-first"]
+        return solve_mode in ["normal", "index", "index-reverse", "level-bottom", "level-top", "random"]
 
     def _send_error_message(self, message):
         self._continue_checking = False

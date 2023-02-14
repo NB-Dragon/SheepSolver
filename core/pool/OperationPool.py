@@ -44,12 +44,14 @@ class OperationPool(object):
     def get_head_key_list(self):
         if self._sort_mode == "normal":
             return list(self._head_list)
-        elif self._sort_mode == "reverse":
+        elif self._sort_mode == "index":
+            return sorted(self._head_list)
+        elif self._sort_mode == "index-reverse":
             return sorted(self._head_list, reverse=True)
-        elif self._sort_mode == "top-first":
-            origin_card_level_dict = self._get_card_level_dict()
-            sorted_dict = dict(sorted(origin_card_level_dict.items(), key=lambda a: a[1], reverse=True))
-            return list(sorted_dict.keys())
+        elif self._sort_mode == "level-bottom":
+            return sorted(self._head_list, key=self._sort_for_level)
+        elif self._sort_mode == "level-top":
+            return sorted(self._head_list, key=self._sort_for_level, reverse=True)
         elif self._sort_mode == "random":
             result_list = list(self._head_list)
             random.shuffle(result_list)
@@ -57,9 +59,6 @@ class OperationPool(object):
         else:
             return []
 
-    def _get_card_level_dict(self):
-        result_dict = dict()
-        for card_index in self._head_list:
-            card_detail = self._card_container.get_card_detail(card_index)
-            result_dict[card_index] = card_detail.get_card_level()
-        return result_dict
+    def _sort_for_level(self, card_index):
+        card_detail = self._card_container.get_card_detail(card_index)
+        return card_detail.get_card_level()
