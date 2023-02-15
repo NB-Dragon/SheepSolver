@@ -14,11 +14,11 @@ class ResidualPool(object):
         # 已经成功消除的卡牌信息
         self._disappear_card = []
 
-    def is_pool_count_close_to_limit(self):
-        return self._pool_count == 6
-
     def is_card_type_close_to_limit(self):
         return len(self._pool_card) == self._pool_limit - 1
+
+    def is_pool_count_close_to_limit(self):
+        return self._pool_count == self._pool_limit - 1
 
     def is_card_type_close_to_possible(self):
         return len(self._pool_card) == self._pool_limit - 2
