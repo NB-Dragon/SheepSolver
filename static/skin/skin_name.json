@@ -4676,7 +4676,7 @@
     "clothesId": 1268,
     "name": "婚纱羊",
     "isTopic": 0,
-    "platform": 1,
+    "platform": 2,
     "description": ""
   },
   {
@@ -4684,7 +4684,7 @@
     "clothesId": 1269,
     "name": "礼服羊",
     "isTopic": 0,
-    "platform": 1,
+    "platform": 2,
     "description": ""
   },
   {
@@ -4692,7 +4692,7 @@
     "clothesId": 1270,
     "name": "狗粮羊",
     "isTopic": 0,
-    "platform": 1,
+    "platform": 2,
     "description": ""
   },
   {
@@ -4700,7 +4700,7 @@
     "clothesId": 1271,
     "name": "巧克力羊",
     "isTopic": 0,
-    "platform": 1,
+    "platform": 2,
     "description": ""
   },
   {
