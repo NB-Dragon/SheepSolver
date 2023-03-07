@@ -4,7 +4,7 @@
 # Create User: NB-Dragon
 import os
 import sys
-from hepler.FileHelper import FileHelper
+from helper.FileHelper import FileHelper
 
 
 class ProjectHelper(object):

@@ -4,8 +4,8 @@
 # Create User: NB-Dragon
 import os
 import time
-from hepler.FileHelper import FileHelper
-from hepler.RequestHelper import RequestHelper
+from helper.FileHelper import FileHelper
+from helper.RequestHelper import RequestHelper
 
 
 class OnlineDataAnalyzer(object):

@@ -5,8 +5,8 @@
 import json
 import time
 from business.SheepSolver import SheepSolver
-from hepler.FileHelper import FileHelper
-from hepler.InputHelper import InputHelper
+from helper.FileHelper import FileHelper
+from helper.InputHelper import InputHelper
 
 
 def read_online_data():

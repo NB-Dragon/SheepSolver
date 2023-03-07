@@ -4,7 +4,7 @@
 # Create User: NB-Dragon
 import os
 from core.data.ShuffleHelper import ShuffleHelper
-from hepler.FileHelper import FileHelper
+from helper.FileHelper import FileHelper
 
 
 class StaticDataGenerator(object):

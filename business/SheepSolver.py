@@ -6,7 +6,7 @@ import time
 from core.card.CardContainer import CardContainer
 from core.pool.OperationPool import OperationPool
 from core.pool.ResidualPool import ResidualPool
-from hepler.ProjectHelper import ProjectHelper
+from helper.ProjectHelper import ProjectHelper
 
 
 class SheepSolver(object):
