@@ -37,7 +37,8 @@ class DataAnalyzer(object):
 
     @staticmethod
     def _judge_name_important(byte_data):
-        important_name_list = [b"gd_game_topic_list", b"gd_skin_list", b"gd_language", b"gd_event_data"]
+        important_name_list = [b"gd_language", b"gd_skin_list", b"gd_game_topic_list", b"gd_block_topic_slot_data",
+                               b"gd_event_data"]
         for name_item in important_name_list:
             if name_item in byte_data:
                 return True

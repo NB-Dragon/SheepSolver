@@ -23,8 +23,9 @@ class ProjectHelper(object):
         result_dict = dict()
         result_dict["config"] = os.path.join(self._code_entrance_path, "config.json")
         result_dict["online_data"] = os.path.join(self._code_entrance_path, "online_data.json")
-        result_dict["skin_name"] = os.path.join(self._code_entrance_path, "static", "skin", "skin_name.json")
-        result_dict["topic_skin"] = os.path.join(self._code_entrance_path, "static", "skin", "topic_skin.json")
+        result_dict["block_info"] = os.path.join(self._code_entrance_path, "static", "skin", "block_info.json")
+        result_dict["skin_info"] = os.path.join(self._code_entrance_path, "static", "skin", "skin_info.json")
+        result_dict["topic_info"] = os.path.join(self._code_entrance_path, "static", "skin", "topic_info.json")
         return result_dict
 
     def _init_project_config(self):
