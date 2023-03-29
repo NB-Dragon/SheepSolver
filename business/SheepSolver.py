@@ -10,12 +10,13 @@ from helper.ProjectHelper import ProjectHelper
 
 
 class SheepSolver(object):
-    def __init__(self, sort_mode):
+    def __init__(self, solve_type):
+        self._solve_type = solve_type
         self._global_config = self._generate_global_config()
         self._show_progress_method = self._generate_show_progress_method()
 
         self._card_container = CardContainer()
-        self._operation_pool = OperationPool(self._card_container, sort_mode)
+        self._operation_pool = OperationPool(self._card_container)
         self._residual_pool = ResidualPool(self._card_container)
 
         self._start_time = None
@@ -36,7 +37,7 @@ class SheepSolver(object):
     def solve(self):
         self._show_progress_method()
         self._record_current_progress()
-        head_list = self._operation_pool.get_head_key_list()
+        head_list = self._operation_pool.get_head_key_list(self._solve_type)
         head_list = self._get_head_list_for_alive(head_list)
         head_list = self._get_head_list_sorted_by_residual(head_list)
         for head_item in head_list:

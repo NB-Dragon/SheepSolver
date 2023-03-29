@@ -6,9 +6,8 @@ import random
 
 
 class OperationPool(object):
-    def __init__(self, card_container, sort_mode):
+    def __init__(self, card_container):
         self._card_container = card_container
-        self._sort_mode = sort_mode
         # 以序号注册可操作卡牌数据
         self._head_list = []
 
@@ -19,7 +18,11 @@ class OperationPool(object):
         return "-".join([str(item) for item in sorted(self._head_list)])
 
     def is_game_over(self):
-        return len(self._head_list) == 0
+        normal_key_list = self._get_normal_key_list("normal")
+        return len(normal_key_list) == 0
+
+    def get_head_key_list(self, solve_type):
+        return self._get_normal_key_list(solve_type)
 
     def pick_card(self, card_index):
         card_detail = self._card_container.get_card_detail(card_index)
@@ -41,18 +44,18 @@ class OperationPool(object):
             if children_key in self._head_list:
                 self._head_list.remove(children_key)
 
-    def get_head_key_list(self):
-        if self._sort_mode == "normal":
+    def _get_normal_key_list(self, solve_type):
+        if solve_type == "normal":
             return list(self._head_list)
-        elif self._sort_mode == "index":
+        elif solve_type == "index":
             return sorted(self._head_list)
-        elif self._sort_mode == "index-reverse":
+        elif solve_type == "index-reverse":
             return sorted(self._head_list, reverse=True)
-        elif self._sort_mode == "level-bottom":
+        elif solve_type == "level-bottom":
             return sorted(self._head_list, key=self._sort_for_level)
-        elif self._sort_mode == "level-top":
+        elif solve_type == "level-top":
             return sorted(self._head_list, key=self._sort_for_level, reverse=True)
-        elif self._sort_mode == "random":
+        elif solve_type == "random":
             result_list = list(self._head_list)
             random.shuffle(result_list)
             return result_list
