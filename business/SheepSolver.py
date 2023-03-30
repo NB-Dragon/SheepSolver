@@ -30,8 +30,8 @@ class SheepSolver(object):
     def init_card_data(self, map_data: dict):
         map_level_data = dict(sorted(map_data["levelData"].items(), key=lambda item: int(item[0])))
         for level, level_data in map_level_data.items():
-            self._card_count += len(level_data)
             self._card_container.append_level_card(level_data)
+        self._card_count = self._card_container.get_card_count()
         self._operation_pool.generate_head_list()
 
     def solve(self):

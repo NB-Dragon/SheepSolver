@@ -24,8 +24,11 @@ class CardContainer(object):
     def get_card_detail(self, card_index):
         return self._card_dict.get(card_index, None)
 
+    def get_card_count(self):
+        return len(self._card_dict)
+
     def _append_origin_data(self, level_card_data):
-        current_index = self._get_card_count()
+        current_index = self.get_card_count()
         for level_card_item in level_card_data:
             self._card_dict[current_index] = CardDetail(level_card_item)
             current_index += 1
@@ -48,17 +51,14 @@ class CardContainer(object):
         return {card_index: self._card_dict[card_index] for card_index in old_card_key_list}
 
     def _get_new_card_key_list(self, new_card_count):
-        current_card_count = self._get_card_count()
+        current_card_count = self.get_card_count()
         begin_index = current_card_count - new_card_count
         return [item for item in range(begin_index, current_card_count)]
 
     def _get_old_card_key_list(self, new_card_count):
-        current_card_count = self._get_card_count()
+        current_card_count = self.get_card_count()
         end_index = current_card_count - new_card_count
         return [item for item in range(0, end_index)]
-
-    def _get_card_count(self):
-        return len(self._card_dict)
 
     @staticmethod
     def _clac_iou(new_card, old_card):
