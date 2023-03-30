@@ -646,14 +646,14 @@
   {
     "clothesId": 93,
     "name": "火锅羊",
-    "isTopic": 0,
+    "isTopic": 16,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 94,
     "name": "烤肉羊",
-    "isTopic": 0,
+    "isTopic": 16,
     "platform": 1,
     "description": ""
   },
@@ -2630,6 +2630,237 @@
     "isTopic": 0,
     "platform": 1,
     "description": "在羊羊大世界中，参与<color=#004eff>羊羊旅行季</c>活动后获得。"
+  },
+  {
+    "clothesId": 377,
+    "name": "圆号羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 378,
+    "name": "摄影羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 379,
+    "name": "浮世绘羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 380,
+    "name": "因纽特羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 381,
+    "name": "部落羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 382,
+    "name": "棉花糖羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 383,
+    "name": "泡泡羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 384,
+    "name": "蛋包饭羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 385,
+    "name": "柯基羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 386,
+    "name": "爱丽丝羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 387,
+    "name": "冷饮羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 388,
+    "name": "摇钱树羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 389,
+    "name": "鳄鱼羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 390,
+    "name": "拳王羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 391,
+    "name": "草莓巴菲羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 392,
+    "name": "园艺羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 393,
+    "name": "小恶魔羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 394,
+    "name": "日出羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 395,
+    "name": "耳机羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 396,
+    "name": "甜心羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 397,
+    "name": "美梦羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 398,
+    "name": "周末羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 399,
+    "name": "咸鱼羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 400,
+    "name": "旋转木马羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 401,
+    "name": "寝室羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 402,
+    "name": "糖果屋羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 403,
+    "name": "抓娃娃机羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 404,
+    "name": "露营羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 405,
+    "name": "拿铁羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 406,
+    "name": "武士羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 407,
+    "name": "猫爬架羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 408,
+    "name": "温泉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 409,
+    "name": "斗笠羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
   },
   {
     "clothesId": 1003,
