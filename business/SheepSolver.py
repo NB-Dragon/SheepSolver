@@ -28,16 +28,17 @@ class SheepSolver(object):
         self._situation_history = set()
 
     def init_card_data(self, map_data: dict):
-        map_level_data = dict(sorted(map_data["levelData"].items(), key=lambda item: int(item[0])))
-        for level, level_data in map_level_data.items():
+        level_list = sorted([int(item) for item in map_data["levelData"].keys()])
+        for level_item in level_list:
+            level_data = map_data["levelData"][str(level_item)]
             self._card_container.append_level_card(level_data)
         self._card_count = self._card_container.get_card_count()
-        self._operation_pool.generate_head_list()
+        self._operation_pool.prepare_game_data()
 
     def solve(self):
         self._show_progress_method()
         self._record_current_progress()
-        head_list = self._operation_pool.get_head_key_list(self._solve_type)
+        head_list = self._operation_pool.generate_head_list(self._solve_type)
         head_list = self._get_head_list_for_alive(head_list)
         head_list = self._get_head_list_sorted_by_residual(head_list)
         for head_item in head_list:
@@ -45,7 +46,7 @@ class SheepSolver(object):
             if self._check_programme_can_continue() is False:
                 break
             self._operation_pick_card(head_item)
-            head_fingerprint = self._operation_pool.generate_head_description()
+            head_fingerprint = self._operation_pool.generate_head_fingerprint()
             if head_fingerprint in self._situation_history:
                 self._operation_recover_card(head_item)
                 continue

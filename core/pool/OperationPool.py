@@ -11,18 +11,19 @@ class OperationPool(object):
         # 以序号注册可操作卡牌数据
         self._head_list = []
 
-    def generate_head_list(self):
+    def prepare_game_data(self):
         self._head_list = self._card_container.get_freedom_card_list()
 
-    def generate_head_description(self):
-        return "-".join([str(item) for item in sorted(self._head_list)])
+    def generate_head_list(self, solve_type):
+        return self._get_normal_key_list(solve_type)
+
+    def generate_head_fingerprint(self):
+        normal_key_list = sorted(self._get_normal_key_list("normal"))
+        return "-".join([str(item) for item in normal_key_list])
 
     def is_game_over(self):
         normal_key_list = self._get_normal_key_list("normal")
         return len(normal_key_list) == 0
-
-    def get_head_key_list(self, solve_type):
-        return self._get_normal_key_list(solve_type)
 
     def pick_card(self, card_index):
         card_detail = self._card_container.get_card_detail(card_index)

@@ -30,7 +30,7 @@ class ResidualPool(object):
         return [item["card_type"] for item in self._pool_card if len(item["card_list"]) == 2]
 
     def get_sorted_card_type_list(self):
-        sorted_pool_card = sorted(self._pool_card, key=lambda a: len(a["card_list"]), reverse=True)
+        sorted_pool_card = sorted(self._pool_card, key=lambda item: len(item["card_list"]), reverse=True)
         return [item["card_type"] for item in sorted_pool_card]
 
     def pick_card(self, card_index):
