@@ -30,7 +30,8 @@ class CardContainer(object):
     def _append_origin_data(self, level_card_data):
         current_index = self.get_card_count()
         for level_card_item in level_card_data:
-            self._card_dict[current_index] = CardDetail(level_card_item)
+            card_detail = self._generate_new_card_detail(level_card_item)
+            self._card_dict[current_index] = card_detail
             current_index += 1
 
     def _handle_overlap_data(self, level_card_data):
@@ -59,6 +60,12 @@ class CardContainer(object):
         current_card_count = self.get_card_count()
         end_index = current_card_count - new_card_count
         return [item for item in range(0, end_index)]
+
+    @staticmethod
+    def _generate_new_card_detail(origin_data):
+        card_detail = CardDetail()
+        card_detail.recognize_origin_map_data(origin_data)
+        return card_detail
 
     @staticmethod
     def _clac_iou(new_card, old_card):

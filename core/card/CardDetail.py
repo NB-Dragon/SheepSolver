@@ -3,13 +3,13 @@
 # Create Time: 2022/12/31 00:00
 # Create User: NB-Dragon
 class CardDetail(object):
-    def __init__(self, origin_data):
-        self._generate_card_attribute(origin_data)
+    def __init__(self):
+        self._attribute = dict()
         self._parent_node = set()
         self._children_node = set()
+        self._select_state = False
 
-    def _generate_card_attribute(self, origin_data):
-        self._attribute = dict()
+    def recognize_origin_map_data(self, origin_data):
         self._attribute["id"] = origin_data["id"]
         self._attribute["type"] = origin_data["type"]
         self._attribute["level"] = int(origin_data["id"].split("-")[0])
