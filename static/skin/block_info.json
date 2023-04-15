@@ -2137,5 +2137,87 @@
       "topic_name": "动物伙伴",
       "path_name": "block/theme45/block_16"
     }
+  ],
+  "46": [
+    {
+      "block_id": 30418,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_1"
+    },
+    {
+      "block_id": 30419,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_2"
+    },
+    {
+      "block_id": 30420,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_3"
+    },
+    {
+      "block_id": 30421,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_4"
+    },
+    {
+      "block_id": 30422,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_5"
+    },
+    {
+      "block_id": 30423,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_6"
+    },
+    {
+      "block_id": 30424,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_7"
+    },
+    {
+      "block_id": 30425,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_8"
+    },
+    {
+      "block_id": 30426,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_9"
+    },
+    {
+      "block_id": 30427,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_10"
+    },
+    {
+      "block_id": 30428,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_11"
+    },
+    {
+      "block_id": 30429,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_12"
+    },
+    {
+      "block_id": 30430,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_13"
+    },
+    {
+      "block_id": 30431,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_14"
+    },
+    {
+      "block_id": 30432,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_15"
+    },
+    {
+      "block_id": 30433,
+      "topic_name": "动物伙伴II",
+      "path_name": "block/theme46/block_16"
+    }
   ]
 }
