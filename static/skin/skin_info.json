@@ -2863,6 +2863,62 @@
     "description": ""
   },
   {
+    "clothesId": 410,
+    "name": "呆萌羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊性格测试</c>活动后获得。"
+  },
+  {
+    "clothesId": 411,
+    "name": "腼腆羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊性格测试</c>活动后获得。"
+  },
+  {
+    "clothesId": 412,
+    "name": "高冷羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊性格测试</c>活动后获得。"
+  },
+  {
+    "clothesId": 413,
+    "name": "花痴羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊性格测试</c>活动后获得。"
+  },
+  {
+    "clothesId": 414,
+    "name": "热情羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊性格测试</c>活动后获得。"
+  },
+  {
+    "clothesId": 415,
+    "name": "社恐羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊性格测试</c>活动后获得。"
+  },
+  {
+    "clothesId": 416,
+    "name": "自恋羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊性格测试</c>活动后获得。"
+  },
+  {
+    "clothesId": 417,
+    "name": "佛系羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊性格测试</c>活动后获得。"
+  },
+  {
     "clothesId": 1003,
     "name": "披羊皮的狼",
     "isTopic": 0,
