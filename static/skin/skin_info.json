@@ -478,14 +478,14 @@
   {
     "clothesId": 69,
     "name": "护肤羊",
-    "isTopic": 0,
+    "isTopic": 11,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 70,
     "name": "美妆羊",
-    "isTopic": 0,
+    "isTopic": 11,
     "platform": 1,
     "description": ""
   },
@@ -688,28 +688,28 @@
   {
     "clothesId": 99,
     "name": "肉肉羊",
-    "isTopic": 0,
+    "isTopic": 19,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 100,
     "name": "菜菜羊",
-    "isTopic": 0,
+    "isTopic": 19,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 101,
     "name": "闹钟羊",
-    "isTopic": 0,
+    "isTopic": 20,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 102,
     "name": "被窝羊",
-    "isTopic": 0,
+    "isTopic": 20,
     "platform": 1,
     "description": ""
   },
@@ -835,14 +835,14 @@
   {
     "clothesId": 120,
     "name": "苹果羊",
-    "isTopic": 0,
+    "isTopic": 22,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 121,
     "name": "核桃羊",
-    "isTopic": 0,
+    "isTopic": 22,
     "platform": 1,
     "description": ""
   },
@@ -877,14 +877,14 @@
   {
     "clothesId": 126,
     "name": "刺豚羊",
-    "isTopic": 0,
+    "isTopic": 25,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 127,
     "name": "龙虾羊",
-    "isTopic": 0,
+    "isTopic": 25,
     "platform": 1,
     "description": ""
   },
@@ -1003,42 +1003,42 @@
   {
     "clothesId": 144,
     "name": "歌姬羊",
-    "isTopic": 0,
+    "isTopic": 29,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 145,
     "name": "舞女羊",
-    "isTopic": 0,
+    "isTopic": 29,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 146,
     "name": "糖果羊",
-    "isTopic": 0,
+    "isTopic": 30,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 147,
     "name": "鲜花羊",
-    "isTopic": 0,
+    "isTopic": 30,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 148,
     "name": "冬日暖阳羊",
-    "isTopic": 0,
+    "isTopic": 31,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 149,
     "name": "冬日暖宅羊",
-    "isTopic": 0,
+    "isTopic": 31,
     "platform": 1,
     "description": ""
   },
@@ -1318,14 +1318,14 @@
   {
     "clothesId": 189,
     "name": "妃子羊",
-    "isTopic": 0,
+    "isTopic": 35,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 190,
     "name": "皇后羊",
-    "isTopic": 0,
+    "isTopic": 35,
     "platform": 1,
     "description": ""
   },
@@ -1416,14 +1416,14 @@
   {
     "clothesId": 203,
     "name": "牛仔羊",
-    "isTopic": 0,
+    "isTopic": 38,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 204,
     "name": "小马羊",
-    "isTopic": 0,
+    "isTopic": 38,
     "platform": 1,
     "description": ""
   },
@@ -1444,28 +1444,28 @@
   {
     "clothesId": 207,
     "name": "大鼓羊",
-    "isTopic": 0,
+    "isTopic": 40,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 208,
     "name": "爵士鼓羊",
-    "isTopic": 0,
+    "isTopic": 40,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 209,
     "name": "烤面包机羊",
-    "isTopic": 0,
+    "isTopic": 41,
     "platform": 1,
     "description": ""
   },
   {
     "clothesId": 210,
     "name": "蒸笼羊",
-    "isTopic": 0,
+    "isTopic": 41,
     "platform": 1,
     "description": ""
   },
@@ -2917,6 +2917,118 @@
     "isTopic": 0,
     "platform": 1,
     "description": "在羊羊大世界中，参与<color=#004eff>羊羊性格测试</c>活动后获得。"
+  },
+  {
+    "clothesId": 418,
+    "name": "玄奘",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 419,
+    "name": "炸弹羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 420,
+    "name": "棉花糖羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 421,
+    "name": "松饼羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 422,
+    "name": "僵尸羊",
+    "isTopic": 47,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 423,
+    "name": "道士羊",
+    "isTopic": 47,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 424,
+    "name": "狼人羊",
+    "isTopic": 15,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 425,
+    "name": "吸血鬼羊",
+    "isTopic": 15,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 426,
+    "name": "冬阴功羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 427,
+    "name": "泡澡羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 428,
+    "name": "泳池羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 429,
+    "name": "果酱羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 430,
+    "name": "披萨羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 431,
+    "name": "花篮羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 432,
+    "name": "特种作战羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 433,
+    "name": "编程羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
   },
   {
     "clothesId": 1003,
