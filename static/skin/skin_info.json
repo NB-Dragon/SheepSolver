@@ -2934,7 +2934,7 @@
   },
   {
     "clothesId": 420,
-    "name": "棉花糖羊",
+    "name": "软糖羊",
     "isTopic": 0,
     "platform": 1,
     "description": ""
@@ -3026,6 +3026,62 @@
   {
     "clothesId": 433,
     "name": "编程羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 434,
+    "name": "悟净",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 435,
+    "name": "苏打羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 436,
+    "name": "纸箱羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 437,
+    "name": "虚拟现实羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 438,
+    "name": "炒饭羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 439,
+    "name": "电话羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 440,
+    "name": "独角仙羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 441,
+    "name": "摆渡羊",
     "isTopic": 0,
     "platform": 1,
     "description": ""
