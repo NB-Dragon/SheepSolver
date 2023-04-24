@@ -24,7 +24,7 @@ class StaticDataGenerator(object):
             self._ensure_map_key_sorted(origin_map_data)
             block_type_data, shuffle_seed = origin_map_data["blockTypeData"], map_seed_dict["map_seed"]
             type_list = self._generate_shuffle_list(block_type_data, shuffle_seed)
-            self._reset_map_data_type(type_list, origin_map_data)
+            self._reset_map_data_type(origin_map_data, type_list)
             origin_map_data.update(map_seed_dict)
         return origin_map_data
 
@@ -49,7 +49,7 @@ class StaticDataGenerator(object):
         for key, count in block_type_data.items():
             result_list.extend([int(key)] * count * 3)
         ShuffleHelper(map_seed).shuffle(result_list)
-        return result_list
+        return reversed(result_list)
 
     @staticmethod
     def _generate_card_list(origin_map_data):
@@ -58,7 +58,7 @@ class StaticDataGenerator(object):
             result_list.extend(level_data)
         return result_list
 
-    def _reset_map_data_type(self, type_list, origin_map_data):
+    def _reset_map_data_type(self, origin_map_data, type_list):
         card_list = self._generate_card_list(origin_map_data)
         card_list = [item for item in card_list if item["type"] == 0]
         for card_item, card_type in zip(card_list, type_list):

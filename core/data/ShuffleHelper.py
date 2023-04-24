@@ -29,7 +29,6 @@ class ShuffleHelper(object):
             random_number = self._get_random()
             j = math.floor(random_number * (i + 1))
             data_list[i], data_list[j] = data_list[j], data_list[i]
-        data_list.reverse()
 
     def _get_random(self):
         random_result = self._get_random_group()
@@ -47,5 +46,4 @@ class ShuffleHelper(object):
 
     @staticmethod
     def _generate_random_seed():
-        base_list = [0, 0, 0, 0]
-        return [random.randint(0, 0xFFFFFFFF) for item in base_list]
+        return [random.randint(0, 0xFFFFFFFF) for item in range(4)]
