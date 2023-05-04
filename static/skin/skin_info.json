@@ -2216,21 +2216,21 @@
     "name": "钻石羊",
     "isTopic": 0,
     "platform": 1,
-    "description": "在羊羊竞赛中，赛季结算时处于指定段位获得。"
+    "description": "在羊羊竞赛中，达到指定段位后获得。"
   },
   {
     "clothesId": 318,
     "name": "王者羊",
     "isTopic": 0,
     "platform": 1,
-    "description": "在羊羊竞赛中，赛季结算时处于指定段位获得。"
+    "description": "在羊羊竞赛中，达到指定段位后获得。"
   },
   {
     "clothesId": 319,
     "name": "战神羊",
     "isTopic": 0,
     "platform": 1,
-    "description": "在羊羊竞赛中，赛季结算时处于指定段位获得。"
+    "description": "在羊羊竞赛中，达到指定段位后获得。"
   },
   {
     "clothesId": 320,
