@@ -3171,6 +3171,118 @@
     "description": ""
   },
   {
+    "clothesId": 454,
+    "name": "过山车羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊游园会</c>活动后获得。"
+  },
+  {
+    "clothesId": 455,
+    "name": "海盗船羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊游园会</c>活动后获得。"
+  },
+  {
+    "clothesId": 456,
+    "name": "鬼屋羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊游园会</c>活动后获得。"
+  },
+  {
+    "clothesId": 457,
+    "name": "马戏羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊游园会</c>活动后获得。"
+  },
+  {
+    "clothesId": 458,
+    "name": "碰碰车羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊游园会</c>活动后获得。"
+  },
+  {
+    "clothesId": 459,
+    "name": "激流勇进羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊游园会</c>活动后获得。"
+  },
+  {
+    "clothesId": 460,
+    "name": "花车羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊游园会</c>活动后获得。"
+  },
+  {
+    "clothesId": 461,
+    "name": "旋转茶杯羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊游园会</c>活动后获得。"
+  },
+  {
+    "clothesId": 462,
+    "name": "松鼠羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 463,
+    "name": "大小姐羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 464,
+    "name": "充气城堡羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 465,
+    "name": "鱼籽寿司羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 466,
+    "name": "万有引力羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 467,
+    "name": "澡堂羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 468,
+    "name": "一箱猫羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 469,
+    "name": "泡面羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
     "clothesId": 1003,
     "name": "披羊皮的狼",
     "isTopic": 0,
