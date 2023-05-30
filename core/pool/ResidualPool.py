@@ -14,6 +14,14 @@ class ResidualPool(object):
         # 已经成功消除的卡牌信息
         self._disappear_card = []
 
+    def prepare_game_data(self):
+        self._pool_count = 0
+        self._pool_card = []
+        self._disappear_card = []
+
+    def is_card_count_out_of_limit(self):
+        return self._pool_count >= self._pool_limit
+
     def is_card_type_close_to_limit(self):
         return len(self._pool_card) == self._pool_limit - 1
 
@@ -34,50 +42,59 @@ class ResidualPool(object):
         return [item["card_type"] for item in sorted_pool_card]
 
     def pick_card(self, card_index):
-        card_detail = self._card_container.get_card_detail(card_index)
+        card_detail = self._card_container.get_card_detail_item(card_index)
         card_pair = self._find_match_card_pair(card_detail)
         if card_pair is None:
-            card_pair = self._create_new_card_pair(card_detail)
-        card_pair["card_list"].append(card_index)
-        self._pool_count += 1
+            card_pair = self._create_card_pair(card_detail)
+        self._card_pair_append_card(card_pair, card_index)
         self._card_disappear_for_same(card_pair)
 
     def recover_card(self, card_index):
-        card_detail = self._card_container.get_card_detail(card_index)
+        card_detail = self._card_container.get_card_detail_item(card_index)
         card_pair = self._find_match_card_pair(card_detail)
         if card_pair is None:
-            card_pair = self._create_old_card_pair(card_index)
-            self._pool_count += 3
-        card_pair["card_list"].remove(card_index)
-        self._pool_count -= 1
+            card_pair = self._recover_disappear_item(card_detail)
+        self._card_pair_remove_card(card_pair, card_index)
         self._card_disappear_for_back(card_pair)
 
     def _card_disappear_for_same(self, card_pair):
         if len(card_pair["card_list"]) == 3:
-            disappear_item = self._create_disappear_item(card_pair)
-            self._disappear_card.append(disappear_item)
-            self._pool_card.remove(card_pair)
-            self._pool_count -= 3
+            self._create_disappear_item(card_pair)
 
     def _card_disappear_for_back(self, card_pair):
         if len(card_pair["card_list"]) == 0:
-            self._pool_card.remove(card_pair)
+            self._recover_card_pair(card_pair)
 
-    def _create_disappear_item(self, card_pair):
-        pair_index = self._pool_card.index(card_pair)
-        return {"pair_index": pair_index, "card_pair": card_pair}
-
-    def _create_new_card_pair(self, card_detail):
+    def _create_card_pair(self, card_detail):
         card_type = card_detail.get_card_type()
         card_pair = {"card_type": card_type, "card_list": []}
         self._pool_card.append(card_pair)
         return card_pair
 
-    def _create_old_card_pair(self, card_detail):
+    def _recover_card_pair(self, card_pair):
+        self._pool_card.remove(card_pair)
+
+    def _create_disappear_item(self, card_pair):
+        pair_index = self._pool_card.index(card_pair)
+        disappear_item = {"pair_index": pair_index, "card_pair": card_pair}
+        self._disappear_card.append(disappear_item)
+        self._pool_card.remove(card_pair)
+        self._pool_count -= 3
+
+    def _recover_disappear_item(self, card_detail):
         disappear_item = self._disappear_card.pop(-1)
         pair_index, card_pair = disappear_item["pair_index"], disappear_item["card_pair"]
         self._pool_card.insert(pair_index, card_pair)
+        self._pool_count += 3
         return card_pair
+
+    def _card_pair_append_card(self, card_pair, card_index):
+        card_pair["card_list"].append(card_index)
+        self._pool_count += 1
+
+    def _card_pair_remove_card(self, card_pair, card_index):
+        card_pair["card_list"].remove(card_index)
+        self._pool_count -= 1
 
     def _find_match_card_pair(self, card_detail):
         card_type = card_detail.get_card_type()

@@ -45,17 +45,17 @@ class OnlineDataAnalyzer(object):
         map_cache_name = "{}.json".format(map_hash)
         return os.path.join(self._static_map_path, map_cache_name)
 
+    @staticmethod
+    def _get_game_map_hash(summary_data):
+        print("=====> 当前游戏的地图结构密钥已更新")
+        return summary_data["data"]["map_md5"][1]
+
     def _is_file_up_to_date(self, file_path):
         if os.path.isfile(file_path):
             system_date = self._get_current_date()
             modify_date = self._get_file_modify_date(file_path)
             return system_date == modify_date
         return False
-
-    @staticmethod
-    def _get_game_map_hash(summary_data):
-        print("=====> 当前游戏的地图结构密钥已更新")
-        return summary_data["data"]["map_md5"][1]
 
     @staticmethod
     def _get_current_date():

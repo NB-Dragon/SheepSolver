@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # Create Time: 2022/12/15 00:00
 # Create User: NB-Dragon
-class InterfaceTool(object):
+class GameLinkController(object):
     def __init__(self, link_config):
         self._link_config = link_config
 

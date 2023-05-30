@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # Create Time: 2022/12/31 00:00
 # Create User: NB-Dragon
+import json
 from core.card.CardDetail import CardDetail
 
 
@@ -14,23 +15,41 @@ class CardContainer(object):
         self._append_origin_data(level_card_data)
         self._handle_overlap_data(level_card_data)
 
-    def get_freedom_card_list(self):
+    def export_compute_data_string(self):
+        result_dict = {key: value.export_compute_data() for key, value in self._card_dict.items()}
+        return json.dumps(result_dict)
+
+    def import_compute_data_string(self, data_string):
+        self._card_dict.clear()
+        import_data = json.loads(data_string)
+        for index, value in import_data.items():
+            card_detail = CardDetail()
+            card_detail.import_compute_data(value)
+            self._card_dict[int(index)] = card_detail
+
+    def get_main_zone_card_list(self):
         result_list = list()
         for card_index, card_detail in self._card_dict.items():
-            if card_detail.is_card_freedom():
+            if card_detail.is_card_no_parent():
                 result_list.append(card_index)
         return result_list
-
-    def get_card_detail(self, card_index):
-        return self._card_dict.get(card_index, None)
 
     def get_card_count(self):
         return len(self._card_dict)
 
+    def get_card_detail_item(self, card_index):
+        return self._card_dict.get(card_index, None)
+
+    def get_card_detail_dict(self, card_list):
+        result_dict = dict()
+        for card_index in card_list:
+            result_dict[card_index] = self._card_dict[card_index]
+        return result_dict
+
     def _append_origin_data(self, level_card_data):
         current_index = self.get_card_count()
         for level_card_item in level_card_data:
-            card_detail = self._generate_new_card_detail(level_card_item)
+            card_detail = self._create_card_detail(level_card_item)
             self._card_dict[current_index] = card_detail
             current_index += 1
 
@@ -62,7 +81,7 @@ class CardContainer(object):
         return [item for item in range(0, end_index)]
 
     @staticmethod
-    def _generate_new_card_detail(origin_data):
+    def _create_card_detail(origin_data):
         card_detail = CardDetail()
         card_detail.recognize_origin_map_data(origin_data)
         return card_detail
