@@ -41,6 +41,12 @@ class ResidualPool(object):
         sorted_pool_card = sorted(self._pool_card, key=lambda item: len(item["card_list"]), reverse=True)
         return [item["card_type"] for item in sorted_pool_card]
 
+    def get_pool_zone_all_card_list(self):
+        result_list = []
+        for card_pair in self._pool_card:
+            result_list.extend(card_pair["card_list"])
+        return result_list
+
     def pick_card(self, card_index):
         card_detail = self._card_container.get_card_detail_item(card_index)
         card_pair = self._find_match_card_pair(card_detail)

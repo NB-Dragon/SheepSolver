@@ -50,7 +50,7 @@ class SheepSolver(object):
 
     @staticmethod
     def _generate_global_config():
-        return ProjectHelper().get_project_config()["global"]
+        return ProjectHelper().get_project_config("normal", "global")
 
     def _generate_current_iteration_time(self):
         if isinstance(self._start_time, float):

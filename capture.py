@@ -23,20 +23,19 @@ class DataAnalyzer(object):
     def response(self, flow):
         link_parse_result = urllib.parse.urlparse(flow.request.url)
         if link_parse_result.netloc == "cat-match.easygame2021.com":
-            request_header = dict(flow.request.headers)
             if self._is_game_start_link(link_parse_result.path):
                 response_data = json.loads(flow.response.content)
-                self._handle_response_result(response_data, request_header)
+                self._handle_response_result(response_data)
         elif link_parse_result.netloc == "cat-match-static.easygame2021.com":
             if self._is_game_resource_data(flow.response.content):
                 print(flow.response.content.decode())
 
     def _generate_game_link_controller(self):
-        link_config = self._project_helper.get_project_config()["link"]
+        link_config = self._project_helper.get_project_config("normal", "link")
         return GameLinkController(link_config)
 
     def _is_game_start_link(self, request_path):
-        match_list = [item for item in self._game_start_list if item in request_path]
+        match_list = [item for item in self._game_start_list if request_path.endswith(item)]
         return len(match_list) != 0
 
     @staticmethod
@@ -45,9 +44,7 @@ class DataAnalyzer(object):
         match_list = [item for item in resource_name_list if item in bytes_data]
         return len(match_list) != 0
 
-    def _handle_response_result(self, response_data, header=None):
-        header = {key.lower(): value for key, value in header.items()}
-        print("=====> 当前用户token为: {}".format(header.get("t")))
+    def _handle_response_result(self, response_data):
         save_file_path = self._project_helper.get_project_file_path("online_data")
         self._online_data_analyzer.download_map_struct_data(response_data)
         self._static_data_generator.generate_final_map_file(response_data, save_file_path)

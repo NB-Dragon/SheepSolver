@@ -21,7 +21,8 @@ class ProjectHelper(object):
 
     def _init_project_file_path(self):
         result_dict = dict()
-        result_dict["config"] = os.path.join(self._code_entrance_path, "config.json")
+        result_dict["normal_config"] = os.path.join(self._code_entrance_path, "normal_config.json")
+        result_dict["mahjong_config"] = os.path.join(self._code_entrance_path, "mahjong_config.json")
         result_dict["online_data"] = os.path.join(self._code_entrance_path, "online_data.json")
         result_dict["block_info"] = os.path.join(self._code_entrance_path, "static", "skin", "block_info.json")
         result_dict["skin_info"] = os.path.join(self._code_entrance_path, "static", "skin", "skin_info.json")
@@ -29,10 +30,12 @@ class ProjectHelper(object):
         return result_dict
 
     def _init_project_config(self):
-        return FileHelper().read_json_data(self._project_file_path["config"])
+        normal_config = FileHelper().read_json_data(self._project_file_path["normal_config"])
+        mahjong_config = FileHelper().read_json_data(self._project_file_path["mahjong_config"])
+        return {"normal": normal_config, "mahjong": mahjong_config}
 
-    def get_project_config(self):
-        return self._project_config
+    def get_project_config(self, config_name, config_key):
+        return self._project_config.get(config_name).get(config_key)
 
     def get_project_directory_path(self, key):
         return self._project_directory_path.get(key, None)

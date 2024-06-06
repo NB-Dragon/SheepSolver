@@ -1,0 +1,44 @@
+{
+  "global": {
+    "show_progress": true,
+    "solve_first": 0.8,
+    "time_limit": -1,
+    "expect_progress": {"time": -1, "percentage": 0.80}
+  },
+  "link": {
+    "domain": {
+      "user": "https://cat-match.easygame2021.com",
+      "static": "https://cat-match-static.easygame2021.com"
+    },
+    "game": {
+      "daily": {
+        "start": "/sheep/v1/game/map_info_ex",
+        "seed": "/sheep/v1/game/map_info_ex_seed",
+        "over": "/sheep/v1/game/game_over_ex"
+      },
+      "topic": {
+        "join": "/sheep/v1/game/topic/game_join",
+        "start": "/sheep/v1/game/topic/game_start",
+        "seed": "/sheep/v1/game/map_info_ex_seed",
+        "over": "/sheep/v1/game/topic/game_over"
+      },
+      "tag": {
+        "start": "/sheep/v1/game/tag/game/start",
+        "seed": "/sheep/v1/game/map_info_ex_seed",
+        "over": "/sheep/v1/game/tag/game/over"
+      },
+      "world": {
+        "start": "/sheep/v1/game/world/game_start",
+        "seed": "/sheep/v1/game/map_info_ex_seed",
+        "over": "/sheep/v1/game/world/game_over"
+      }
+    },
+    "other": {
+      "static_map": "/maps",
+      "personal_info": "/sheep/v1/game/personal_info",
+      "topic_info": "/sheep/v1/game/topic/info",
+      "skin_info": "/sheep/v1/game/skin/ids",
+      "challenge_info": "/sheep/v1/game/challenge/info"
+    }
+  }
+}

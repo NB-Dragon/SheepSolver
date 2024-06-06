@@ -25,13 +25,6 @@ class ShuffleHelper(object):
         self._seed_1 = (seed_list[0] & 0xFFFFFFFF) << 32 | (seed_list[1] & 0xFFFFFFFF)
         self._seed_2 = (seed_list[2] & 0xFFFFFFFF) << 32 | (seed_list[3] & 0xFFFFFFFF)
 
-    def get_shuffle_seed(self):
-        return {"seed_1": self._seed_1, "seed_2": self._seed_2}
-
-    def set_shuffle_seed(self, shuffle_seed):
-        self._seed_1 = shuffle_seed["seed_1"]
-        self._seed_2 = shuffle_seed["seed_2"]
-
     def shuffle(self, data_list, iter_limit):
         for i in list(reversed(range(len(data_list))))[0:iter_limit]:
             random_number = self.get_random()

@@ -16,8 +16,15 @@ class StaticDataGenerator(object):
         if summary_data["err_code"] == 0:
             map_hash = self._get_game_map_hash(summary_data)
             map_seed = self._get_game_map_seed(summary_data)
-            map_real_data = self._generate_shuffle_map_data(map_hash, map_seed)
-            self._handle_save_file(save_path, map_real_data)
+            if not os.path.exists(self._generate_map_cache_path(map_hash)):
+                print("=====> 游戏地图数据生成失败")
+                print("=====> 请根据文档指引申请进群，私信群主获取解决方案")
+            elif summary_data["data"]["need_seed"] is True:
+                print("=====> 地图种子信息加载失败")
+                print("=====> 请根据文档指引申请进群，私信群主获取解决方案")
+            else:
+                map_real_data = self._generate_shuffle_map_data(map_hash, map_seed)
+                self._handle_save_file(save_path, map_real_data)
 
     def _generate_shuffle_map_data(self, map_hash, map_seed_dict):
         origin_map_data = self._load_map_cache_data(map_hash)
@@ -40,13 +47,6 @@ class StaticDataGenerator(object):
         self._adjust_data_dict(map_struct_data, "blockTypeData")
         self._adjust_data_dict(map_struct_data, "levelData")
 
-    def _reset_map_card_type(self, map_struct_data):
-        type_list = self._generate_shuffle_list(map_struct_data)
-        card_list = self._generate_card_list(map_struct_data)
-        card_list = [item for item in card_list if item["type"] == 0]
-        for card_item, card_type in zip(card_list, type_list):
-            card_item["type"] = card_type
-
     def _generate_shuffle_list(self, map_struct_data):
         result_list = []
         for key, count in map_struct_data["blockTypeData"].items():
@@ -60,6 +60,13 @@ class StaticDataGenerator(object):
         for level_index, level_data in map_struct_data["levelData"].items():
             result_list.extend(level_data)
         return result_list
+
+    def _reset_map_card_type(self, map_struct_data):
+        type_list = self._generate_shuffle_list(map_struct_data)
+        card_list = self._generate_card_list(map_struct_data)
+        card_list = [item for item in card_list if item["type"] == 0]
+        for card_item, card_type in zip(card_list, type_list):
+            card_item["type"] = card_type
 
     @staticmethod
     def _adjust_data_dict(data_dict, sort_key):
@@ -81,6 +88,3 @@ class StaticDataGenerator(object):
         if isinstance(map_data, dict):
             FileHelper().write_json_data(save_path, map_data)
             print("=====> 当前游戏的地图数据生成成功")
-        else:
-            print("=====> 当前游戏的地图数据生成失败")
-            print("=====> 请根据文档指引申请进群，私信群主获取解决方案")

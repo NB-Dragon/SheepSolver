@@ -9,13 +9,14 @@ import urllib3
 class RequestHelper(object):
     def __init__(self):
         self._user_token = None
+        self._accept_response_code = [200, 201, 202, 203, 204, 205, 206]
 
     def set_user_token(self, user_token):
         self._user_token = user_token
 
     def _get_request_header(self):
         user_agent = self._generate_user_agent()
-        request_header = {"user-agent": user_agent, "content-type": "application/json"}
+        request_header = {"user-agent": user_agent, "content-type": "application/json", "b": 690}
         if self._user_token is not None:
             request_header["t"] = self._user_token
         return request_header
@@ -27,7 +28,7 @@ class RequestHelper(object):
             response = pool_manager.request("GET", request_link, preload_content=False, headers=request_header)
             content, status = response.data, response.status
             response.close()
-            return content if status in [200, 206] else None
+            return content if status in self._accept_response_code else None
         except Exception as e:
             print("[GET] 请求异常，异常信息为: {}".format(str(e)))
             return None
@@ -39,7 +40,7 @@ class RequestHelper(object):
             response = pool_manager.request("POST", request_link, fields=request_data, headers=request_header)
             content, status = response.data, response.status
             response.close()
-            return content if status in [200, 206] else None
+            return content if status in self._accept_response_code else None
         except Exception as e:
             print("[POST] 请求异常，异常信息为: {}".format(str(e)))
             return None
