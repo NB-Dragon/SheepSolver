@@ -42,7 +42,7 @@
   {
     "id": 6,
     "topicId": 6,
-    "blockId": 4,
+    "blockId": 6,
     "leftId": 45,
     "rightId": 46,
     "platform": 1
@@ -345,250 +345,122 @@
   },
   {
     "id": 44,
-    "topicId": 1001,
-    "blockId": 15,
-    "leftId": 1009,
-    "rightId": 1010,
-    "platform": 2
+    "topicId": 44,
+    "blockId": 58,
+    "leftId": 637,
+    "rightId": 638,
+    "platform": 1
   },
   {
     "id": 45,
-    "topicId": 1002,
-    "blockId": 2,
-    "leftId": 1063,
-    "rightId": 1064,
-    "platform": 2
+    "topicId": 45,
+    "blockId": 70,
+    "leftId": 764,
+    "rightId": 765,
+    "platform": 1
   },
   {
     "id": 46,
-    "topicId": 1003,
-    "blockId": 5,
-    "leftId": 1065,
-    "rightId": 1066,
-    "platform": 2
+    "topicId": 46,
+    "blockId": 71,
+    "leftId": 776,
+    "rightId": 777,
+    "platform": 1
   },
   {
     "id": 47,
-    "topicId": 1004,
-    "blockId": 7,
-    "leftId": 1007,
-    "rightId": 1008,
-    "platform": 2
+    "topicId": 47,
+    "blockId": 74,
+    "leftId": 788,
+    "rightId": 789,
+    "platform": 1
   },
   {
     "id": 48,
-    "topicId": 1005,
-    "blockId": 9,
-    "leftId": 1049,
-    "rightId": 1050,
-    "platform": 2
+    "topicId": 48,
+    "blockId": 75,
+    "leftId": 801,
+    "rightId": 802,
+    "platform": 1
   },
   {
     "id": 49,
-    "topicId": 1006,
-    "blockId": 10,
-    "leftId": 1051,
-    "rightId": 1052,
-    "platform": 2
+    "topicId": 49,
+    "blockId": 83,
+    "leftId": 846,
+    "rightId": 847,
+    "platform": 1
   },
   {
     "id": 50,
-    "topicId": 1007,
-    "blockId": 11,
-    "leftId": 1053,
-    "rightId": 1054,
-    "platform": 2
+    "topicId": 50,
+    "blockId": 87,
+    "leftId": 907,
+    "rightId": 908,
+    "platform": 1
   },
   {
     "id": 51,
-    "topicId": 1008,
-    "blockId": 12,
-    "leftId": 1057,
-    "rightId": 1058,
-    "platform": 2
+    "topicId": 51,
+    "blockId": 98,
+    "leftId": 1026,
+    "rightId": 1027,
+    "platform": 1
   },
   {
     "id": 52,
-    "topicId": 1009,
-    "blockId": 13,
-    "leftId": 1059,
-    "rightId": 1060,
-    "platform": 2
+    "topicId": 52,
+    "blockId": 99,
+    "leftId": 1028,
+    "rightId": 1029,
+    "platform": 1
   },
   {
     "id": 53,
-    "topicId": 1010,
-    "blockId": 14,
-    "leftId": 1061,
-    "rightId": 1062,
-    "platform": 2
+    "topicId": 53,
+    "blockId": 100,
+    "leftId": 1030,
+    "rightId": 1031,
+    "platform": 1
   },
   {
     "id": 54,
-    "topicId": 1011,
-    "blockId": 18,
-    "leftId": 1083,
-    "rightId": 1084,
-    "platform": 2
+    "topicId": 54,
+    "blockId": 103,
+    "leftId": 1044,
+    "rightId": 1045,
+    "platform": 1
   },
   {
     "id": 55,
-    "topicId": 1012,
-    "blockId": 19,
-    "leftId": 1085,
-    "rightId": 1086,
-    "platform": 2
+    "topicId": 55,
+    "blockId": 104,
+    "leftId": 1058,
+    "rightId": 1059,
+    "platform": 1
   },
   {
     "id": 56,
-    "topicId": 1013,
-    "blockId": 20,
-    "leftId": 1087,
-    "rightId": 1088,
-    "platform": 2
+    "topicId": 56,
+    "blockId": 106,
+    "leftId": 1072,
+    "rightId": 1073,
+    "platform": 1
   },
   {
     "id": 57,
-    "topicId": 1014,
-    "blockId": 22,
-    "leftId": 1099,
-    "rightId": 1100,
-    "platform": 2
+    "topicId": 57,
+    "blockId": 123,
+    "leftId": 1235,
+    "rightId": 1236,
+    "platform": 1
   },
   {
     "id": 58,
-    "topicId": 1015,
-    "blockId": 24,
-    "leftId": 1101,
-    "rightId": 1102,
-    "platform": 2
-  },
-  {
-    "id": 59,
-    "topicId": 1016,
-    "blockId": 25,
-    "leftId": 1103,
-    "rightId": 1104,
-    "platform": 2
-  },
-  {
-    "id": 60,
-    "topicId": 1017,
-    "blockId": 26,
-    "leftId": 1105,
-    "rightId": 1106,
-    "platform": 2
-  },
-  {
-    "id": 61,
-    "topicId": 1018,
-    "blockId": 27,
-    "leftId": 1116,
-    "rightId": 1117,
-    "platform": 2
-  },
-  {
-    "id": 62,
-    "topicId": 1019,
-    "blockId": 28,
-    "leftId": 1118,
-    "rightId": 1119,
-    "platform": 2
-  },
-  {
-    "id": 63,
-    "topicId": 1020,
-    "blockId": 30,
-    "leftId": 1120,
-    "rightId": 1121,
-    "platform": 2
-  },
-  {
-    "id": 64,
-    "topicId": 1021,
-    "blockId": 31,
-    "leftId": 1122,
-    "rightId": 1123,
-    "platform": 2
-  },
-  {
-    "id": 65,
-    "topicId": 1022,
-    "blockId": 32,
-    "leftId": 1135,
-    "rightId": 1136,
-    "platform": 2
-  },
-  {
-    "id": 66,
-    "topicId": 1023,
-    "blockId": 33,
-    "leftId": 1137,
-    "rightId": 1138,
-    "platform": 2
-  },
-  {
-    "id": 67,
-    "topicId": 1024,
-    "blockId": 34,
-    "leftId": 1160,
-    "rightId": 1161,
-    "platform": 2
-  },
-  {
-    "id": 68,
-    "topicId": 1026,
-    "blockId": 36,
-    "leftId": 1162,
-    "rightId": 1163,
-    "platform": 2
-  },
-  {
-    "id": 69,
-    "topicId": 1027,
-    "blockId": 37,
-    "leftId": 1164,
-    "rightId": 1165,
-    "platform": 2
-  },
-  {
-    "id": 70,
-    "topicId": 1028,
-    "blockId": 38,
-    "leftId": 1174,
-    "rightId": 1175,
-    "platform": 2
-  },
-  {
-    "id": 71,
-    "topicId": 1029,
-    "blockId": 39,
-    "leftId": 1176,
-    "rightId": 1177,
-    "platform": 2
-  },
-  {
-    "id": 72,
-    "topicId": 1030,
-    "blockId": 40,
-    "leftId": 1178,
-    "rightId": 1179,
-    "platform": 2
-  },
-  {
-    "id": 73,
-    "topicId": 1031,
-    "blockId": 41,
-    "leftId": 1180,
-    "rightId": 1181,
-    "platform": 2
-  },
-  {
-    "id": 74,
-    "topicId": 1032,
-    "blockId": 42,
-    "leftId": 1182,
-    "rightId": 1183,
-    "platform": 0
+    "topicId": 58,
+    "blockId": 128,
+    "leftId": 1285,
+    "rightId": 1286,
+    "platform": 1
   }
 ]
