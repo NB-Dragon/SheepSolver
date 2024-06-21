@@ -5,6 +5,7 @@
 class ResidualPool(object):
     def __init__(self, card_container):
         self._card_container = card_container
+        self._card_sequence = None
         # 当前操作池有多少张卡牌
         self._pool_count = 0
         # 当前操作池可容纳的最大牌数
@@ -14,7 +15,8 @@ class ResidualPool(object):
         # 已经成功消除的卡牌信息
         self._disappear_card = []
 
-    def prepare_game_data(self):
+    def prepare_game_data(self, card_sequence):
+        self._card_sequence = card_sequence
         self._pool_count = 0
         self._pool_card = []
         self._disappear_card = []
@@ -41,25 +43,15 @@ class ResidualPool(object):
         sorted_pool_card = sorted(self._pool_card, key=lambda item: len(item["card_list"]), reverse=True)
         return [item["card_type"] for item in sorted_pool_card]
 
-    def get_pool_zone_all_card_list(self):
-        result_list = []
-        for card_pair in self._pool_card:
-            result_list.extend(card_pair["card_list"])
-        return result_list
-
     def pick_card(self, card_index):
         card_detail = self._card_container.get_card_detail_item(card_index)
-        card_pair = self._find_match_card_pair(card_detail)
-        if card_pair is None:
-            card_pair = self._create_card_pair(card_detail)
+        card_pair = self._find_match_card_pair(card_detail) or self._create_card_pair(card_detail)
         self._card_pair_append_card(card_pair, card_index)
         self._card_disappear_for_same(card_pair)
 
     def recover_card(self, card_index):
         card_detail = self._card_container.get_card_detail_item(card_index)
-        card_pair = self._find_match_card_pair(card_detail)
-        if card_pair is None:
-            card_pair = self._recover_disappear_item(card_detail)
+        card_pair = self._find_match_card_pair(card_detail) or self._recover_disappear_item(card_detail)
         self._card_pair_remove_card(card_pair, card_index)
         self._card_disappear_for_back(card_pair)
 

@@ -12,6 +12,7 @@ class GamePoolController(object):
         self._solve_type = solve_type
         self._global_config = global_config
         self._card_container = CardContainer()
+        self._card_sequence = None
         self._operation_pool = OperationPool(self._card_container)
         self._residual_pool = ResidualPool(self._card_container)
 
@@ -21,9 +22,10 @@ class GamePoolController(object):
             level_data = map_data["levelData"][level_key]
             self._card_container.append_level_card(level_data)
 
-    def prepare_game_data(self):
-        self._operation_pool.prepare_game_data()
-        self._residual_pool.prepare_game_data()
+    def prepare_game_data(self, card_sequence):
+        self._card_sequence = card_sequence
+        self._operation_pool.prepare_game_data(card_sequence)
+        self._residual_pool.prepare_game_data(card_sequence)
 
     def export_game_data(self):
         card = self._card_container.export_compute_data_string()
@@ -81,8 +83,8 @@ class GamePoolController(object):
         self._residual_pool.pick_card(card_index)
 
     def recover_card(self, card_index):
-        self._operation_pool.recover_card(card_index)
         self._residual_pool.recover_card(card_index)
+        self._operation_pool.recover_card(card_index)
 
     def _sort_head_list_with_type_list(self, card_type_dict, card_type_list):
         result_list = list()

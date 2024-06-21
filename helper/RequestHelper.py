@@ -16,7 +16,7 @@ class RequestHelper(object):
 
     def _get_request_header(self):
         user_agent = self._generate_user_agent()
-        request_header = {"user-agent": user_agent, "content-type": "application/json", "b": 690}
+        request_header = {"user-agent": user_agent, "content-type": "application/json"}
         if self._user_token is not None:
             request_header["t"] = self._user_token
         return request_header

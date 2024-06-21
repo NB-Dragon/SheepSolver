@@ -3,6 +3,7 @@
 # Create Time: 2022/11/30 00:00
 # Create User: NB-Dragon
 import time
+from core.card.CardSequence import CardSequence
 from core.tool.GamePoolController import GamePoolController
 from helper.ProjectHelper import ProjectHelper
 
@@ -10,19 +11,20 @@ from helper.ProjectHelper import ProjectHelper
 class SheepSolver(object):
     def __init__(self, solve_type):
         self._global_config = self._generate_global_config()
+        self._card_sequence = CardSequence()
         self._game_pool_controller = GamePoolController(solve_type, self._global_config)
 
         self._start_time = None
         self._iteration_time = 0
+
+        self._card_count = 0
         self._current_progress = 0
         self._maximum_progress = 0
-        self._card_count = 0
-        self._pick_list = []
         self._situation_history = set()
 
     def load_map_data(self, map_data: dict):
         self._game_pool_controller.init_map_data(map_data)
-        self._game_pool_controller.prepare_game_data()
+        self._game_pool_controller.prepare_game_data(self._card_sequence)
         self._card_count = self._game_pool_controller.get_all_card_count()
 
     def solve(self):
@@ -77,38 +79,32 @@ class SheepSolver(object):
 
     def _show_solving_progress(self):
         if self._global_config["show_progress"]:
-            print("当前进度为: {}/{}".format(len(self._pick_list), self._card_count))
+            pick_index_list = self._card_sequence.get_pick_index_list()
+            pick_index_list = [item for item in pick_index_list if item >= 0]
+            print("当前进度为: {}/{}".format(len(pick_index_list), self._card_count))
 
     def _record_current_progress(self):
-        card_list = [item for item in self._pick_list if item >= 0]
-        self._current_progress = len(card_list) / self._card_count
+        pick_index_list = self._card_sequence.get_pick_index_list()
+        pick_index_list = [item for item in pick_index_list if item >= 0]
+        self._current_progress = len(pick_index_list) / self._card_count
         if self._current_progress > self._maximum_progress:
             self._maximum_progress = self._current_progress
 
     def _operation_pick_card(self, card_index):
         self._game_pool_controller.pick_card(card_index)
-        self._pick_list.append(card_index)
 
     def _operation_recover_card(self, card_index):
         self._game_pool_controller.recover_card(card_index)
-        self._pick_list.remove(card_index)
 
     def _generate_card_detail_dict(self):
         return self._game_pool_controller.get_all_card_dict()
 
     @staticmethod
-    def _get_card_id_from_detail(card_detail_dict, index):
-        if index in card_detail_dict:
-            return card_detail_dict[index].get_card_id()
+    def _get_card_id_from_detail(card_detail_dict, card_index):
+        if card_index in card_detail_dict:
+            return card_detail_dict[card_index].get_card_id()
         else:
             return "0-0-0"
-
-    @staticmethod
-    def _get_card_type_from_detail(card_detail_dict, index):
-        if index in card_detail_dict:
-            return card_detail_dict[index].get_card_type()
-        else:
-            return index
 
     def _generate_card_id_list(self, card_detail_dict, card_list):
         result_list = list()
@@ -117,29 +113,31 @@ class SheepSolver(object):
             result_list.append(result_item)
         return result_list
 
-    def _generate_card_type_list(self, card_detail_dict, card_list):
+    @staticmethod
+    def _generate_card_type_list(card_list):
         result_list = list()
         for card_item in card_list:
-            card_type = self._get_card_type_from_detail(card_detail_dict, card_item)
-            result_list.append({"index": card_item, "type": card_type})
+            result_list.append({"index": card_item[0], "type": card_item[1]})
         return result_list
 
     def generate_card_index_result(self):
         if self._game_pool_controller.is_game_over():
-            return list(self._pick_list)
+            pick_index_list = self._card_sequence.get_pick_index_list()
+            return pick_index_list
         else:
             return None
 
     def generate_card_id_result(self):
         if self._game_pool_controller.is_game_over():
             card_detail_dict = self._generate_card_detail_dict()
-            return self._generate_card_id_list(card_detail_dict, self._pick_list)
+            pick_index_list = self._card_sequence.get_pick_index_list()
+            return self._generate_card_id_list(card_detail_dict, pick_index_list)
         else:
             return None
 
     def generate_card_type_result(self):
         if self._game_pool_controller.is_game_over():
-            card_detail_dict = self._generate_card_detail_dict()
-            return self._generate_card_type_list(card_detail_dict, self._pick_list)
+            pick_type_list = self._card_sequence.get_pick_type_list()
+            return self._generate_card_type_list(pick_type_list)
         else:
             return None
