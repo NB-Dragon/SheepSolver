@@ -23,6 +23,7 @@ class ProjectHelper(object):
         result_dict = dict()
         result_dict["normal_config"] = os.path.join(self._code_entrance_path, "normal_config.json")
         result_dict["mahjong_config"] = os.path.join(self._code_entrance_path, "mahjong_config.json")
+        result_dict["gnome_config"] = os.path.join(self._code_entrance_path, "gnome_config.json")
         result_dict["online_data"] = os.path.join(self._code_entrance_path, "online_data.json")
         result_dict["block_info"] = os.path.join(self._code_entrance_path, "static", "skin", "block_info.json")
         result_dict["skin_info"] = os.path.join(self._code_entrance_path, "static", "skin", "skin_info.json")
@@ -32,7 +33,8 @@ class ProjectHelper(object):
     def _init_project_config(self):
         normal_config = FileHelper().read_json_data(self._project_file_path["normal_config"])
         mahjong_config = FileHelper().read_json_data(self._project_file_path["mahjong_config"])
-        return {"normal": normal_config, "mahjong": mahjong_config}
+        gnome_config = FileHelper().read_json_data(self._project_file_path["gnome_config"])
+        return {"normal": normal_config, "mahjong": mahjong_config, "gnome": gnome_config}
 
     def get_project_config(self, config_name, config_key):
         return self._project_config.get(config_name).get(config_key)
@@ -66,6 +68,6 @@ class ProjectHelper(object):
     @staticmethod
     def _get_script_path(sys_argv: list):
         for index in range(len(sys_argv)):
-            if sys_argv[index] in ["-s", "--script"]:
+            if sys_argv[index] in ["-s", "--scripts"]:
                 return sys_argv[index + 1]
         return None

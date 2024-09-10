@@ -14,11 +14,9 @@ class DataAnalyzer(object):
     def __init__(self):
         self._project_helper = ProjectHelper()
         self._game_link_controller = self._generate_game_link_controller()
-        self._static_map_link = self._game_link_controller.get_static_map_link()
         self._game_start_list = self._game_link_controller.get_game_start_list()
-        self._static_map_path = self._project_helper.get_project_directory_path("static_map")
-        self._online_data_analyzer = OnlineDataAnalyzer(self._static_map_path, self._static_map_link)
-        self._static_data_generator = StaticDataGenerator(self._static_map_path)
+        self._online_data_analyzer = OnlineDataAnalyzer(self._project_helper)
+        self._static_data_generator = StaticDataGenerator(self._project_helper)
 
     def response(self, flow):
         link_parse_result = urllib.parse.urlparse(flow.request.url)
@@ -45,9 +43,10 @@ class DataAnalyzer(object):
         return len(match_list) != 0
 
     def _handle_response_result(self, response_data):
-        save_file_path = self._project_helper.get_project_file_path("online_data")
-        self._online_data_analyzer.download_map_struct_data(response_data)
-        self._static_data_generator.generate_final_map_file(response_data, save_file_path)
+        map_hash = response_data["data"]["map_md5"][1]
+        map_seed = response_data["data"]["map_seed"]
+        self._online_data_analyzer.create_map_struct_file(map_hash)
+        self._static_data_generator.fill_seed_data_into_file(map_hash, map_seed)
 
 
 addons = [DataAnalyzer()]
