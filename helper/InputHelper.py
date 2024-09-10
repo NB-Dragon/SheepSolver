@@ -8,7 +8,7 @@ import time
 
 class InputHelper(object):
     def __init__(self):
-        self._expect_list = ["normal", "index", "index-reverse", "level-bottom", "level-top", "random"]
+        self._expect_list = ["index-ascending", "index-descending", "level-bottom", "level-top", "normal", "random"]
         self._continue_checking = True
 
     def get_runtime_arguments(self, ):
