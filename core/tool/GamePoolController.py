@@ -8,11 +8,15 @@ from core.pool.ResidualPool import ResidualPool
 
 
 class GamePoolController(object):
-    def __init__(self, solve_type, global_config):
-        self._solve_type = solve_type
-        self._global_config = global_config
-        self._card_container = CardContainer()
+    def __init__(self, global_config, algorithm):
+        self._prepare_runtime_param(global_config, algorithm)
         self._card_sequence = None
+        self._fingerprint_set = set()
+
+    def _prepare_runtime_param(self, global_config, algorithm):
+        self._algorithm = algorithm
+        self._solve_progress = global_config["solve_first"]
+        self._card_container = CardContainer()
         self._operation_pool = OperationPool(self._card_container)
         self._residual_pool = ResidualPool(self._card_container)
 
@@ -42,18 +46,18 @@ class GamePoolController(object):
         card_range = range(self._card_container.get_card_count())
         return self._card_container.get_card_detail_dict(card_range)
 
-    def is_game_over(self):
-        main_zone_card_list = self._operation_pool.get_main_zone_show_card_list(self._solve_type)
+    def check_game_over(self):
+        main_zone_card_list = self._operation_pool.get_main_zone_show_card_list(self._algorithm)
         return len(main_zone_card_list) == 0
 
-    def generate_head_list(self):
-        main_zone_card_list = self._operation_pool.get_main_zone_show_card_list(self._solve_type)
-        return main_zone_card_list
+    def check_fingerprint_exist(self):
+        main_zone_card_list = self._operation_pool.get_main_zone_show_card_list(self._algorithm)
+        fingerprint = tuple(sorted(main_zone_card_list))
+        return True if fingerprint in self._fingerprint_set else bool(self._fingerprint_set.add(fingerprint))
 
-    def generate_head_fingerprint(self):
-        main_zone_card_list = self._operation_pool.get_main_zone_show_card_list(self._solve_type)
-        all_key_list = list(sorted(main_zone_card_list))
-        return "-".join([str(item) for item in all_key_list])
+    def generate_head_list(self):
+        main_zone_card_list = self._operation_pool.get_main_zone_show_card_list(self._algorithm)
+        return main_zone_card_list
 
     def ensure_head_list_alive(self, index_list):
         expect_card_dict = self._card_container.get_card_detail_dict(index_list)
@@ -69,10 +73,10 @@ class GamePoolController(object):
         else:
             return index_list
 
-    def ensure_head_list_disappear(self, index_list, progress):
+    def ensure_head_list_disappear(self, index_list, current_progress):
         expect_card_dict = self._card_container.get_card_detail_dict(index_list)
         card_type_dict = {index: card_detail.get_card_type() for index, card_detail in expect_card_dict.items()}
-        if progress >= self._global_config["solve_first"]:
+        if current_progress >= self._solve_progress:
             expect_type_list = self._residual_pool.get_sorted_card_type_list()
             return self._sort_head_list_with_type_list(card_type_dict, expect_type_list)
         else:

@@ -5,22 +5,25 @@
 import time
 from core.card.CardSequence import CardSequence
 from core.tool.GamePoolController import GamePoolController
-from helper.ProjectHelper import ProjectHelper
 
 
 class SheepSolver(object):
-    def __init__(self, solve_type):
-        self._global_config = self._generate_global_config()
-        self._card_sequence = CardSequence()
-        self._game_pool_controller = GamePoolController(solve_type, self._global_config)
+    def __init__(self, global_config, algorithm):
+        self._stdout_print_method = print
+        self._prepare_runtime_param(global_config, algorithm)
 
-        self._start_time = None
+        self._time_distance = []
         self._iteration_time = 0
+        self._last_show_time = 0
 
         self._card_count = 0
         self._current_progress = 0
         self._maximum_progress = 0
-        self._situation_history = set()
+
+    def _prepare_runtime_param(self, global_config, algorithm):
+        self._global_config = global_config
+        self._card_sequence = CardSequence()
+        self._game_pool_controller = GamePoolController(global_config, algorithm)
 
     def load_map_data(self, map_data: dict):
         self._game_pool_controller.init_map_data(map_data)
@@ -38,27 +41,43 @@ class SheepSolver(object):
             if self._check_programme_can_continue() is False:
                 break
             self._operation_pick_card(head_item)
-            head_fingerprint = self._game_pool_controller.generate_head_fingerprint()
-            if head_fingerprint in self._situation_history:
+            if self._game_pool_controller.check_fingerprint_exist():
                 self._operation_recover_card(head_item)
                 continue
-            else:
-                self._situation_history.add(head_fingerprint)
             self.solve()
-            if not self._game_pool_controller.is_game_over():
+            if not self._game_pool_controller.check_game_over():
                 self._operation_recover_card(head_item)
             else:
                 break
 
-    @staticmethod
-    def _generate_global_config():
-        return ProjectHelper().get_project_config("normal", "global")
+    def _show_solving_progress(self):
+        if self._global_config["show_progress"] and self._verify_within_time_period(1):
+            pick_index_list = self._card_sequence.get_pick_index_list()
+            pick_index_list = [item for item in pick_index_list if item >= 0]
+            content = "当前进度为: {}/{}".format(len(pick_index_list), self._card_count)
+            self._stdout_print_method(content)
+
+    def _verify_within_time_period(self, second):
+        if self._iteration_time - self._last_show_time >= second:
+            self._last_show_time = self._iteration_time
+            return True
+        else:
+            return False
+
+    def _record_current_progress(self):
+        pick_index_list = self._card_sequence.get_pick_index_list()
+        pick_index_list = [item for item in pick_index_list if item >= 0]
+        self._current_progress = len(pick_index_list) / self._card_count
+        if self._current_progress > self._maximum_progress:
+            self._maximum_progress = self._current_progress
 
     def _generate_current_iteration_time(self):
-        if isinstance(self._start_time, float):
-            self._iteration_time = time.time() - self._start_time
+        current_time = time.time()
+        if len(self._time_distance) == 2:
+            self._time_distance[1] = current_time
+            self._iteration_time = self._time_distance[1] - self._time_distance[0]
         else:
-            self._start_time = time.time()
+            self._time_distance = [current_time, current_time]
             self._iteration_time = 0
 
     def _check_programme_can_continue(self):
@@ -76,19 +95,6 @@ class SheepSolver(object):
         expect_time, expect_progress = expect_progress["time"], expect_progress["percentage"]
         detect_result = self._iteration_time <= expect_time or self._maximum_progress >= expect_progress
         return True if expect_time < 0 else detect_result
-
-    def _show_solving_progress(self):
-        if self._global_config["show_progress"]:
-            pick_index_list = self._card_sequence.get_pick_index_list()
-            pick_index_list = [item for item in pick_index_list if item >= 0]
-            print("当前进度为: {}/{}".format(len(pick_index_list), self._card_count))
-
-    def _record_current_progress(self):
-        pick_index_list = self._card_sequence.get_pick_index_list()
-        pick_index_list = [item for item in pick_index_list if item >= 0]
-        self._current_progress = len(pick_index_list) / self._card_count
-        if self._current_progress > self._maximum_progress:
-            self._maximum_progress = self._current_progress
 
     def _operation_pick_card(self, card_index):
         self._game_pool_controller.pick_card(card_index)
@@ -121,14 +127,14 @@ class SheepSolver(object):
         return result_list
 
     def generate_card_index_result(self):
-        if self._game_pool_controller.is_game_over():
+        if self._game_pool_controller.check_game_over():
             pick_index_list = self._card_sequence.get_pick_index_list()
             return pick_index_list
         else:
             return None
 
     def generate_card_id_result(self):
-        if self._game_pool_controller.is_game_over():
+        if self._game_pool_controller.check_game_over():
             card_detail_dict = self._generate_card_detail_dict()
             pick_index_list = self._card_sequence.get_pick_index_list()
             return self._generate_card_id_list(card_detail_dict, pick_index_list)
@@ -136,7 +142,7 @@ class SheepSolver(object):
             return None
 
     def generate_card_type_result(self):
-        if self._game_pool_controller.is_game_over():
+        if self._game_pool_controller.check_game_over():
             pick_type_list = self._card_sequence.get_pick_type_list()
             return self._generate_card_type_list(pick_type_list)
         else:

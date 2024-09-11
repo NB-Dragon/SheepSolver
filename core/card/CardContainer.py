@@ -38,7 +38,7 @@ class CardContainer(object):
         return len(self._card_dict)
 
     def get_card_detail_item(self, card_index):
-        return self._card_dict.get(card_index, None)
+        return self._card_dict[card_index]
 
     def get_card_detail_dict(self, card_list):
         result_dict = dict()

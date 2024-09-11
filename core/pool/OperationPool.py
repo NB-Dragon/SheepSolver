@@ -11,23 +11,21 @@ class OperationPool(object):
         self._card_sequence = None
         # 以序号注册可操作卡牌数据
         self._main_zone = []
+        # 在准备阶段对所有卡牌排序
+        self._sort_card = dict()
 
     def prepare_game_data(self, card_sequence):
         self._card_sequence = card_sequence
         self._main_zone = self._card_container.get_main_zone_card_list()
+        self._sort_card = self._generate_default_sorted_dict()
 
-    def get_main_zone_show_card_list(self, solve_type):
-        if solve_type == "normal":
+    def get_main_zone_show_card_list(self, algorithm):
+        if algorithm in self._sort_card:
+            result_list = [item for item in self._sort_card[algorithm] if item in self._main_zone]
+            return result_list
+        elif algorithm == "normal":
             return list(self._main_zone)
-        elif solve_type == "index":
-            return sorted(self._main_zone)
-        elif solve_type == "index-reverse":
-            return sorted(self._main_zone, reverse=True)
-        elif solve_type == "level-bottom":
-            return sorted(self._main_zone, key=self._sort_for_level)
-        elif solve_type == "level-top":
-            return sorted(self._main_zone, key=self._sort_for_level, reverse=True)
-        elif solve_type == "random":
+        elif algorithm == "random":
             result_list = list(self._main_zone)
             random.shuffle(result_list)
             return result_list
@@ -107,6 +105,19 @@ class OperationPool(object):
             if card_index in origin_list:
                 result_dict[card_index] = card_detail
         return result_dict
+
+    def _generate_default_sorted_dict(self):
+        result_dict = dict()
+        card_index_list = range(self._card_container.get_card_count())
+        result_dict["index-ascending"] = list(sorted(card_index_list, key=self._sort_for_index))
+        result_dict["index-descending"] = list(sorted(card_index_list, key=self._sort_for_index, reverse=True))
+        result_dict["level-bottom"] = list(sorted(card_index_list, key=self._sort_for_level))
+        result_dict["level-top"] = list(sorted(card_index_list, key=self._sort_for_level, reverse=True))
+        return result_dict
+
+    # noinspection PyMethodMayBeStatic
+    def _sort_for_index(self, card_index):
+        return card_index
 
     def _sort_for_level(self, card_index):
         card_detail = self._card_container.get_card_detail_item(card_index)

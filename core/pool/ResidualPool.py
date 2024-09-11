@@ -6,20 +6,17 @@ class ResidualPool(object):
     def __init__(self, card_container):
         self._card_container = card_container
         self._card_sequence = None
+        # 操作池可容纳的最大牌数
+        self._pool_limit = 7
         # 当前操作池有多少张卡牌
         self._pool_count = 0
-        # 当前操作池可容纳的最大牌数
-        self._pool_limit = 7
-        # 当前操作池卡牌类别及序号
+        # 当前操作池卡牌类别及其卡牌序号
         self._pool_card = []
-        # 已经成功消除的卡牌信息
+        # 当前操作池消除记录及其初始位置
         self._disappear_card = []
 
     def prepare_game_data(self, card_sequence):
         self._card_sequence = card_sequence
-        self._pool_count = 0
-        self._pool_card = []
-        self._disappear_card = []
 
     def is_card_count_out_of_limit(self):
         return self._pool_count >= self._pool_limit
