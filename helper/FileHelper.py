@@ -3,36 +3,34 @@
 # Create Time: 2022/11/30 00:00
 # Create User: NB-Dragon
 import json
-import os
 
 
 class FileHelper(object):
     def read_json_data(self, file_path):
-        file_content = self.read_file_content(file_path) or "null"
-        return json.loads(file_content)
+        bytes_data = self.read_bytes_data(file_path) or b"null"
+        file_string = bytes_data.decode("utf-8", "surrogatepass")
+        return json.loads(file_string)
 
     def write_json_data(self, file_path, json_data):
-        json_content = json.dumps(json_data)
-        self.write_file_content(file_path, json_content)
+        file_string = json.dumps(json_data)
+        bytes_data = file_string.encode(file_string)
+        self.write_bytes_data(file_path, bytes_data)
 
     @staticmethod
-    def read_file_content(file_path):
+    def read_bytes_data(file_path):
         try:
-            if os.path.isfile(file_path):
-                reader = open(file_path, "r", encoding="utf-8")
-                content = reader.read()
-                reader.close()
-                return content
-            else:
-                return None
+            reader = open(file_path, "rb")
+            content = reader.read()
+            reader.close()
+            return content
         except Exception as e:
             return None
 
     @staticmethod
-    def write_file_content(file_path, content):
+    def write_bytes_data(file_path, content):
         try:
-            writer = open(file_path, "w", encoding="utf-8")
+            writer = open(file_path, "wb")
             writer.write(content)
             writer.close()
         except Exception as e:
-            print("文件写入失败: {}, 出错详情为: {}".format(file_path, str(e)))
+            return None

@@ -8,9 +8,9 @@ from core.tool.GamePoolController import GamePoolController
 
 
 class SheepSolver(object):
-    def __init__(self, global_config, algorithm):
+    def __init__(self, solver_config, solver_algorithm):
         self._stdout_print_method = print
-        self._prepare_runtime_param(global_config, algorithm)
+        self._prepare_runtime_param(solver_config, solver_algorithm)
 
         self._time_distance = []
         self._iteration_time = 0
@@ -20,10 +20,10 @@ class SheepSolver(object):
         self._current_progress = 0
         self._maximum_progress = 0
 
-    def _prepare_runtime_param(self, global_config, algorithm):
-        self._global_config = global_config
+    def _prepare_runtime_param(self, solver_config, solver_algorithm):
+        self._solver_config = solver_config
         self._card_sequence = CardSequence()
-        self._game_pool_controller = GamePoolController(global_config, algorithm)
+        self._game_pool_controller = GamePoolController(solver_config, solver_algorithm)
 
     def load_map_data(self, map_data: dict):
         self._game_pool_controller.init_map_data(map_data)
@@ -51,7 +51,7 @@ class SheepSolver(object):
                 break
 
     def _show_solving_progress(self):
-        if self._global_config["show_progress"] and self._verify_within_time_period(1):
+        if self._solver_config["show_progress"] and self._verify_within_time_period(1):
             pick_index_list = self._card_sequence.get_pick_index_list()
             pick_index_list = [item for item in pick_index_list if item >= 0]
             content = "当前进度为: {}/{}".format(len(pick_index_list), self._card_count)
@@ -87,11 +87,11 @@ class SheepSolver(object):
             return False
 
     def _is_solver_in_time_limit(self):
-        time_limit = self._global_config["time_limit"]
+        time_limit = self._solver_config["time_limit"]
         return True if time_limit < 0 else self._iteration_time <= time_limit
 
     def _is_solver_progress_meets_expect(self):
-        expect_progress = self._global_config["expect_progress"]
+        expect_progress = self._solver_config["expect_progress"]
         expect_time, expect_progress = expect_progress["time"], expect_progress["percentage"]
         detect_result = self._iteration_time <= expect_time or self._maximum_progress >= expect_progress
         return True if expect_time < 0 else detect_result

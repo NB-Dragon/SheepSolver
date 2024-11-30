@@ -10,24 +10,24 @@ from helper.InputHelper import InputHelper
 from helper.ProjectHelper import ProjectHelper
 
 
-def read_global_config():
-    return ProjectHelper().get_project_config("normal", "global")
+def read_solver_config():
+    return ProjectHelper().get_project_config("dynamic", "solver")
 
 
-def read_solve_algorithm():
+def read_solver_algorithm():
     input_parser = InputHelper()
     runtime_arguments = input_parser.get_runtime_arguments()
     return runtime_arguments.mode
 
 
 def read_online_data():
-    online_file_path = "online_data.json"
-    return FileHelper().read_json_data(online_file_path)
+    online_data_path = ProjectHelper().get_global_online_data()
+    return FileHelper().read_json_data(online_data_path)
 
 
 if __name__ == '__main__':
-    global_config, algorithm = read_global_config(), read_solve_algorithm()
-    sheep_solver = SheepSolver(global_config, algorithm)
+    solver_config, solver_algorithm = read_solver_config(), read_solver_algorithm()
+    sheep_solver = SheepSolver(solver_config, solver_algorithm)
     sheep_solver.load_map_data(read_online_data())
     start_time = time.time()
     sheep_solver.solve()

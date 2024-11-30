@@ -16,9 +16,10 @@ class OnlineDataAnalyzer(object):
         self._prepare_runtime_param()
 
     def _prepare_runtime_param(self):
-        link_config = self._project_helper.get_project_config("normal", "link")
-        self._static_map_link = GameLinkController(link_config).get_static_map_link()
-        self._static_map_path = self._project_helper.get_project_directory_path("static_map")
+        link_config = self._project_helper.get_project_config("protect", "link")
+        self._game_link_controller = GameLinkController(link_config)
+        self._static_map_link = self._game_link_controller.get_static_map_link()
+        self._static_map_path = self._project_helper.get_project_path("static_map")
 
     def create_map_struct_cache(self, map_hash):
         map_struct_link = self._generate_map_struct_request_link(map_hash, "map")
@@ -43,8 +44,7 @@ class OnlineDataAnalyzer(object):
     @staticmethod
     def _save_local_struct_data(map_struct_data, map_struct_file, map_hash):
         if isinstance(map_struct_data, bytes) and len(map_struct_data):
-            map_struct_string = map_struct_data.decode()
-            FileHelper().write_file_content(map_struct_file, map_struct_string)
+            FileHelper().write_bytes_data(map_struct_file, map_struct_data)
             print("=====> 地图初始结构缓存成功: {}".format(map_hash))
         else:
             print("=====> 地图初始结构缓存失败: {}".format(map_hash))

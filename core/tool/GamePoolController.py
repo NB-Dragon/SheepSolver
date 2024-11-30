@@ -8,14 +8,14 @@ from core.pool.ResidualPool import ResidualPool
 
 
 class GamePoolController(object):
-    def __init__(self, global_config, algorithm):
-        self._prepare_runtime_param(global_config, algorithm)
+    def __init__(self, solver_config, solver_algorithm):
+        self._prepare_runtime_param(solver_config, solver_algorithm)
         self._card_sequence = None
         self._fingerprint_set = set()
 
-    def _prepare_runtime_param(self, global_config, algorithm):
-        self._algorithm = algorithm
-        self._solve_progress = global_config["solve_first"]
+    def _prepare_runtime_param(self, solver_config, solver_algorithm):
+        self._solver_algorithm = solver_algorithm
+        self._solve_progress = solver_config["solve_first"]
         self._card_container = CardContainer()
         self._operation_pool = OperationPool(self._card_container)
         self._residual_pool = ResidualPool(self._card_container)
@@ -47,16 +47,16 @@ class GamePoolController(object):
         return self._card_container.get_card_detail_dict(card_range)
 
     def check_game_over(self):
-        main_zone_card_list = self._operation_pool.get_main_zone_show_card_list(self._algorithm)
+        main_zone_card_list = self._operation_pool.get_main_zone_show_card_list(self._solver_algorithm)
         return len(main_zone_card_list) == 0
 
     def check_fingerprint_exist(self):
-        main_zone_card_list = self._operation_pool.get_main_zone_show_card_list(self._algorithm)
+        main_zone_card_list = self._operation_pool.get_main_zone_show_card_list(self._solver_algorithm)
         fingerprint = tuple(sorted(main_zone_card_list))
         return True if fingerprint in self._fingerprint_set else bool(self._fingerprint_set.add(fingerprint))
 
     def generate_head_list(self):
-        main_zone_card_list = self._operation_pool.get_main_zone_show_card_list(self._algorithm)
+        main_zone_card_list = self._operation_pool.get_main_zone_show_card_list(self._solver_algorithm)
         return main_zone_card_list
 
     def ensure_head_list_alive(self, index_list):

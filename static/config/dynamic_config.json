@@ -1,0 +1,49 @@
+{
+  "traffic": {
+    "base_command": [
+      "mitmdump"
+    ],
+    "table_config": {
+      "script": {
+        "key": "--scripts",
+        "data": [
+          "gnome_capture.py"
+        ],
+        "pipe": []
+      },
+      "port": {
+        "key": "--listen-port",
+        "data": [
+          "6666"
+        ],
+        "pipe": []
+      },
+      "mode": {
+        "key": "--mode",
+        "data": [
+          "regular"
+        ],
+        "pipe": []
+      },
+      "host": {
+        "key": "--allow-hosts",
+        "data": [
+          "easygame2021.com",
+          "shu.easygame2021.com",
+          "cat-match.easygame2021.com",
+          "joyo-avatar.easygame2021.com"
+        ],
+        "pipe": []
+      }
+    }
+  },
+  "solver": {
+    "show_progress": true,
+    "solve_first": 0.8,
+    "time_limit": -1,
+    "expect_progress": {
+      "time": -1,
+      "percentage": 0.80
+    }
+  }
+}

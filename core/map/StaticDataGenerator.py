@@ -14,8 +14,8 @@ class StaticDataGenerator(object):
         self._prepare_runtime_param()
 
     def _prepare_runtime_param(self):
-        self._save_file_path = self._project_helper.get_project_file_path("online_data")
-        self._static_map_path = self._project_helper.get_project_directory_path("static_map")
+        self._save_file_path = self._project_helper.get_global_online_data()
+        self._static_map_path = self._project_helper.get_project_path("static_map")
 
     def fill_seed_data_into_cache(self, map_struct, map_seed):
         self._map_struct_fill_data(map_struct, map_seed)
@@ -29,10 +29,9 @@ class StaticDataGenerator(object):
             print("=====> 地图种子信息加载失败")
             print("=====> 请根据文档指引申请进群，私信群主获取解决方案")
         else:
-            seed_data_path = self._project_helper.get_project_file_path("online_data")
             map_struct_data = FileHelper().read_json_data(map_struct_file)
             self._map_struct_fill_data(map_struct_data, map_seed)
-            self._save_local_seed_data(map_struct_data, seed_data_path)
+            self._save_local_seed_data(map_struct_data, self._save_file_path)
 
     def _generate_map_struct_file_path(self, map_hash):
         map_cache_name = "{}.json".format(map_hash)
