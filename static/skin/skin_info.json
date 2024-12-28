@@ -3473,7 +3473,7 @@
   },
   {
     "clothesId": 497,
-    "name": "搪瓷杯羊",
+    "name": "大茶缸羊",
     "isTopic": 0,
     "platform": 1,
     "description": ""
@@ -4687,7 +4687,7 @@
     "name": "么么龙羊",
     "isTopic": 0,
     "platform": 1,
-    "description": "通过微信公众号转跳至游戏后获得。"
+    "description": "通过微信公众号转跳至游戏或关注抖音官方号后获得。"
   },
   {
     "clothesId": 671,
@@ -9000,5 +9000,3113 @@
     "isTopic": 128,
     "platform": 1,
     "description": ""
+  },
+  {
+    "clothesId": 1287,
+    "name": "蒙古包羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1288,
+    "name": "花开福寿羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1289,
+    "name": "蜜瓜圣代羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1290,
+    "name": "星星雨伞羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1291,
+    "name": "蝶恋花羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1292,
+    "name": "布谷钟羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1293,
+    "name": "美男石膏羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1294,
+    "name": "小画家羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1295,
+    "name": "朋克探险羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1296,
+    "name": "辣椒羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1297,
+    "name": "狮子羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>现世乌龙</c>在线上互动【画了个羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1298,
+    "name": "马戏帐篷羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>雨过天晴</c>在线上互动【画了个羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1299,
+    "name": "冲浪羊",
+    "isTopic": 130,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1300,
+    "name": "滑雪羊",
+    "isTopic": 130,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1301,
+    "name": "黑洞羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1302,
+    "name": "老式拌饭羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1303,
+    "name": "三原色羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1304,
+    "name": "樱桃小熊羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1305,
+    "name": "草莓兔兔羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1306,
+    "name": "海葵小丑鱼羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1307,
+    "name": "灵感大爆炸羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1308,
+    "name": "爱上我自己羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1309,
+    "name": "梦幻门扉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1310,
+    "name": "呱呱午睡羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>了了酱</c>在线上互动【画了个羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1311,
+    "name": "喜气洋羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>了了酱</c>在线上互动【画了个羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1312,
+    "name": "汉堡套餐羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Nienie捏</c>在线上互动【画了个羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1313,
+    "name": "水信玄饼羊",
+    "isTopic": 131,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1314,
+    "name": "阳光海岸羊",
+    "isTopic": 131,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1315,
+    "name": "诗仙羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与羊羊拉力赛-玉米杯获得。"
+  },
+  {
+    "clothesId": 1316,
+    "name": "盛唐美羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与羊羊拉力赛-玉米杯获得。"
+  },
+  {
+    "clothesId": 1317,
+    "name": "宝宝辅食羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1318,
+    "name": "彩宝矿石羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1319,
+    "name": "橙c美式羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1320,
+    "name": "过程结果羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1321,
+    "name": "化学喷泉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1322,
+    "name": "界面错误羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1323,
+    "name": "蓝瘦不香菇羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1324,
+    "name": "玫瑰少女羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1325,
+    "name": "泡泡茶壶羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1326,
+    "name": "亡灵公主羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1327,
+    "name": "墨西哥吉他羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1328,
+    "name": "森林公主羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1329,
+    "name": "彩虹许愿池羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "集齐职场老油条系列卡牌后获得。"
+  },
+  {
+    "clothesId": 1330,
+    "name": "羊排套餐羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "羊羊竞赛第18赛季获得。"
+  },
+  {
+    "clothesId": 1331,
+    "name": "草莓可颂羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "羊羊竞赛第18赛季获得。"
+  },
+  {
+    "clothesId": 1332,
+    "name": "遨游星河羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊小宇宙</c>活动后获得。"
+  },
+  {
+    "clothesId": 1333,
+    "name": "虫洞羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊小宇宙</c>活动后获得。"
+  },
+  {
+    "clothesId": 1334,
+    "name": "观测者羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊小宇宙</c>活动后获得。"
+  },
+  {
+    "clothesId": 1335,
+    "name": "太空人羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊小宇宙</c>活动后获得。"
+  },
+  {
+    "clothesId": 1336,
+    "name": "太羊系羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊小宇宙</c>活动后获得。"
+  },
+  {
+    "clothesId": 1337,
+    "name": "星环羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊小宇宙</c>活动后获得。"
+  },
+  {
+    "clothesId": 1338,
+    "name": "遥望家园羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊小宇宙</c>活动后获得。"
+  },
+  {
+    "clothesId": 1339,
+    "name": "宇宙少女羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊小宇宙</c>活动后获得。"
+  },
+  {
+    "clothesId": 1340,
+    "name": "白昼面纱羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1341,
+    "name": "月夜面纱羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1342,
+    "name": "冰镇西瓜羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1343,
+    "name": "乘凉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1344,
+    "name": "雨中睡觉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1345,
+    "name": "吸血鬼少女羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1346,
+    "name": "森林王子羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1347,
+    "name": "焦头烂鹅羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1348,
+    "name": "斗牛角包羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1349,
+    "name": "蟹蟹拉面羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1350,
+    "name": "奶牛甜甜圈羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>饱饱吃不饱</c>在线上互动【画了个羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1351,
+    "name": "糖果盒羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>闪闪烁</c>在线上互动【画了个羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1352,
+    "name": "华丽大小姐羊",
+    "isTopic": 137,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1353,
+    "name": "清晨窗景羊",
+    "isTopic": 137,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1354,
+    "name": "馨润莲语羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参加游船争渡活动获得。"
+  },
+  {
+    "clothesId": 1355,
+    "name": "孤舟岸畔羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参加游船争渡活动获得。"
+  },
+  {
+    "clothesId": 1356,
+    "name": "旋转楼梯羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1357,
+    "name": "OL羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1358,
+    "name": "阿努比斯羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1359,
+    "name": "埃及猫神羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1360,
+    "name": "海的女羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1361,
+    "name": "虎鲸羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1362,
+    "name": "啦啦队员羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1363,
+    "name": "清风微拂羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1364,
+    "name": "印第安部落羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1365,
+    "name": "模特羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1366,
+    "name": "扎西羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1367,
+    "name": "卓玛羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1368,
+    "name": "爆金币羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1369,
+    "name": "鞭策羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1370,
+    "name": "草莓大福羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1371,
+    "name": "蜂巢蜜羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1372,
+    "name": "榴莲千层羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1373,
+    "name": "马面裙羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1374,
+    "name": "猫猫推车羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1375,
+    "name": "牧羊羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1376,
+    "name": "压缩包羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1377,
+    "name": "珠海渔女羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1378,
+    "name": "半自动咖啡机羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1379,
+    "name": "黑猫王子羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1380,
+    "name": "猫包羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1381,
+    "name": "禅意羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1382,
+    "name": "风铃羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1383,
+    "name": "萌系熊猫羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1384,
+    "name": "魔瓶羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1385,
+    "name": "木偶师羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1386,
+    "name": "提线木偶羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1387,
+    "name": "皮蛋豆腐羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1388,
+    "name": "翩翩蝶舞羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1389,
+    "name": "苹果糖羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1390,
+    "name": "时空穿梭羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1391,
+    "name": "昙花一现羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1392,
+    "name": "雪顶苏打羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1393,
+    "name": "海盗桶羊",
+    "isTopic": 143,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1394,
+    "name": "蔚蓝海军羊",
+    "isTopic": 143,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1395,
+    "name": "勾魂羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的书斋怪谈</c>活动后获得。"
+  },
+  {
+    "clothesId": 1396,
+    "name": "练妖炉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#012eff>羊羊的书斋怪谈</c>活动后获得。"
+  },
+  {
+    "clothesId": 1397,
+    "name": "倩女羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#013eff>羊羊的书斋怪谈</c>活动后获得。"
+  },
+  {
+    "clothesId": 1398,
+    "name": "尸鬼羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#014eff>羊羊的书斋怪谈</c>活动后获得。"
+  },
+  {
+    "clothesId": 1399,
+    "name": "收妖镜羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#015eff>羊羊的书斋怪谈</c>活动后获得。"
+  },
+  {
+    "clothesId": 1400,
+    "name": "雪狐妖羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#016eff>羊羊的书斋怪谈</c>活动后获得。"
+  },
+  {
+    "clothesId": 1401,
+    "name": "引魂羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#017eff>羊羊的书斋怪谈</c>活动后获得。"
+  },
+  {
+    "clothesId": 1402,
+    "name": "玉兔精羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#018eff>羊羊的书斋怪谈</c>活动后获得。"
+  },
+  {
+    "clothesId": 1403,
+    "name": "应援羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "羊羊竞赛第19赛季获得。"
+  },
+  {
+    "clothesId": 1404,
+    "name": "小偶像羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "羊羊竞赛第19赛季获得。"
+  },
+  {
+    "clothesId": 1405,
+    "name": "滑翔伞羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1406,
+    "name": "击剑羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1407,
+    "name": "女篮羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1408,
+    "name": "乒乓羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1409,
+    "name": "艺术体操羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1410,
+    "name": "皮划艇羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1411,
+    "name": "番茄果汁羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1412,
+    "name": "猫跑轮羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1413,
+    "name": "爆改蝴蝶羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战神布丁</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1414,
+    "name": "爆改三角龙羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Thebzk</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1415,
+    "name": "爆改熊猫羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>藕粉桂花小丸子</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1416,
+    "name": "爆改仙君羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>张若然</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1417,
+    "name": "蓝屏宕机羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "集齐老板的一天系列卡牌后获得。"
+  },
+  {
+    "clothesId": 1418,
+    "name": "美妙旋律羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1419,
+    "name": "彩虹小兵羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1420,
+    "name": "竹林笛韵羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1421,
+    "name": "熊熊椰冰羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1422,
+    "name": "沁爽菠萝羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1423,
+    "name": "蔷薇双马尾羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1424,
+    "name": "爆改爱老虎羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Thebzk</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1425,
+    "name": "爆改独角仙羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>尔东辰</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1426,
+    "name": "爆改美西螈羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>薇诺妮卡</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1427,
+    "name": "爆改小象羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战神布丁</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1428,
+    "name": "爆改锦鲤羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Thebzk</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1429,
+    "name": "爆改海豹羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>饱饱吃不饱</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1430,
+    "name": "白衣天使羊",
+    "isTopic": 148,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1431,
+    "name": "痊愈灵药羊",
+    "isTopic": 148,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1432,
+    "name": "果冻背包羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与羊羊拉力赛-白菜杯获得。"
+  },
+  {
+    "clothesId": 1433,
+    "name": "小卖铺羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与羊羊拉力赛-白菜杯获得。"
+  },
+  {
+    "clothesId": 1434,
+    "name": "爆改乌龟羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>SeeU</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1435,
+    "name": "爆改渡渡羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Tancc</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1436,
+    "name": "爆改猴羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>苍山明夜</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1437,
+    "name": "爆改流行羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Thebzk</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1438,
+    "name": "爆改人鱼羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Lyn姜姜</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1439,
+    "name": "爆改蚊子羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Tancc</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1440,
+    "name": "爆改嘻哈羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Thebzk</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1441,
+    "name": "爆改视觉系羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>耳朵</c>在线上互动【爆改丑羊】活动中创作提供。"
+  },
+  {
+    "clothesId": 1442,
+    "name": "莓子贝果羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1443,
+    "name": "猕猴桃汁羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1444,
+    "name": "猫咪多肉铺羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1445,
+    "name": "魔法月光羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1446,
+    "name": "蒜粉扇贝羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1447,
+    "name": "日辉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1448,
+    "name": "月光羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1449,
+    "name": "碧焰战神羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1450,
+    "name": "川剧变脸羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1451,
+    "name": "歌剧魅影羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1452,
+    "name": "歌剧演员羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1453,
+    "name": "海胆寿司羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1454,
+    "name": "牛仔很忙羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1455,
+    "name": "猫咪电视羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1456,
+    "name": "美式大头照羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1457,
+    "name": "柠檬素裙羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1458,
+    "name": "不想开学羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的开学快乐</c>活动后获得。"
+  },
+  {
+    "clothesId": 1459,
+    "name": "文具多羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的开学快乐</c>活动后获得。"
+  },
+  {
+    "clothesId": 1460,
+    "name": "学院甜心羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的开学快乐</c>活动后获得。"
+  },
+  {
+    "clothesId": 1461,
+    "name": "营养学餐羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的开学快乐</c>活动后获得。"
+  },
+  {
+    "clothesId": 1462,
+    "name": "熬夜补作业羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的开学快乐</c>活动后获得。"
+  },
+  {
+    "clothesId": 1463,
+    "name": "经典老师羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的开学快乐</c>活动后获得。"
+  },
+  {
+    "clothesId": 1464,
+    "name": "三好学生羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的开学快乐</c>活动后获得。"
+  },
+  {
+    "clothesId": 1465,
+    "name": "一肚子墨水羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的开学快乐</c>活动后获得。"
+  },
+  {
+    "clothesId": 1466,
+    "name": "迷你二周年羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与羊羊2周年活动获得。"
+  },
+  {
+    "clothesId": 1467,
+    "name": "蓝莓可丽饼羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与羊羊2周年活动获得。"
+  },
+  {
+    "clothesId": 1468,
+    "name": "秋风徐来羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "周年庆活动期间，登录游戏获得。"
+  },
+  {
+    "clothesId": 1469,
+    "name": "花店车羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "羊羊竞赛第20赛季获得。"
+  },
+  {
+    "clothesId": 1470,
+    "name": "花艺师羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "羊羊竞赛第20赛季获得。"
+  },
+  {
+    "clothesId": 1471,
+    "name": "浇给羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1472,
+    "name": "焦糖午后羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1473,
+    "name": "金平糖羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1474,
+    "name": "黎明女皇羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1475,
+    "name": "葡提盛宴羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1476,
+    "name": "巧克力瀑布羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1477,
+    "name": "兔兔花园羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1478,
+    "name": "西装绅士羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1479,
+    "name": "芝芝莓莓羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1480,
+    "name": "种菜羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1481,
+    "name": "饲养员羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1482,
+    "name": "小花盆栽羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1483,
+    "name": "铲屎官羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1484,
+    "name": "倒反天罡羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1485,
+    "name": "绯红魔王羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1486,
+    "name": "牛马羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1487,
+    "name": "千禧挚爱羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1488,
+    "name": "人类猫条羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1489,
+    "name": "深海礼裙羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1490,
+    "name": "搜谱勾gi羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1491,
+    "name": "田园甘风羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1492,
+    "name": "蔚蓝战士羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1493,
+    "name": "幽夜黛影羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1494,
+    "name": "中华肉包羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1495,
+    "name": "邮政羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与秋日信使赛获得。"
+  },
+  {
+    "clothesId": 1496,
+    "name": "秋日私语羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与秋日信使赛获得。"
+  },
+  {
+    "clothesId": 1497,
+    "name": "草莓焦糖布丁羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1498,
+    "name": "大芒狗羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1499,
+    "name": "谜梦黑玫羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1500,
+    "name": "蜜恋甜心羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1501,
+    "name": "喵巫月语羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1502,
+    "name": "扭蛋机羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1503,
+    "name": "清新绿意羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1504,
+    "name": "情绪价值羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1505,
+    "name": "砂锅土豆粉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1506,
+    "name": "伤心凉粉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1507,
+    "name": "树桩羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1508,
+    "name": "酸了羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1509,
+    "name": "草莓卷卷羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的甜蜜礼装</c>活动后获得。"
+  },
+  {
+    "clothesId": 1510,
+    "name": "红丝绒少女羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的甜蜜礼装</c>活动后获得。"
+  },
+  {
+    "clothesId": 1511,
+    "name": "焦糖碱水羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的甜蜜礼装</c>活动后获得。"
+  },
+  {
+    "clothesId": 1512,
+    "name": "蓝莓贵妇羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的甜蜜礼装</c>活动后获得。"
+  },
+  {
+    "clothesId": 1513,
+    "name": "玫瑰可可羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的甜蜜礼装</c>活动后获得。"
+  },
+  {
+    "clothesId": 1514,
+    "name": "沁凉薄荷羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的甜蜜礼装</c>活动后获得。"
+  },
+  {
+    "clothesId": 1515,
+    "name": "青柠茶香羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的甜蜜礼装</c>活动后获得。"
+  },
+  {
+    "clothesId": 1516,
+    "name": "砂糖香草羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的甜蜜礼装</c>活动后获得。"
+  },
+  {
+    "clothesId": 1517,
+    "name": "伯爵羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "羊羊竞赛第21赛季获得。"
+  },
+  {
+    "clothesId": 1518,
+    "name": "蔷薇少女羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "羊羊竞赛第21赛季获得。"
+  },
+  {
+    "clothesId": 1519,
+    "name": "宝宝帐篷羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "登录游戏获得。"
+  },
+  {
+    "clothesId": 1520,
+    "name": "采蘑菇羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1521,
+    "name": "黄油松饼羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1522,
+    "name": "面包小店羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1523,
+    "name": "拼装玩具羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1524,
+    "name": "青提马卡龙羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1525,
+    "name": "神奇海螺羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1526,
+    "name": "香菜奶茶羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1527,
+    "name": "想家羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1528,
+    "name": "幸运格子羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1529,
+    "name": "一盒晴天羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1530,
+    "name": "一盒星空羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1531,
+    "name": "紫缦蝶裳羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1532,
+    "name": "摇滚兔兔羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "集齐e人的周末系列卡牌后获得。"
+  },
+  {
+    "clothesId": 1533,
+    "name": "不想上班羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Cy.Sun</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1534,
+    "name": "荆棘女王羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Thebzk</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1535,
+    "name": "美鹭羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>鹭鹭</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1536,
+    "name": "精致打工羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>耶耶拿铁</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1537,
+    "name": "小矿工羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>尔东辰</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1538,
+    "name": "不熬夜羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>不熬夜家族</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1539,
+    "name": "找了个羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>一颗小西柚</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1540,
+    "name": "兔兔过山车羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>花开花落</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1541,
+    "name": "滑雪少女羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>呦呦酱</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1542,
+    "name": "棉花羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>苏喵喵</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1543,
+    "name": "鸭梨妹羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1544,
+    "name": "橄榄少年羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1545,
+    "name": "草莓自由羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1546,
+    "name": "茶叶罐子羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1547,
+    "name": "甜桃少女羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1548,
+    "name": "蒙布朗羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1549,
+    "name": "玻璃心羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>呦呦酱</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1550,
+    "name": "蜜甜初恋羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼-5队</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1551,
+    "name": "缪斯女神羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>靈感繆斯</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1552,
+    "name": "兔子警官羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>卖兔子的胡萝贝</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1553,
+    "name": "单曲循环羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼-8队</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1554,
+    "name": "彩梦羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff> 战狼-7队</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1555,
+    "name": "幸运草羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>OTM打怪兽</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1556,
+    "name": "红包雨羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Thebzk</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1557,
+    "name": "夏夜印象羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1558,
+    "name": "复古辣妹羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1559,
+    "name": "换季羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1560,
+    "name": "焰火精灵羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1561,
+    "name": "双生子粉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>大明星美少女早睡</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1562,
+    "name": "披星羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>www</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1563,
+    "name": "提钱退休羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>钱纷纷</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1564,
+    "name": "心平气和羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>九九</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1565,
+    "name": "鸭梨山大羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>海滩长颈鹿</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1566,
+    "name": "羊羊花店羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>吃不饱</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1567,
+    "name": "紫雪半庭羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼-洛颜</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1568,
+    "name": "小熊背包羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>小蒙圈</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1569,
+    "name": "萨摩耶羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的狗狗乐园</c>活动后获得。\n该装扮由玩家<color=#004eff>粥羊</c>投稿提供。"
+  },
+  {
+    "clothesId": 1570,
+    "name": "金毛羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的狗狗乐园</c>活动后获得。\n该装扮由玩家<color=#004eff>粥羊</c>投稿提供。"
+  },
+  {
+    "clothesId": 1571,
+    "name": "蜜蜂柯基羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的狗狗乐园</c>活动后获得。\n该装扮由玩家<color=#004eff>粥羊</c>投稿提供。"
+  },
+  {
+    "clothesId": 1572,
+    "name": "雪纳瑞羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的狗狗乐园</c>活动后获得。\n该装扮由玩家<color=#004eff>粥羊</c>投稿提供。"
+  },
+  {
+    "clothesId": 1573,
+    "name": "巴哥羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的狗狗乐园</c>活动后获得。\n该装扮由玩家<color=#004eff>粥羊</c>投稿提供。"
+  },
+  {
+    "clothesId": 1574,
+    "name": "比熊羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的狗狗乐园</c>活动后获得。\n该装扮由玩家<color=#004eff>粥羊</c>投稿提供。"
+  },
+  {
+    "clothesId": 1575,
+    "name": "松狮羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的狗狗乐园</c>活动后获得。\n该装扮由玩家<color=#004eff>粥羊</c>投稿提供。"
+  },
+  {
+    "clothesId": 1576,
+    "name": "约克夏羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的狗狗乐园</c>活动后获得。\n该装扮由玩家<color=#004eff>粥羊</c>投稿提供。"
+  },
+  {
+    "clothesId": 1577,
+    "name": "酣畅健体羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与羊羊拉力赛-树桩杯获得。"
+  },
+  {
+    "clothesId": 1578,
+    "name": "强壮增肌羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与羊羊拉力赛-树桩杯获得。"
+  },
+  {
+    "clothesId": 1579,
+    "name": "九色鹿羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>DD会发光</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1580,
+    "name": "童话城堡羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>aa</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1581,
+    "name": "云端丘比特羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>aa</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1582,
+    "name": "深海羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>浮云奶盖</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1583,
+    "name": "跳跳鬼羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>呦呦酱</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1584,
+    "name": "欧若拉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff> ∩快乐∩</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1585,
+    "name": "梦中数羊羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>胖咩</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1586,
+    "name": "幸运锦鲤羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼-9队</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1587,
+    "name": "九尾祥瑞羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>浮云奶盖</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1588,
+    "name": "莎莎卷饼羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1589,
+    "name": "樱桃棉花糖羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1590,
+    "name": "优雅女仆羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1591,
+    "name": "飞行员猫猫羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "集齐i人的周末系列卡牌后获得。"
+  },
+  {
+    "clothesId": 1592,
+    "name": "富豪绅士羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "羊羊竞赛第22赛季获得。"
+  },
+  {
+    "clothesId": 1593,
+    "name": "豪门盛宴羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "羊羊竞赛第22赛季获得。"
+  },
+  {
+    "clothesId": 1594,
+    "name": "拔了个罐羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与拔了个罐联动活动获得。"
+  },
+  {
+    "clothesId": 1595,
+    "name": "布偶技师羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与拔了个罐联动活动获得。"
+  },
+  {
+    "clothesId": 1596,
+    "name": "冬日沙发羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1597,
+    "name": "冰湖羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1598,
+    "name": "积木小房子羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1599,
+    "name": "彩梦蝶羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>棠花花</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1600,
+    "name": "海兔羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Blue.</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1601,
+    "name": "狐狸小姐羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>藕粉桂花小丸子</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1602,
+    "name": "抹茶蛋糕卷羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>小妖静</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1603,
+    "name": "南方小土豆羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>CheersUP主</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1604,
+    "name": "女武神羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>施洋</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1605,
+    "name": "福兔羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>锐锐</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1606,
+    "name": "使不得鸭羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Thebzk</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1607,
+    "name": "魅力台球羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Mxxxxxx</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1608,
+    "name": "飞天气球羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>畅畅</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1609,
+    "name": "龙年大吉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>吃不饱</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1610,
+    "name": "小财神羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>空手套白羊-七七</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1611,
+    "name": "祝福羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>仙贝烤焦了</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1612,
+    "name": "彩虹独角兽羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>闪闪烁</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1613,
+    "name": "梦幻列车羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>连滩水冰月</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1614,
+    "name": "东南西北羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>花开花落</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1615,
+    "name": "气象瓶羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>阿来</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1616,
+    "name": "炫彩纸鹤羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>晴天</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1617,
+    "name": "甜甜爱心羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1618,
+    "name": "海参羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1619,
+    "name": "双鱼星神羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#016eff>猫糖</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1620,
+    "name": "外卖红包羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1621,
+    "name": "外卖车羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1622,
+    "name": "花型糕点架羊",
+    "isTopic": 173,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1623,
+    "name": "围炉赏雪羊",
+    "isTopic": 173,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1624,
+    "name": "魔蝎羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>小熊崽崽</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1625,
+    "name": "闪电羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>OTM打怪兽</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1626,
+    "name": "芙蕖仙子羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼3队</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1627,
+    "name": "桃醉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>闪闪烁</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1628,
+    "name": "腰鼓羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>阿来</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1629,
+    "name": "呦呦鹿鸣羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>呦呦酱</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1630,
+    "name": "红菱艳羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼13队</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1631,
+    "name": "黄金女王羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>杜粟</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1632,
+    "name": "魔鬼鱼羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>敏靖</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1633,
+    "name": "奶油玉米羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>尔东辰</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1634,
+    "name": "一桶柠茶羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1635,
+    "name": "炒面面包羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1636,
+    "name": "冰海羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与彩虹漂移赛获得。"
+  },
+  {
+    "clothesId": 1637,
+    "name": "双色极光羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "参与彩虹漂移赛获得。"
+  },
+  {
+    "clothesId": 1638,
+    "name": "炒豆角羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "集齐北方的冬天系列卡牌后获得。"
+  },
+  {
+    "clothesId": 1639,
+    "name": "门外世界羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1640,
+    "name": "紫蝶心愿羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1641,
+    "name": "蓝天白云酸奶羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1642,
+    "name": "你醒啦羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>敏靖</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1643,
+    "name": "俯瞰草地羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼13队</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1644,
+    "name": "铃兰风铃羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>久久鸭</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1645,
+    "name": "梦精灵羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>张若然</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1646,
+    "name": "清爽柠檬鸭羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>蚊蚊</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1647,
+    "name": "世界和平羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼佛系队</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1648,
+    "name": "下海羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>童沐恩</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1649,
+    "name": "小荷池塘羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>珍珍</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1650,
+    "name": "摇摇木马羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>晴天</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1651,
+    "name": "魔法药水羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的魔法物语</c>活动后获得。\n该装扮由玩家<color=#004eff>饱饱吃不饱</c>投稿提供。"
+  },
+  {
+    "clothesId": 1652,
+    "name": "魔女羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的魔法物语</c>活动后获得。\n该装扮由玩家<color=#004eff>饱饱吃不饱</c>投稿提供。"
+  },
+  {
+    "clothesId": 1653,
+    "name": "送信猫头鹰羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的魔法物语</c>活动后获得。\n该装扮由玩家<color=#004eff>饱饱吃不饱</c>投稿提供。"
+  },
+  {
+    "clothesId": 1654,
+    "name": "遗失梦境羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的魔法物语</c>活动后获得。\n该装扮由玩家<color=#004eff>饱饱吃不饱</c>投稿提供。"
+  },
+  {
+    "clothesId": 1655,
+    "name": "蝙蝠之夜羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的魔法物语</c>活动后获得。\n该装扮由玩家<color=#004eff>饱饱吃不饱</c>投稿提供。"
+  },
+  {
+    "clothesId": 1656,
+    "name": "魅影幽灵羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的魔法物语</c>活动后获得。\n该装扮由玩家<color=#004eff>饱饱吃不饱</c>投稿提供。"
+  },
+  {
+    "clothesId": 1657,
+    "name": "魔法城堡羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的魔法物语</c>活动后获得。\n该装扮由玩家<color=#004eff>饱饱吃不饱</c>投稿提供。"
+  },
+  {
+    "clothesId": 1658,
+    "name": "魔法手册羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#011eff>羊羊的魔法物语</c>活动后获得。\n该装扮由玩家<color=#004eff>饱饱吃不饱</c>投稿提供。"
+  },
+  {
+    "clothesId": 1659,
+    "name": "不倒翁羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>小阿菲</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1660,
+    "name": "飞龙在天羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>大核桃</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1661,
+    "name": "鲸梦羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>azan</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1662,
+    "name": "童话兔子先生羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>小森与海与布丁共创</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1663,
+    "name": "信号故障羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>遥啊遥</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1664,
+    "name": "儿童游戏桌羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>榴光溢彩</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1665,
+    "name": "哪吒羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>阿来</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1666,
+    "name": "星星女孩羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>小妖静</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1667,
+    "name": "猫罐头羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1668,
+    "name": "田野女孩羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1669,
+    "name": "面包柴犬羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1670,
+    "name": "碎花小黑裙羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1671,
+    "name": "多巴胺人鱼羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼-微笑</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1672,
+    "name": "樱花单车羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>aa</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1673,
+    "name": "樱花仙子羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>张若然</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1674,
+    "name": "夏日饱饱羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>饱饱</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1675,
+    "name": "战狼羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼-阿布</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1676,
+    "name": "东篱公子羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>棠花花</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1677,
+    "name": "花精灵羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>小妖静</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1678,
+    "name": "画蛇添财羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>三小只</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1679,
+    "name": "游戏卡带羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>耳朵</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1680,
+    "name": "为你撑伞羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Xx</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1681,
+    "name": "温暖水域羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1682,
+    "name": "菠萝硬糖羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1683,
+    "name": "仿真壁炉羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "羊羊竞赛第23赛季获得。"
+  },
+  {
+    "clothesId": 1684,
+    "name": "冬夜雪窗羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "羊羊竞赛第23赛季获得。"
+  },
+  {
+    "clothesId": 1685,
+    "name": "冰雪节羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "集齐南方的冬天系列卡牌后获得。"
+  },
+  {
+    "clothesId": 1686,
+    "name": "天使羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1687,
+    "name": "薄荷巧克力羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1688,
+    "name": "帆布购物袋羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1689,
+    "name": "抹茶拿铁羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1690,
+    "name": "榛巧酱羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1691,
+    "name": "俄罗斯方块羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>Cy.Sun</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1692,
+    "name": "鹿鹤同春羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>榴光溢彩</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1693,
+    "name": "冒险岛羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼-16队</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1694,
+    "name": "糖瓜儿羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>小王同学</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1695,
+    "name": "白皇后羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>六元</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1696,
+    "name": "宝瓶座羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>我们,一直走</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1697,
+    "name": "木乃伊羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>雲卿顔</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1698,
+    "name": "香氛泡泡浴羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>童沐恩</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1699,
+    "name": "小王子羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>我们,一直走</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1700,
+    "name": "一起滑雪羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>一颗小西柚</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1701,
+    "name": "七彩凤凰羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>小妖静</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1702,
+    "name": "糖果圣代羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>辣炒肥五花</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1703,
+    "name": "铁桶饼干羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼-18队</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1704,
+    "name": "蝴蝶精灵羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>苏喵喵</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1705,
+    "name": "猪猪女孩羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>zhuzhu</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1706,
+    "name": "草莓雪媚娘羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1707,
+    "name": "洗泡泡羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1708,
+    "name": "一罐番茄酱羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1709,
+    "name": "一罐酸黄瓜羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1710,
+    "name": "白棋羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊的萌物棋盘</c>活动后获得。\n该装扮由玩家<color=#004eff>Cy.Sun</c>投稿提供。"
+  },
+  {
+    "clothesId": 1711,
+    "name": "黑棋羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊的萌物棋盘</c>活动后获得。\n该装扮由玩家<color=#004eff>Cy.Sun</c>投稿提供。"
+  },
+  {
+    "clothesId": 1712,
+    "name": "猴主教羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊的萌物棋盘</c>活动后获得。\n该装扮由玩家<color=#004eff>Cy.Sun</c>投稿提供。"
+  },
+  {
+    "clothesId": 1713,
+    "name": "猫皇后羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊的萌物棋盘</c>活动后获得。\n该装扮由玩家<color=#004eff>Cy.Sun</c>投稿提供。"
+  },
+  {
+    "clothesId": 1714,
+    "name": "狮子国王羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊的萌物棋盘</c>活动后获得。\n该装扮由玩家<color=#004eff>Cy.Sun</c>投稿提供。"
+  },
+  {
+    "clothesId": 1715,
+    "name": "小熊士兵羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊的萌物棋盘</c>活动后获得。\n该装扮由玩家<color=#004eff>Cy.Sun</c>投稿提供。"
+  },
+  {
+    "clothesId": 1716,
+    "name": "小猪骑士羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊的萌物棋盘</c>活动后获得。\n该装扮由玩家<color=#004eff>Cy.Sun</c>投稿提供。"
+  },
+  {
+    "clothesId": 1717,
+    "name": "熊猫战车羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "在羊羊大世界中，参与<color=#004eff>羊羊的萌物棋盘</c>活动后获得。\n该装扮由玩家<color=#004eff>Cy.Sun</c>投稿提供。"
+  },
+  {
+    "clothesId": 1718,
+    "name": "冰封玫瑰羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>羊村高启强</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1719,
+    "name": "拆快递羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>莉莉</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1720,
+    "name": "盆满钵满羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>左灯右行</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1721,
+    "name": "日落海滩羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼21队</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1722,
+    "name": "灵儿羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼佛系队</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1723,
+    "name": "琉璃仙子羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>战狼20队</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1724,
+    "name": "山茶花仙子羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "常规或活动模式通关后获得。\n该装扮由玩家<color=#004eff>张若然</c>在线上互动【夏日艺术展】活动中创作提供。"
+  },
+  {
+    "clothesId": 1725,
+    "name": "芬达海羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1726,
+    "name": "暖冬苹果派羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1727,
+    "name": "小松树蛋糕羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1728,
+    "name": "玉米脆片羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1729,
+    "name": "樱桃蛋糕羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": ""
+  },
+  {
+    "clothesId": 1730,
+    "name": "2024年度羊",
+    "isTopic": 0,
+    "platform": 1,
+    "description": "2024羊羊的年度报告中获得。"
   }
 ]

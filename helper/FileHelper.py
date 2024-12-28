@@ -13,7 +13,7 @@ class FileHelper(object):
 
     def write_json_data(self, file_path, json_data):
         file_string = json.dumps(json_data)
-        bytes_data = file_string.encode(file_string)
+        bytes_data = file_string.encode("utf-8", "surrogatepass")
         self.write_bytes_data(file_path, bytes_data)
 
     @staticmethod
